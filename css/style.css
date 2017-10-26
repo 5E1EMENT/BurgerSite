@@ -1,0 +1,143 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  width: 100%;
+  height: 100%; }
+
+body {
+  width: 100%;
+  height: 100%; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    list-style: none; }
+
+p {
+  padding: 0;
+  margin: 0; }
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.header {
+  height: 100vh;
+  background-image: url("../img/video-bg.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+  .header .container {
+    max-width: 960px;
+    margin: 0 auto; }
+    .header .container .header__logo, .header .container .header__nav {
+      float: left; }
+    .header .container .header__top:after, .header .container .header__top:before {
+      display: table;
+      content: ""; }
+    .header .container .header__top:after {
+      clear: both; }
+    .header .container .header__logo {
+      width: 20%; }
+      .header .container .header__logo .logo {
+        display: inline-block; }
+      .header .container .header__logo .logo__pic {
+        margin-top: 10px;
+        margin-left: -10px;
+        max-width: 92px;
+        max-height: 70px;
+        display: block; }
+    .header .container .header__nav {
+      width: 75%;
+      padding-top: 33px;
+      font-size: 13px; }
+      .header .container .header__nav .nav {
+        text-align: right; }
+        .header .container .header__nav .nav .nav_item {
+          display: inline-block; }
+          .header .container .header__nav .nav .nav_item:hover {
+            text-decoration: underline; }
+        .header .container .header__nav .nav .nav_item:after {
+          display: inline-block;
+          content: "";
+          vertical-align: middle;
+          width: 0.3125rem;
+          height: 0.3125rem;
+          border-radius: 0.15625rem;
+          background: white;
+          margin: 0.875rem; }
+        .header .container .header__nav .nav li.nav_item:after:nth-last-child {
+          content: none; }
+        .header .container .header__nav .nav .menu__link {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: white;
+          font-size: 13px;
+          font-family: 'UbuntuMedium'; }
+        .header .container .header__nav .nav .order-btn {
+          text-decoration: none;
+          padding: 10px;
+          background-color: #e45028;
+          width: 100px;
+          height: 35px;
+          border-radius: 5px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          vertical-align: baseline; }
+          .header .container .header__nav .nav .order-btn:hover {
+            background-color: #c1401e; }
+    .header .container .header__scroll .scroll__nav {
+      position: fixed;
+      color: white;
+      right: 50px; }
+      .header .container .header__scroll .scroll__nav .scroll__link {
+        display: block;
+        border-radius: 50%;
+        background-color: white;
+        width: 6px;
+        height: 6px;
+        margin-top: 15px;
+        color: white;
+        position: relative; }
+      .header .container .header__scroll .scroll__nav .scroll_active {
+        -webkit-box-shadow: 0 0 0 3px black, 0 0 0 4.5px #fff;
+        box-shadow: 0 0 0 3px black, 0 0 0 4.5px #fff;
+        border-radius: 3px; }
+    .header .container .header__content {
+      position: relative; }
+      .header .container .header__content .header__content-left {
+        display: inline-block; }
+        .header .container .header__content .header__content-left .header_burger {
+          margin-top: 25%;
+          padding: 0; }
+      .header .container .header__content .header__content-right {
+        vertical-align: top;
+        display: inline-block;
+        margin-left: 10px;
+        margin-top: 25%; }
+        .header .container .header__content .header__content-right .header_title {
+          color: #f9b43b;
+          font-size: 72px;
+          line-height: 1.7;
+          margin: 0;
+          text-transform: uppercase;
+          font-family: 'GagalinRegular'; }
+        .header .container .header__content .header__content-right .header_title-text {
+          color: #fff;
+          line-height: 1;
+          font-family: 'LifehackMedium';
+          font-size: 65px;
+          text-transform: lowercase; }
+    .header .container .header__arrow {
+      position: absolute;
+      left: 50%;
+      bottom: 40px; }
+      .header .container .header__arrow:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1); }

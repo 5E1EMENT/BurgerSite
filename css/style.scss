@@ -1,0 +1,218 @@
+//========MIXINS=============//
+@mixin ubuntu($style: ubuntu) {
+    @if $style == bold {
+        font-family: 'UbuntuB';
+    }
+    @if $style == medium {
+        font-family: 'UbuntuMedium';
+    }
+    @if $style == regular {
+        font-family: 'UbuntuRegular';
+    }
+    @if $style == light {
+        font-family: 'UbuntuLight';
+    }
+}
+@mixin clearfix {
+	&:after, &:before {
+			display: table;
+			content: "";
+		} 
+		&:after {
+			clear: both;
+		}
+}
+@mixin Lifehack($style: Lifehack) {
+    @if $style == medium {
+        font-family: 'LifehackMedium';
+    }
+}
+@mixin Gagalin($style: Gagalin) {
+    @if $style == medium {
+        font-family: 'GagalinRegular';
+    }
+}
+* {
+	box-sizing: border-box;
+}
+html {
+	width: 100%;
+	height:100%;
+}
+body {
+	width: 100%;
+	height:100%;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style: none; 
+	}
+}
+p {
+	padding: 0;
+	margin: 0;
+}
+
+.wrapper {
+			min-height: 100%;
+			overflow: hidden;
+			position: relative;
+		}
+//==========HEADER===========//
+//==========NAVIGATION===========//
+.header {
+	height: 100vh;
+	background-image: url("../img/video-bg.png") ;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	
+	.container {
+		max-width: 960px;
+		margin: 0 auto;
+	.header__logo, .header__nav {
+		float: left;
+		
+	}
+	.header__top {
+		@include clearfix;
+	}
+	.header__logo {
+		width : 20%;
+		.logo {
+			display: inline-block;
+		}
+		.logo__pic {
+			margin-top: 10px;
+			margin-left: -10px;
+			max-width:92px;
+			max-height: 70px;
+			display: block;
+		}
+	}
+	.header__nav {
+		width:75%;
+		padding-top: 33px; 
+		font-size: 13px;
+		.nav {
+			text-align: right;
+				.nav_item {
+				display: inline-block;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			.nav_item:after {
+	display: inline-block;
+    content: "";
+    vertical-align: middle;
+    width: 0.3125rem;
+    height: 0.3125rem;
+    border-radius: 0.15625rem;
+    background: white;
+    margin: 0.875rem;
+			}
+			li.nav_item:after:nth-last-child {
+				content: none;
+			}
+
+		.menu__link {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: white;
+			font-size: 13px;
+			@include ubuntu(medium); 
+
+		}
+		.order-btn {
+			text-decoration: none;
+			padding: 10px;
+			background-color: #e45028;
+			width: 100px;
+			height:35px;
+			border-radius: 5px;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			vertical-align: baseline;
+
+			&:hover {
+				background-color: #c1401e;
+			}
+		}
+
+		}
+	}
+	.header__scroll {
+		.scroll__nav {
+			position: fixed;
+			color: white;
+			right: 50px;
+			.scroll__link {
+				display: block;
+    			border-radius: 50%;
+    			background-color: white;
+    			width: 6px;
+    			height: 6px;
+    			margin-top: 15px;
+    			color: white;
+    			position: relative;
+			}
+			.scroll_active {
+				box-shadow: 0 0 0 3px black, 0 0 0 4.5px #fff;
+				border-radius: 3px;
+				
+			}
+		}
+	}
+	.header__content {
+		position: relative;
+		.header__content-left {
+			
+			display: inline-block;
+			.header_burger {
+				margin-top: 25%;
+				padding: 0;
+			}
+		}
+		.header__content-right {
+			vertical-align: top;
+			display: inline-block;
+			margin-left:10px;
+			margin-top:25%;
+			
+			
+			 .header_title {
+			 	color: #f9b43b;
+			 	font-size: 72px;
+			 	line-height: 1.7;
+			 	margin: 0;
+			 	text-transform: uppercase;
+			 	@include Gagalin(medium);
+			 	}
+			 .header_title-text {
+			 	color: #fff;
+			 	line-height: 1;
+			 	@include Lifehack(medium);
+			 	font-size: 65px;
+			 	text-transform:lowercase;
+			 	}
+			 
+		}
+	}
+	.header__arrow {
+		position: absolute;
+		left: 50%;
+		bottom: 40px;
+		&:hover {
+			transform: scale(1.1) 
+		}
+	}
+	}
+	
+}
+
