@@ -66,13 +66,13 @@ p {
 .header {
 	height: 100vh;
 	background-image: url("../img/video-bg.png") ;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
 	background-size: cover;
-	
+	min-height: 650px;
 	.container {
+		position: relative;
 		max-width: 960px;
 		margin: 0 auto;
+		height:100%;
 	.header__logo, .header__nav {
 		float: left;
 		
@@ -147,35 +147,56 @@ p {
 
 		}
 	}
-	.header__scroll {
-		.scroll__nav {
-			position: fixed;
-			color: white;
-			right: 50px;
-			.scroll__link {
-				display: block;
-    			border-radius: 50%;
-    			background-color: white;
-    			width: 6px;
-    			height: 6px;
-    			margin-top: 15px;
-    			color: white;
-    			position: relative;
-			}
-			.scroll_active {
-				box-shadow: 0 0 0 3px black, 0 0 0 4.5px #fff;
-				border-radius: 3px;
-				
-			}
-		}
-	}
+	//==========SCROLL===========//
+.screen-switcher {
+  position: fixed;
+  top: 90px;
+  right: 50px;
+
+ &__items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+ &__item {
+    margin-bottom: 5px;
+  }
+
+ &__link {
+    display: block;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+
+   &--active {
+      border: 1px solid #f9fafa ;
+    }
+
+   &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 4px;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+	//==========CONTENT===========//
 	.header__content {
 		position: relative;
 		.header__content-left {
 			
 			display: inline-block;
 			.header_burger {
-				margin-top: 25%;
+				margin-top: 20%;
 				padding: 0;
 			}
 		}
@@ -183,7 +204,7 @@ p {
 			vertical-align: top;
 			display: inline-block;
 			margin-left:10px;
-			margin-top:25%;
+			margin-top:20%;
 			
 			
 			 .header_title {
@@ -204,15 +225,73 @@ p {
 			 
 		}
 	}
-	.header__arrow {
-		position: absolute;
-		left: 50%;
-		bottom: 40px;
-		&:hover {
-			transform: scale(1.1) 
+	//==========ARROW===========//
+		.header__arrow {
+			left: 50%;
+			position: absolute;
+    		display: block;
+    		bottom: 40px;
+    		.arrow {
+    			display: block;
+
+    		}	
 		}
 	}
+
+}
+.best {
+	@include clearfix;
+	height: 100vh;
+	background-image: url("../img/best-bg.png") ;
+	background-size: cover;
+	min-height: 650px;
+	.container {
+		position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		height:100%;
+		top:10%;
+	 .best__title-text {
+	 	text-align: center;
+	 	font-size: 72px;
+	 	color: #2f3234;
+	 	@include Gagalin(medium);
+		margin-bottom:9%;
+	 }
+	 .best__content {
+	 	.best__content-fresh {
+	 		width: 33.3%;
+	 		float: left;
+
+	 	}
+	 	.best__content-handy {
+			width: 33.3%;
+			float: left;
+	 	}
+	 	.best__content-natural {
+	 		width: 33.3%;
+	 		float: left;
+	 	}
+	 	img {
+	 		display: block;
+	 		margin: 0 auto;
+
+	 	}
+	 	h3 {
+	 		@include Lifehack(medium);
+	 		font-size: 24px;
+	 		text-align: center;
+	 		color: #2f3234;
+
+	 	}
+	 	p {
+	 		@include ubuntu(medium); 
+	 		font-size: 14px;
+			color: #696868;
+			line-height: 1.5;
+			text-align: center;
+	 	}
+	 }
 	}
-	
 }
 

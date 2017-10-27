@@ -28,12 +28,13 @@ p {
 .header {
   height: 100vh;
   background-image: url("../img/video-bg.png");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  min-height: 650px; }
   .header .container {
+    position: relative;
     max-width: 960px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    height: 100%; }
     .header .container .header__logo, .header .container .header__nav {
       float: left; }
     .header .container .header__top:after, .header .container .header__top:before {
@@ -91,35 +92,50 @@ p {
           vertical-align: baseline; }
           .header .container .header__nav .nav .order-btn:hover {
             background-color: #c1401e; }
-    .header .container .header__scroll .scroll__nav {
+    .header .container .screen-switcher {
       position: fixed;
-      color: white;
+      top: 90px;
       right: 50px; }
-      .header .container .header__scroll .scroll__nav .scroll__link {
+      .header .container .screen-switcher__items {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+      .header .container .screen-switcher__item {
+        margin-bottom: 5px; }
+      .header .container .screen-switcher__link {
         display: block;
+        position: relative;
+        width: 14px;
+        height: 14px;
+        border: 1px solid transparent;
         border-radius: 50%;
-        background-color: white;
-        width: 6px;
-        height: 6px;
-        margin-top: 15px;
-        color: white;
-        position: relative; }
-      .header .container .header__scroll .scroll__nav .scroll_active {
-        -webkit-box-shadow: 0 0 0 3px black, 0 0 0 4.5px #fff;
-        box-shadow: 0 0 0 3px black, 0 0 0 4.5px #fff;
-        border-radius: 3px; }
+        font-size: 0; }
+        .header .container .screen-switcher__link--active {
+          border: 1px solid #f9fafa; }
+        .header .container .screen-switcher__link::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 4px;
+          height: 4px;
+          background-color: #fff;
+          border-radius: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
     .header .container .header__content {
       position: relative; }
       .header .container .header__content .header__content-left {
         display: inline-block; }
         .header .container .header__content .header__content-left .header_burger {
-          margin-top: 25%;
+          margin-top: 20%;
           padding: 0; }
       .header .container .header__content .header__content-right {
         vertical-align: top;
         display: inline-block;
         margin-left: 10px;
-        margin-top: 25%; }
+        margin-top: 20%; }
         .header .container .header__content .header__content-right .header_title {
           color: #f9b43b;
           font-size: 72px;
@@ -134,10 +150,55 @@ p {
           font-size: 65px;
           text-transform: lowercase; }
     .header .container .header__arrow {
-      position: absolute;
       left: 50%;
+      position: absolute;
+      display: block;
       bottom: 40px; }
-      .header .container .header__arrow:hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1); }
+      .header .container .header__arrow .arrow {
+        display: block; }
+
+.best {
+  height: 100vh;
+  background-image: url("../img/best-bg.png");
+  background-size: cover;
+  min-height: 650px; }
+  .best:after, .best:before {
+    display: table;
+    content: ""; }
+  .best:after {
+    clear: both; }
+  .best .container {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 100%;
+    top: 10%; }
+    .best .container .best__title-text {
+      text-align: center;
+      font-size: 72px;
+      color: #2f3234;
+      font-family: 'GagalinRegular';
+      margin-bottom: 9%; }
+    .best .container .best__content .best__content-fresh {
+      width: 33.3%;
+      float: left; }
+    .best .container .best__content .best__content-handy {
+      width: 33.3%;
+      float: left; }
+    .best .container .best__content .best__content-natural {
+      width: 33.3%;
+      float: left; }
+    .best .container .best__content img {
+      display: block;
+      margin: 0 auto; }
+    .best .container .best__content h3 {
+      font-family: 'LifehackMedium';
+      font-size: 24px;
+      text-align: center;
+      color: #2f3234; }
+    .best .container .best__content p {
+      font-family: 'UbuntuMedium';
+      font-size: 14px;
+      color: #696868;
+      line-height: 1.5;
+      text-align: center; }
