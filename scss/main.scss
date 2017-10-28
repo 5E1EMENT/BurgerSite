@@ -1,0 +1,15 @@
+//Config
+@import "config/_variables";
+@import "config/_mixins";
+
+//Base
+@import "layout/_fonts";
+@import "layout/_base";
+@import "layout/_adjustment";
+
+//sections
+@import "section/_header";
+@import "section/_footer";
+@import "section/_scroll";
+@import "section/_section-best";
+@import "section/_section-reviews";

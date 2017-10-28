@@ -1,0 +1,53 @@
+.best {
+	@include clearfix;
+	
+	background-image: url("../img/best-bg.png") ;
+	background-size: cover;
+	
+	.container {
+		position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		height:100%;
+		
+	 .best__title-text {
+	 	color: #2f3234;
+	 	text-align: center;
+		margin-bottom:9%;
+	 }
+	 .best__content {
+	 	.best__content-fresh {
+	 		width: 33.3%;
+	 		float: left;
+
+	 	}
+	 	.best__content-handy {
+			width: 33.3%;
+			float: left;
+	 	}
+	 	.best__content-natural {
+	 		width: 33.3%;
+	 		float: left;
+	 	}
+	 	img {
+	 		display: block;
+	 		margin: 0 auto;
+
+	 	}
+	 	.best__text {
+	 		@include Lifehack(medium);
+	 		font-size: 24px;
+	 		text-align: center;
+	 		color: #2f3234;
+
+	 	}
+	 	.best__description {
+	 		@include ubuntu(medium); 
+	 		font-size: 14px;
+			color: #696868;
+			line-height: 1.5;
+			text-align: center;
+	 	}
+	 }
+	}
+}

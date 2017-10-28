@@ -7,105 +7,112 @@
   
   <title>My Burger</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
+  
   <!--FONTS -->
-  <link rel="stylesheet" href="css/fonts.css">
+  
 
   <body>
     <div class="wrapper">
-      <header class="header">
-        <div class="container">
-          <div class="header__top">
-            <div class="header__logo">
-              <a href="" class="logo">
-                <img src="img/logo.png" alt="" class="logo__pic">
-              </a>
+      <div class="maincontent">
+        <!--Наш header-->
+        <header class="header">
+          <div class="container">
+            <div class="header__top">
+              <div class="header__logo">
+                <a href="" class="logo">
+                  <img src="img/logo.png" alt="" class="logo__pic">
+                </a>
+              </div>
+              <div class="header__nav">
+                <ul class="nav">
+                  <li class="nav__item">
+                    <a href="" class="nav__link">О нас</a></li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">Бургеры</a></li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">Команда</a></li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">Меню</a></li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">Отзывы</a></li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">Контакты</a></li>
+                    <button class="nav__link order-btn">Заказать</button>
+                </ul>
+              </div>
             </div>
-            <div class="header__nav">
-              <ul class="nav">
-                <li class="nav_item">
-                  <a href="" class="menu__link">О нас</a></li>
-                <li class="nav_item"><a href="" class="menu__link">Бургеры</a></li>
-                <li class="nav_item">
-                  <a href="" class="menu__link">Команда</a></li>
-                <li class="nav_item">
-                  <a href="" class="menu__link">Меню</a></li>
-                <li class="nav_item">
-                  <a href="" class="menu__link">Отзывы</a></li>
-                <li class="nav_item">
-                  <a href="" class="menu__link">Контакты</a></li>
-                  <button class="menu__link order-btn">Заказать</button>
+            <div class="screen-switcher">
+              <ul class="screen-switcher__items">
+                <li class="screen-switcher__item">
+                    <a href="#" class="screen-switcher__link  screen-switcher__link--active">Экран 1</a>
+                </li>
+                <li class="screen-switcher__item">
+                    <a href="#" class="screen-switcher__link">Экран 2</a>
+                </li>
+                <li class="screen-switcher__item">
+                    <a href="#" class="screen-switcher__link">Экран 3</a>
+                </li>
+                <li class="screen-switcher__item">
+                    <a href="#" class="screen-switcher__link">Экран 4</a>
+                </li>
+                <li class="screen-switcher__item">
+                    <a href="#" class="screen-switcher__link">Экран 5</a>
+                </li>
+                <li class="screen-switcher__item">
+                    <a href="#" class="screen-switcher__link">Экран 6</a>
+                </li>
+                <li class="screen-switcher__item">
+                    <a href="#" class="screen-switcher__link">Экран 7</a>
+                </li>
+                <li class="screen-switcher__item">
+                    <a href="#" class="screen-switcher__link">Экран 8</a>
+                </li>
               </ul>
             </div>
-          </div>
-          <div class="screen-switcher">
-            <ul class="screen-switcher__items">
-              <li class="screen-switcher__item">
-                  <a href="#" class="screen-switcher__link  screen-switcher__link--active">Экран 1</a>
-              </li>
-              <li class="screen-switcher__item">
-                  <a href="#" class="screen-switcher__link">Экран 2</a>
-              </li>
-              <li class="screen-switcher__item">
-                  <a href="#" class="screen-switcher__link">Экран 3</a>
-              </li>
-              <li class="screen-switcher__item">
-                  <a href="#" class="screen-switcher__link">Экран 4</a>
-              </li>
-              <li class="screen-switcher__item">
-                  <a href="#" class="screen-switcher__link">Экран 5</a>
-              </li>
-              <li class="screen-switcher__item">
-                  <a href="#" class="screen-switcher__link">Экран 6</a>
-              </li>
-              <li class="screen-switcher__item">
-                  <a href="#" class="screen-switcher__link">Экран 7</a>
-              </li>
-              <li class="screen-switcher__item">
-                  <a href="#" class="screen-switcher__link">Экран 8</a>
-              </li>
-            </ul>
-          </div>
-          <div class="header__content">
-            <div class="header__content-left">
-              <img src="img/burger.png" alt="" class="header_burger">
+            <div class="header__content">
+              <div class="header__content-left">
+                <img src="img/burger.png" alt="" class="header_burger">
+              </div>
+              <div class="header__content-right">
+                <h1 class="title header__title">мы делаем<br></h1>
+                <span class="header__title-text">натуральные<br> бургеры</span>
+              </div>
             </div>
-            <div class="header__content-right">
-              <h1 class="header_title">мы делаем<br></h1>
-              <span class="header_title-text">натуральные<br> бургеры</span>
+            <div class="header__arrow">
+              <a href="" class="arrow"><img src="img/arrow-scroll.png"  alt="" ></a>
             </div>
           </div>
-          <div class="header__arrow">
-            <a href="" class="arrow"><img src="img/arrow-scroll.png"  alt="" ></a>
-          </div>
+        </header>
+        <!--Секция Мы Лучшие-->
+        <section class="best">
+          <div class="container">
+            <div class="wrap">
+              <h2 class="title best__title-text">
+                  Мы лучшие
+              </h2>
+              <div class="best__content">
+                <div class="best__content-fresh">
+                  <img src="img/meat.png" alt="" class="best__meat">
+                  <h3 class="best__text fresh__text">100% свежее мясо</h3>
+                  <p class="best__description fresh__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+                </div>
+                <div class="best__content-handy">
+                  <img src="img/hand.png" alt="" class="best__hand">
+                  <h3 class="best__text handy__text">Ручная сборка</h3>
+                  <p class="best__description handy__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+                </div>
+                <div class="best__content-natural">
+                  <img src="img/natural.png" alt="" class="best__natural">
+                  <h3 class="best__text natural__text">Натуральные ингредиенты</h3>
+                  <p class="best__description natural__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+                </div>
+              </div>
+            </div>
         </div>
-      </header>
-      <section class="best">
-        <div class="container">
-          <div class="best__title">
-            <h2 class="best__title-text">
-              Мы лучшие
-            </h2>
-          </div>
-          <div class="best__content">
-            <div class="best__content-fresh">
-              <img src="img/meat.png" alt="" class="best-meat">
-              <h3>100% свежее мясо</h3>
-              <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
-            </div>
-            <div class="best__content-handy">
-              <img src="img/hand.png" alt="" class="best-hand">
-              <h3>Ручная сборка</h3>
-              <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
-            </div>
-            <div class="best__content-natural">
-              <img src="img/natural.png" alt="" class="best-natural">
-              <h3>Натуральные ингредиенты</h3>
-              <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
       </div>
     
     

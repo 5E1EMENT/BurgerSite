@@ -1,0 +1,131 @@
+.header {
+	height: 100vh;
+	background-image: url("../img/video-bg.png") ;
+	background-size: cover;
+	.container {
+		position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		height:100%;
+	.header__logo, .header__nav {
+		float: left;
+		
+	}
+	.header__top {
+		@include clearfix;
+	}
+	.header__logo {
+		width : 20%;
+		.logo {
+			display: inline-block;
+		}
+		.logo__pic {
+			margin-top: 10px;
+			margin-left: -10px;
+			max-width:92px;
+			max-height: 70px;
+			display: block;
+		}
+	}
+	.header__nav {
+		width:75%;
+		padding-top: 33px; 
+		font-size: 13px;
+		.nav {
+			text-align: right;
+				.nav__item {
+				display: inline-block;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			.nav__item:after {
+	display: inline-block;
+    content: "";
+    vertical-align: middle;
+    width: 0.3125rem;
+    height: 0.3125rem;
+    border-radius: 0.15625rem;
+    background: white;
+    margin: 0.875rem;
+			}
+			li.nav_item:after:nth-last-child {
+				content: none;
+			}
+
+		.nav__link {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: white;
+			font-size: 13px;
+			@include ubuntu(medium); 
+
+
+		}
+		.order-btn {
+			text-decoration: none;
+			padding: 10px;
+			background-color: #e45028;
+			width: 100px;
+			height:35px;
+			border-radius: 5px;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			vertical-align: baseline;
+
+			&:hover {
+				background-color: #c1401e;
+			}
+		}
+
+		}
+	}
+	
+	//==========CONTENT===========//
+	.header__content {
+		position: relative;
+		.header__content-left {
+			
+			float:left;
+			.header_burger {
+				margin-top: 20%;
+				padding: 0;
+			}
+		}
+		.header__content-right {
+			vertical-align: top;
+			float: left;
+			margin-left:10px;
+			margin-top:20%;
+			
+			
+			 .header__title {
+			 	color: #f9b43b;
+			 	
+			 	}
+			 .header__title-text {
+			 	color: #fff;
+			 	line-height: 1;
+			 	@include Lifehack(medium);
+			 	font-size: 65px;
+			 	text-transform:lowercase;
+			 	}
+			 
+		}
+	}
+	//==========ARROW===========//
+		.header__arrow {
+			left: 50%;
+			position: absolute;
+    		display: block;
+    		bottom: 40px;
+    		.arrow {
+    			display: block;
+
+    		}	
+		}
+	}
+
+}
