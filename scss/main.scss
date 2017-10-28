@@ -1,15 +1,15 @@
 //Config
-@import "config/_variables";
-@import "config/_mixins";
+@import "config/_variables.scss";
+@import "config/_mixins.scss";
 
 //Base
-@import "layout/_fonts";
-@import "layout/_base";
-@import "layout/_adjustment";
+@import "layout/_fonts.scss";
+@import "layout/_base.scss";
+@import "layout/_adjustment.scss";
 
 //sections
-@import "section/_header";
-@import "section/_footer";
-@import "section/_scroll";
-@import "section/_section-best";
-@import "section/_section-reviews";
+@import "section/_header.scss";
+@import "section/_footer.scss";
+@import "section/_scroll.scss";
+@import "section/_section-best.scss";
+@import "section/_section-reviews.scss";
