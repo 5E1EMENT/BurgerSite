@@ -1,0 +1,64 @@
+.reviews__group {
+	width: 100%;
+    height: 100%;
+    display: flex;  
+    align-content: stretch; 
+    flex-wrap: wrap;
+	.reviews__box {
+		min-width: rem(250px);
+    	min-height: rem(300px); 
+		background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center;
+		flex-grow: 5;
+		width:25%;
+		height:50%;
+		box-sizing: border-box;
+		&:hover .reviews__content {
+			@include clearfix;
+			display: block;
+			width: 100%;
+    		height: 100%;
+    		background: rgba(80,80,80,0.7);
+		}
+		.reviews__content {
+			padding-top:rem(50px);
+			padding-left:rem(10px);
+			display: none;
+			&-name {
+				text-transform: uppercase;
+				@include Gagalin(medium);
+				font-weight: normal;
+				color: white;
+				font-size: 14px;
+				margin-left: rem(20px);
+			}
+			&-text {
+				@include ubuntu(medium); 
+			color: white;
+			font-size: 14px;
+			text-align: left;
+			line-height:1.6;
+			margin-left: rem(20px);
+			padding-right:rem(10px);
+			}
+			&-btn {
+				margin-top:rem(10px);
+				@include ubuntu(medium); 
+				font-size: 14px;
+				padding:13px;
+				background-color: #2f3234;
+				text-transform: uppercase;
+				color:white;
+				border-radius: 5px;
+				border: none;
+				outline: none;
+				margin-left:rem(20px);
+				&:hover {
+					background-color: #1f2122;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
