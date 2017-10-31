@@ -4,7 +4,9 @@
     display: flex;  
     align-content: stretch; 
     flex-wrap: wrap;
+    
 	.reviews__box {
+		
 		min-width: rem(250px);
     	min-height: rem(300px); 
 		background-repeat: no-repeat;
@@ -16,17 +18,21 @@
 		height:50%;
 		box-sizing: border-box;
 		&:hover .reviews__content {
+			
 			@include clearfix;
-			display: block;
+			opacity:1;
+			transition: all 0.2s;
 			width: 100%;
     		height: 100%;
     		background: rgba(80,80,80,0.7);
 		}
 		.reviews__content {
+			transition: all 0.2s;
 			padding-top:rem(50px);
 			padding-left:rem(10px);
-			display: none;
+			opacity: 0;
 			&-name {
+				
 				text-transform: uppercase;
 				@include Gagalin(medium);
 				font-weight: normal;
@@ -35,6 +41,7 @@
 				margin-left: rem(20px);
 			}
 			&-text {
+				
 				@include ubuntu(medium); 
 			color: white;
 			font-size: 14px;
@@ -56,6 +63,7 @@
 				outline: none;
 				margin-left:rem(20px);
 				&:hover {
+					transition: all 0.2s;
 					background-color: #1f2122;
 					cursor: pointer;
 				}
