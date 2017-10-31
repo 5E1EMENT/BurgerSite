@@ -9,7 +9,8 @@
     	min-height: rem(300px); 
 		background-repeat: no-repeat;
     	background-size: cover;
-    	background-position: center;
+    	background-position: center center;
+    	filter: saturate(0%);
 		flex-grow: 5;
 		width:25%;
 		height:50%;

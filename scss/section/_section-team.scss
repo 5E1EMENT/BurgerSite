@@ -1,0 +1,84 @@
+.team {
+	background-image: url("../img/team-bg.png") ;
+	background-size: cover;
+	position: relative;
+	&__container {
+		position: absolute;
+		top: 0;
+    	bottom: 0;
+    	right: 0;
+		width: 50%;
+		background: rgba(49,52,54,.8);
+		.team__wrap {
+			height:100%;
+			margin-left: rem(80px);
+			.team__title {
+				margin-top: rem(90px);
+			color:$orange;
+			padding-bottom: rem(90px);
+			}
+		}
+
+	}
+	&__accordion {
+		.content {
+			display: block !important;
+			
+		}
+		.team__tab{
+			margin-top: rem(20px);
+			cursor: pointer;
+		.team__link {
+			font-size: 14px;
+			color: $white;
+			position:relative;
+			text-decoration: none;
+
+			&:hover {
+				color:$orange;
+			}
+		}
+	}
+		.team__link:before {
+			content: "";
+    			 position: absolute; /* Абсолютное позиционирование */
+    left: -20px; bottom: 2px; /* Положение треугольника */
+    border: 5px solid transparent; /* Прозрачные границы */
+    border-top: 5px solid $orange; /* Добавляем треугольник */
+		}
+		.team__content {
+			transition: all 0.2s;
+			position: relative;
+			display:none;
+			&-name {
+				font-size: 14px;
+				@include ubuntu(medium);
+				
+			}
+			&-maintext {
+				position:absolute;
+				left: 110px;
+				top: 15px;
+				max-width: rem(235px);
+				
+				.team__content-name {
+					@include ubuntu(bold);
+					color: white;
+					margin-top: -10px;
+				}
+				.team__content-text {
+					margin-top:10px;
+					@include ubuntu(light);
+					color:white;
+					font-size: 14px;
+				}
+			}
+			.team__image {
+				margin-top:10px;
+				border-radius: 50%;
+			}
+
+			
+		}
+	}
+}

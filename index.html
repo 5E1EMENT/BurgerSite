@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="css/main.css">
  
   
-  <!--FONTS -->
-  
+  <!--JS -->
+  <script src="js/svg4everybody.js"></script>
 
   <body>
     <div class="wrapper">
@@ -81,7 +81,11 @@
               </div>
             </div>
             <div class="header__arrow">
-              <a href="" class="arrow"><img src="img/arrow-scroll.png"  alt="" ></a>
+              <a href="" class="arrow">
+                <svg class="icon" width="28px" height="15px" style="fill:white;">
+                  <use xlink:href="img/icons/arrow-scroll.svg#Layer_1" />
+                </svg>
+              </a>
             </div>
           </div>
         </header>
@@ -94,17 +98,23 @@
               </h2>
               <div class="best__content">
                 <div class="best__content-fresh">
-                  <img src="img/meat.png" alt="" class="best__meat">
+                  <svg class="icon" width="96.5px" height="89px" style="fill:#e25028;">
+                    <use xlink:href="img/icons/meat.svg#Layer_1" />
+                  </svg>
                   <h3 class="best__text fresh__text">100% свежее мясо</h3>
                   <p class="best__description fresh__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
                 </div>
                 <div class="best__content-handy">
-                  <img src="img/hand.png" alt="" class="best__hand">
+                  <svg class="icon" width="73px" height="86px" style="fill:#f8b43a;">
+                    <use xlink:href="img/icons/hand.svg#Layer_1" />
+                  </svg>
                   <h3 class="best__text handy__text">Ручная сборка</h3>
                   <p class="best__description handy__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
                 </div>
                 <div class="best__content-natural">
-                  <img src="img/natural.png" alt="" class="best__natural">
+                  <svg class="icon" width="88px" height="75.5px" style="fill:#8ac03e;">
+                    <use xlink:href="img/icons/natural.svg#Layer_1" />
+                  </svg>
                   <h3 class="best__text natural__text">Натуральные ингредиенты</h3>
                   <p class="best__description natural__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
                 </div>
@@ -112,9 +122,56 @@
             </div>
         </div>
         </section>
+        <section class="team">
+          <div class="team__container">
+            <div class="team__wrap">
+              <h2 class="title team__title">команда</h2>
+              <div class="team__accordion">
+                <div class="team__tab"><div class="team__link title">Дэниэл Редклиф</div></div>
+                <div class="team__content ">
+                  <img src="img/team-img.jpg" alt="" class="team__image">
+                  <div class="team__content-maintext">
+                    <span class="team__content-name ">Оператор</span>
+                    <p class="team__content-text">
+                      С радостью поможет подобрать идеальный бургер и оформить заказ.  
+                    </p>
+                  </div>
+                </div>
+                <div class="team__tab"><div class="team__link title  ">Ричард Джеймс</div></div>
+                <div class="team__content content ">
+                  <img src="img/team-img.jpg" alt="" class="team__image">
+                  <div class="team__content-maintext">
+                    <span  class="team__content-name ">Оператор</span>
+                    <p class="team__content-text">
+                    С радостью поможет подобрать идеальный бургер и оформить заказ.  
+                  </p>
+                  </div>
+                </div>
+                <div class="team__tab"><div class="team__link title">Джейк Финн</div></div>
+                <div class="team__content ">
+                  <img src="img/team-img.jpg" alt="" class="team__image">
+                  <div class="team__content-maintext">
+                    <span class="team__content-name ">Оператор</span>
+                    <p class="team__content-text">
+                      С радостью поможет подобрать идеальный бургер и оформить заказ.  
+                    </p>
+                  </div>
+                </div>
+                <div class="team__tab"><div class="team__link title">Николай Иванов</div></div>
+                <div class="team__content ">
+                  <img src="img/team-img.jpg" alt="" class="team__image">
+                  <div class="team__content-maintext">
+                    <span class="team__content-name ">Оператор</span>
+                    <p class="team__content-text">С радостью поможет подобрать идеальный бургер и оформить заказ.  </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="reviews">
           <ul class="reviews__group">
-            <li class="reviews__box" style="background-image: url('./img/reviews/man-1.png');">
+            <li class="reviews__box" style="background-image: url('./img/reviews/man-1.jpg');">
               <div class="reviews__content">
                 <h3 class="reviews__content-name">Елена Орлова</h3>
                 <p class="reviews__content-text">
@@ -123,7 +180,7 @@
                 <button class="reviews__content-btn">Подробнее</button>
               </div>
             </li>
-            <li class="reviews__box" style="background-image: url('./img/reviews/man-2.png');">
+            <li class="reviews__box" style="background-image: url('./img/reviews/man-2.jpg');">
               
               <div class="reviews__content">
                 <h3 class="reviews__content-name">Константин Спилберг</h3>
@@ -133,7 +190,7 @@
                 <button class="reviews__content-btn">Подробнее</button>
               </div>
             </li>
-            <li class="reviews__box" style="background-image: url('./img/reviews/man-3.png');">
+            <li class="reviews__box" style="background-image: url('./img/reviews/man-3.jpg');">
               <div class="reviews__content">
                 <h3 class="reviews__content-name">Лилия Яковлева</h3>
                 <p class="reviews__content-text">
@@ -142,7 +199,7 @@
                 <button class="reviews__content-btn">Подробнее</button>
               </div>
             </li>
-            <li class="reviews__box" style="background-image: url('./img/reviews/man-4.png');">
+            <li class="reviews__box" style="background-image: url('./img/reviews/man-4.jpg');">
               <div class="reviews__content">
                 <h3 class="reviews__content-name">Дмитрий Вербицкий</h3>
                 <p class="reviews__content-text">
@@ -151,7 +208,7 @@
                 <button class="reviews__content-btn">Подробнее</button>
               </div>
             </li>
-            <li class="reviews__box" style="background-image: url('./img/reviews/man-5.png');">
+            <li class="reviews__box" style="background-image: url('./img/reviews/man-5.jpg');">
               <div class="reviews__content">
                 <h3 class="reviews__content-name">Джабриель Тието</h3>
                 <p class="reviews__content-text">
@@ -160,7 +217,7 @@
                 <button class="reviews__content-btn">Подробнее</button>
               </div>
             </li>
-            <li class="reviews__box" style="background-image: url('./img/reviews/man-6.png');">
+            <li class="reviews__box" style="background-image: url('./img/reviews/man-6.jpg');">
               <div class="reviews__content">
                 <h3 class="reviews__content-name">Елизавета Кукиш</h3>
                 <p class="reviews__content-text">
@@ -169,7 +226,7 @@
                 <button class="reviews__content-btn">Подробнее</button>
               </div>
             </li>
-            <li class="reviews__box" style="background-image: url('./img/reviews/man-7.png');">
+            <li class="reviews__box" style="background-image: url('./img/reviews/man-7.jpg');">
               <div class="reviews__content">
                 <h3 class="reviews__content-name">Петр Аркадьевич</h3>
                 <p class="reviews__content-text">
@@ -178,7 +235,7 @@
                 <button class="reviews__content-btn">Подробнее</button>
               </div>
             </li>
-            <li class="reviews__box" style="background-image: url('./img/reviews/man-8.png');">
+            <li class="reviews__box" style="background-image: url('./img/reviews/man-8.jpg');">
               <div class="reviews__content">
                 <h3 class="reviews__content-name">Никита Сперанский</h3>
                 <p class="reviews__content-text">
@@ -191,7 +248,8 @@
         </section>
       </div>
       </div>
-
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
     
     
   </body>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'LifehackMedium';
   src: url("../fonts/LifehackMedium.eot");
@@ -225,6 +226,10 @@ p {
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
 
+.icon {
+  display: block;
+  margin: 0 auto; }
+
 .best {
   background-image: url("../img/best-bg.png");
   background-size: cover; }
@@ -284,7 +289,9 @@ p {
     min-height: 18.75rem;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    -webkit-filter: saturate(0%);
+    filter: saturate(0%);
     -webkit-box-flex: 5;
     -webkit-flex-grow: 5;
     -ms-flex-positive: 5;
@@ -337,5 +344,73 @@ p {
         .reviews__group .reviews__box .reviews__content-btn:hover {
           background-color: #1f2122;
           cursor: pointer; }
+
+.team {
+  background-image: url("../img/team-bg.png");
+  background-size: cover;
+  position: relative; }
+  .team__container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background: rgba(49, 52, 54, 0.8); }
+    .team__container .team__wrap {
+      height: 100%;
+      margin-left: 5rem; }
+      .team__container .team__wrap .team__title {
+        margin-top: 5.625rem;
+        color: #f9b43b;
+        padding-bottom: 5.625rem; }
+  .team__accordion .content {
+    display: block !important; }
+  .team__accordion .team__tab {
+    margin-top: 1.25rem;
+    cursor: pointer; }
+    .team__accordion .team__tab .team__link {
+      font-size: 14px;
+      color: #ffffff;
+      position: relative;
+      text-decoration: none; }
+      .team__accordion .team__tab .team__link:hover {
+        color: #f9b43b; }
+  .team__accordion .team__link:before {
+    content: "";
+    position: absolute;
+    /* Абсолютное позиционирование */
+    left: -20px;
+    bottom: 2px;
+    /* Положение треугольника */
+    border: 5px solid transparent;
+    /* Прозрачные границы */
+    border-top: 5px solid #f9b43b;
+    /* Добавляем треугольник */ }
+  .team__accordion .team__content {
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    position: relative;
+    display: none; }
+    .team__accordion .team__content-name {
+      font-size: 14px;
+      font-family: 'UbuntuMedium'; }
+    .team__accordion .team__content-maintext {
+      position: absolute;
+      left: 110px;
+      top: 15px;
+      max-width: 14.6875rem; }
+      .team__accordion .team__content-maintext .team__content-name {
+        font-family: 'UbuntuB';
+        color: white;
+        margin-top: -10px; }
+      .team__accordion .team__content-maintext .team__content-text {
+        margin-top: 10px;
+        font-family: 'UbuntuLight';
+        color: white;
+        font-size: 14px; }
+    .team__accordion .team__content .team__image {
+      margin-top: 10px;
+      border-radius: 50%; }
 
 /*# sourceMappingURL=main.css.map */
