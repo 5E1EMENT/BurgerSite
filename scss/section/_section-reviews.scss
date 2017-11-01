@@ -31,7 +31,7 @@
 			padding-top:rem(50px);
 			padding-left:rem(10px);
 			opacity: 0;
-			&-name {
+			.reviews__name {
 				
 				text-transform: uppercase;
 				@include Gagalin(medium);
@@ -40,7 +40,7 @@
 				font-size: 14px;
 				margin-left: rem(20px);
 			}
-			&-text {
+			.reviews__text {
 				
 				@include ubuntu(medium); 
 			color: white;
@@ -50,7 +50,7 @@
 			margin-left: rem(20px);
 			padding-right:rem(10px);
 			}
-			&-btn {
+			.reviews__btn {
 				margin-top:rem(10px);
 				@include ubuntu(medium); 
 				font-size: 14px;

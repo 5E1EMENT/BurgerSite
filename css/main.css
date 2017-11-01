@@ -101,7 +101,8 @@ p {
 .header {
   height: 100vh;
   background-image: url("../img/video-bg.png");
-  background-size: cover; }
+  background-size: cover;
+  min-height: 650px; }
   .header .container {
     position: relative;
     max-width: 960px;
@@ -131,21 +132,26 @@ p {
       .header .container .header__nav .nav {
         text-align: right; }
         .header .container .header__nav .nav .nav__item {
-          display: inline-block; }
-          .header .container .header__nav .nav .nav__item:hover {
-            text-decoration: underline; }
-        .header .container .header__nav .nav .nav__item:after {
           display: inline-block;
-          content: "";
-          vertical-align: middle;
-          width: 0.3125rem;
-          height: 0.3125rem;
-          border-radius: 0.15625rem;
-          background: white;
-          margin: 0.875rem;
-          margin-top: 0.7rem; }
-        .header .container .header__nav .nav li.nav_item:after:nth-last-child {
-          content: none; }
+          font-size: 0.8125rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: #ffffff;
+          vertical-align: middle; }
+          .header .container .header__nav .nav .nav__item:after {
+            display: inline-block;
+            content: "";
+            vertical-align: middle;
+            width: 0.3125rem;
+            height: 0.3125rem;
+            border-radius: 0.15625rem;
+            background: white;
+            margin: 0.875rem; }
+          .header .container .header__nav .nav .nav__item:nth-last-child(2):after {
+            content: none; }
+          .header .container .header__nav .nav .nav__item:nth-last-child(2) {
+            margin-right: 0.75rem;
+            margin-top: -2px; }
         .header .container .header__nav .nav .nav__link {
           text-decoration: none;
           text-transform: uppercase;
@@ -166,17 +172,36 @@ p {
           .header .container .header__nav .nav .order-btn:hover {
             background-color: #c1401e; }
     .header .container .header__content {
-      position: relative; }
+      position: relative;
+      height: 70%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
       .header .container .header__content .header__content-left {
         float: left; }
         .header .container .header__content .header__content-left .header_burger {
-          margin-top: 20%;
           padding: 0; }
       .header .container .header__content .header__content-right {
-        vertical-align: top;
-        float: left;
-        margin-left: 10px;
-        margin-top: 20%; }
+        vertical-align: middle;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-left: 10px; }
         .header .container .header__content .header__content-right .header__title {
           color: #f9b43b; }
         .header .container .header__content .header__content-right .header__title-text {
@@ -247,29 +272,31 @@ p {
       color: #2f3234;
       text-align: center;
       margin-bottom: 9%; }
-    .best .container .best__content .best__content-fresh {
-      width: 33.3%;
-      float: left; }
-    .best .container .best__content .best__content-handy {
-      width: 33.3%;
-      float: left; }
-    .best .container .best__content .best__content-natural {
-      width: 33.3%;
-      float: left; }
-    .best .container .best__content img {
-      display: block;
-      margin: 0 auto; }
-    .best .container .best__content .best__text {
-      font-family: 'LifehackMedium';
-      font-size: 24px;
-      text-align: center;
-      color: #2f3234; }
-    .best .container .best__content .best__description {
-      font-family: 'UbuntuMedium';
-      font-size: 14px;
-      color: #696868;
-      line-height: 1.5;
-      text-align: center; }
+    .best .container .best__content {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .best .container .best__content .best__content-fresh {
+        width: 33.3%; }
+      .best .container .best__content .best__content-handy {
+        width: 33.3%; }
+      .best .container .best__content .best__content-natural {
+        width: 33.3%; }
+      .best .container .best__content img {
+        display: block;
+        margin: 0 auto; }
+      .best .container .best__content .best__text {
+        font-family: 'LifehackMedium';
+        font-size: 24px;
+        text-align: center;
+        color: #2f3234; }
+      .best .container .best__content .best__description {
+        font-family: 'UbuntuMedium';
+        font-size: 14px;
+        color: #696868;
+        line-height: 1.5;
+        text-align: center; }
 
 .reviews__group {
   width: 100%;
@@ -320,14 +347,14 @@ p {
       padding-top: 3.125rem;
       padding-left: 0.625rem;
       opacity: 0; }
-      .reviews__group .reviews__box .reviews__content-name {
+      .reviews__group .reviews__box .reviews__content .reviews__name {
         text-transform: uppercase;
         font-family: 'GagalinRegular';
         font-weight: normal;
         color: white;
         font-size: 14px;
         margin-left: 1.25rem; }
-      .reviews__group .reviews__box .reviews__content-text {
+      .reviews__group .reviews__box .reviews__content .reviews__text {
         font-family: 'UbuntuMedium';
         color: white;
         font-size: 14px;
@@ -335,7 +362,7 @@ p {
         line-height: 1.6;
         margin-left: 1.25rem;
         padding-right: 0.625rem; }
-      .reviews__group .reviews__box .reviews__content-btn {
+      .reviews__group .reviews__box .reviews__content .reviews__btn {
         margin-top: 0.625rem;
         font-family: 'UbuntuMedium';
         font-size: 14px;
@@ -347,7 +374,7 @@ p {
         border: none;
         outline: none;
         margin-left: 1.25rem; }
-        .reviews__group .reviews__box .reviews__content-btn:hover {
+        .reviews__group .reviews__box .reviews__content .reviews__btn:hover {
           -webkit-transition: all 0.2s;
           -o-transition: all 0.2s;
           transition: all 0.2s;
