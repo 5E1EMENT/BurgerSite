@@ -34,7 +34,9 @@
 		font-size: 13px;
 		.nav {
 			text-align: right;
+
 				.nav__item {
+
 				display: inline-block;
     font-size: rem(13px);
     font-weight: 500;
@@ -44,9 +46,10 @@
     &:after {
         display: inline-block;
         content: "";
-        vertical-align: middle;
+        vertical-align:middle;
         @include circle(rem(5px), white);
         margin: rem(14px);
+        margin-top:10px;
     }
     &:nth-last-child(2):after{
        content: none;
@@ -54,7 +57,7 @@
     }
     &:nth-last-child(2) {
     	margin-right:rem(12px);
-    	margin-top:-2px;
+    	margin-top:-3px;
     }
 			}
 

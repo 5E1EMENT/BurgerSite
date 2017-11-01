@@ -146,12 +146,13 @@ p {
             height: 0.3125rem;
             border-radius: 0.15625rem;
             background: white;
-            margin: 0.875rem; }
+            margin: 0.875rem;
+            margin-top: 10px; }
           .header .container .header__nav .nav .nav__item:nth-last-child(2):after {
             content: none; }
           .header .container .header__nav .nav .nav__item:nth-last-child(2) {
             margin-right: 0.75rem;
-            margin-top: -2px; }
+            margin-top: -3px; }
         .header .container .header__nav .nav .nav__link {
           text-decoration: none;
           text-transform: uppercase;
