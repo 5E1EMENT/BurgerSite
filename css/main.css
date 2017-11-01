@@ -372,19 +372,33 @@ p {
         margin-top: 5.625rem;
         color: #f9b43b;
         padding-bottom: 5.625rem; }
-  .team__accordion .content {
-    display: block !important; }
+  .team__accordion .content-active .team__name.title {
+    color: #f9b43b; }
+  .team__accordion .content-active .team__name:before {
+    content: "";
+    position: absolute;
+    /* Абсолютное позиционирование */
+    left: -20px;
+    bottom: 2px;
+    /* Положение треугольника */
+    border: 5px solid transparent;
+    /* Прозрачные границы */
+    border-bottom: 5px solid #f9b43b;
+    /* Добавляем треугольник */ }
+  .team__accordion .content-active .team__content {
+    overflow: visible;
+    height: 100%; }
   .team__accordion .team__tab {
     margin-top: 1.25rem;
     cursor: pointer; }
-    .team__accordion .team__tab .team__link {
+    .team__accordion .team__tab .team__name {
       font-size: 14px;
       color: #ffffff;
       position: relative;
       text-decoration: none; }
-      .team__accordion .team__tab .team__link:hover {
+      .team__accordion .team__tab .team__name:hover {
         color: #f9b43b; }
-  .team__accordion .team__link:before {
+  .team__accordion .team__name:before {
     content: "";
     position: absolute;
     /* Абсолютное позиционирование */
@@ -396,18 +410,30 @@ p {
     border-top: 5px solid #f9b43b;
     /* Добавляем треугольник */ }
   .team__accordion .team__content {
+    height: 0;
+    overflow: hidden;
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
     position: relative;
-    display: none; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    min-width: 16.25rem; }
     .team__accordion .team__content-name {
       font-size: 14px;
       font-family: 'UbuntuMedium'; }
     .team__accordion .team__content-maintext {
-      position: absolute;
-      left: 110px;
-      top: 15px;
+      margin-left: 1.875rem;
+      margin-top: 15px;
       max-width: 14.6875rem; }
       .team__accordion .team__content-maintext .team__content-name {
         font-family: 'UbuntuB';

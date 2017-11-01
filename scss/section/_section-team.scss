@@ -21,14 +21,28 @@
 
 	}
 	&__accordion {
-		.content {
-			display: block !important;
+		.content-active {
+			.team__name.title{
+				color: $orange;
+			}
+			.team__name:before {
+			content: "";
+    		position: absolute; /* Абсолютное позиционирование */
+    		left: -20px; bottom: 2px; /* Положение треугольника */
+    		border: 5px solid transparent; /* Прозрачные границы */
+    		border-bottom: 5px solid $orange; /* Добавляем треугольник */
+		}
+			.team__content {
+				overflow: visible;
+				height:100%;
+
+			}
 			
 		}
 		.team__tab{
 			margin-top: rem(20px);
 			cursor: pointer;
-		.team__link {
+		.team__name {
 			font-size: 14px;
 			color: $white;
 			position:relative;
@@ -39,28 +53,32 @@
 			}
 		}
 	}
-		.team__link:before {
+		.team__name:before {
 			content: "";
-    			 position: absolute; /* Абсолютное позиционирование */
-    left: -20px; bottom: 2px; /* Положение треугольника */
-    border: 5px solid transparent; /* Прозрачные границы */
-    border-top: 5px solid $orange; /* Добавляем треугольник */
+    		position: absolute; /* Абсолютное позиционирование */
+    		left: -20px; bottom: 2px; /* Положение треугольника */
+    		border: 5px solid transparent; /* Прозрачные границы */
+    		border-top: 5px solid $orange; /* Добавляем треугольник */
 		}
 		.team__content {
+			height: 0;
+			overflow: hidden;
 			transition: all 0.2s;
 			position: relative;
-			display:none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			min-width: rem(260px);
 			&-name {
 				font-size: 14px;
 				@include ubuntu(medium);
 				
 			}
 			&-maintext {
-				position:absolute;
-				left: 110px;
-				top: 15px;
-				max-width: rem(235px);
 				
+				margin-left: rem(30px);
+				margin-top: 15px;
+				max-width: rem(235px);
 				.team__content-name {
 					@include ubuntu(bold);
 					color: white;
