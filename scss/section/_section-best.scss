@@ -13,6 +13,13 @@
 		max-width: 960px;
 		margin: 0 auto;
 		height:100%;
+		.wrap {
+	@include clearfix;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height:100%;
+}
 		
 	 .best__title-text {
 	 	color: #2f3234;
@@ -21,18 +28,15 @@
 	 }
 	 .best__list {
 	 	display: flex;
-
-	 	.best__item {
-	 		width: 33.3%;
-
-	 	}
+		
+	 	
 	 	
 	 	img {
 	 		display: block;
 	 		margin: 0 auto;
 
 	 	}
-	 	.best__text {
+	 	.best__title {
 	 		@include Lifehack(medium);
 	 		font-size: 24px;
 	 		text-align: center;

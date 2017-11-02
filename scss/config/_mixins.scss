@@ -1,16 +1,16 @@
 
 @mixin ubuntu($style: ubuntu) {
     @if $style == bold {
-        font-family: 'UbuntuB';
+        font-family: 'UbuntuB' , Helvetica , sans-serif;
     }
     @if $style == medium {
-        font-family: 'UbuntuMedium';
+        font-family: 'UbuntuMedium' , Helvetica , sans-serif;
     }
     @if $style == regular {
-        font-family: 'UbuntuRegular';
+        font-family: 'UbuntuRegular' , Helvetica , sans-serif;
     }
     @if $style == light {
-        font-family: 'UbuntuLight';
+        font-family: 'UbuntuLight' , Helvetica , sans-serif;
     }
 }
 
@@ -27,12 +27,12 @@
 
 @mixin Lifehack($style: Lifehack) {
     @if $style == medium {
-        font-family: 'LifehackMedium';
+        font-family: 'LifehackMedium' , Helvetica , sans-serif;
     }
 }
 @mixin Gagalin($style: Gagalin) {
     @if $style == medium {
-        font-family: 'GagalinRegular';
+        font-family: 'GagalinRegular' , Helvetica , sans-serif;
     }
 }
 @mixin clearfix {

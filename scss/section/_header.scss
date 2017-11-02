@@ -22,9 +22,9 @@
 		}
 		.logo__pic {
 			margin-top: 10px;
-			margin-left: -10px;
-			max-width:92px;
-			max-height: 70px;
+			
+			max-width:98.265px;
+			max-height: 74.317px;
 			display: block;
 		}
 	}
@@ -33,23 +33,29 @@
 		padding-top: 33px; 
 		font-size: 13px;
 		.nav {
-			text-align: right;
-
+			display: flex;
+			justify-content:space-around;
+			align-items: center;
 				.nav__item {
 
-				display: inline-block;
+				display:flex;
+				align-items: center;
     font-size: rem(13px);
     font-weight: 500;
     text-transform: uppercase;
     color: #ffffff;
     vertical-align: middle;
+    &:hover {
+    	text-decoration: underline;
+    }
     &:after {
-        display: inline-block;
+        display: block;
         content: "";
         vertical-align:middle;
         @include circle(rem(5px), white);
-        margin: rem(14px);
-        margin-top:10px;
+        margin-left: rem(19px);
+        margin-right: rem(19px);
+        
     }
     &:nth-last-child(2):after{
        content: none;
@@ -57,7 +63,7 @@
     }
     &:nth-last-child(2) {
     	margin-right:rem(12px);
-    	margin-top:-3px;
+    	
     }
 			}
 
@@ -75,6 +81,7 @@
 
 		}
 		.order-btn {
+			display: inline-block;
 			text-decoration: none;
 			padding: 10px;
 			background-color: #e45028;
@@ -84,7 +91,7 @@
 			border: none;
 			outline: none;
 			cursor: pointer;
-			vertical-align: baseline;
+			
 
 			&:hover {
 				background-color: #c1401e;
@@ -97,14 +104,14 @@
 	//==========CONTENT===========//
 	.header__content {
 		position: relative;
-		height:70%;
+		height:75%;
 		display: flex;
 		align-items: center;
 		.header__content-left {
 			
-			float:left;
 			.header_burger {
-				
+				display:block;
+				max-width:100%;
 				padding: 0;
 			}
 		}
@@ -120,9 +127,10 @@
 			
 			 .header__title {
 			 	color: #f9b43b;
-			 	
+			 	margin-bottom: rem(30px);
 			 	}
 			 .header__title-text {
+			 	margin-left:rem(30px);
 			 	color: #fff;
 			 	line-height: 1;
 			 	@include Lifehack(medium);
