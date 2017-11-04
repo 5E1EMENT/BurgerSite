@@ -34,10 +34,10 @@
 		font-size: 13px;
 		.nav {
 			display: flex;
-			justify-content:space-around;
+			justify-content:flex-end;
 			align-items: center;
 				.nav__item {
-
+				
 				display:flex;
 				align-items: center;
     font-size: rem(13px);
@@ -53,8 +53,8 @@
         content: "";
         vertical-align:middle;
         @include circle(rem(5px), white);
-        margin-left: rem(19px);
-        margin-right: rem(19px);
+        margin-left: rem(15px);
+        margin-right: rem(15px);
         
     }
     &:nth-last-child(2):after{

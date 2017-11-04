@@ -19,7 +19,7 @@
 		box-sizing: border-box;
 		&:hover .reviews__content {
 			
-			@include clearfix;
+			
 			opacity:1;
 			transition: all 0.2s;
 			width: 100%;

@@ -185,11 +185,7 @@
         </section>
         <!--Секция Меню-->
         <section class="menu">
-          <div class="container">
-            <div class="wrap">
-              
-            </div>
-          </div>
+          
         </section>
         <!--Секция Отзывы-->
         <section class="reviews">
@@ -269,11 +265,13 @@
             </li>
           </ul>
         </section>
+        <!--Секция Заказать-->
         <section class="order">
           <div class="container">
             <div class="wrap">
               <h2 class="order__title title">закажите доставку</h2>
               <div class="form">
+
                 <form action="" class="form__order">
                   <div class="form__content">
                     <div class="form__row">
@@ -312,11 +310,85 @@
                       </label>
                     </div>
                   </div>
+                  <div class="form__content-desc">
+                    <div class="form__row">
+                      <label class="form__block">
+                        <span class="form__block-title">Комментарий</span>
+                        <textarea name="" id="" class="form__area" cols="30" rows="10"></textarea>
+                      </label>
+                      
+                      
+                    </div>
+                    <div class="form__row">
+                      <label  class="form__block">
+                        <div class="form__block-radio">
+                          <input id="cash" type="radio" name="gender" value="cash" class="cash-pay">
+                          <label for="cash" class="cash-text">Потребуется сдача</label>
+                          <input id="card" type="radio" name="gender" value="card" class="card-pay">
+                          <label for="card" class="card-text">Оплата по карте</label>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="form__row">
+                      <label  class="form__block checkbox">
+                        <input id="ready" type="checkbox" class="checkbox-call">
+                        <label for="ready" class="checked-call" >Не перезванивать</label>
+                        
+                      </label>
+                    </div>
+                    <div class="form__row">
+                      <label  class="form__block form__buttons">
+                        <button type="button" class="form-order order-btn">Заказать</button>
+                        <button type="button" class="form-order clear-btn">Очистить</button>
+                      </label>
+                    </div>
+                  </div>
                 </form>
+                
               </div>
             </div>
           </div>
         </section>
+        <section class="map">
+          
+        </section>
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__nav">
+              <div class="footer__nav-contacts">
+                <p class="adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</p>
+                <a href="#" class="phone__link">
+                  <span class="phone">+7 (812) 377-13-77</span>
+                </a>
+              </div>
+              <div class="footer__nav-icons">
+                  <a href="" class="vk__link">
+                    <svg class="icon" width="36.711px" height="36.711px" viewBox = "0 0 36.711 36.711" >
+                      <use xlink:href="img/icons/sprite.svg#vk" />
+                    </svg>
+                  </a>
+                  <a href="" class="fb__link">
+                    <svg class="icon" width="36.711px" height="36.711px" viewBox = "0 0 36.711 36.711" >
+                      <use xlink:href="img/icons/sprite.svg#fb" />
+                    </svg>
+                  </a>
+                  <a href="" class="insta__link">
+                    <svg class="icon" width="36.663px" height="36.664px" viewBox = "0 0 36.711 36.711" >
+                      <use xlink:href="img/icons/sprite.svg#inst" />
+                    </svg>
+                  </a>
+                  <a href="" class="twitter__link">
+                    <svg class="icon" width="36.711px" height="36.711px" viewBox = "0 0 36.711 36.711" >
+
+                      <use xlink:href="img/icons/sprite.svg#tw" />
+                    </svg>
+                  </a>
+                
+              </div>
+            </div>
+
+          </div>
+        </footer>
       </div>
       </div>
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

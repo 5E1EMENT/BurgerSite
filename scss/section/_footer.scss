@@ -1,0 +1,54 @@
+.footer {
+	width:100%;
+	background-color: black;
+	.container{
+		position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		height:100%;
+		.footer__nav {
+			display:flex;
+			margin-top:-62px;
+			justify-content: space-around;
+			bottom:0;
+			width:100%;
+			background-color: black;
+			&-contacts {
+				margin-top:10px;
+				margin-bottom:10px;
+				width:50%;
+				color:white;
+				@include ubuntu(light);
+				font-size: 14px;
+				.adress {
+					padding-bottom:10px; 
+				}
+				.phone__link{
+					text-decoration: none;
+				}
+				.phone {
+					@include ubuntu(bold);
+					color: $btn;
+					font-size: 14px;
+				}
+			}
+			&-icons {
+				width:50%;
+				display:flex;
+				justify-content: flex-end;
+				align-items: center;
+				vertical-align: middle;
+				.icon {
+					margin-right:20px;
+					width:20px;
+					height:20px;
+					fill:#575757;
+					&:hover {
+						fill: $white;
+					}
+				}
+			}
+		}
+	}
+
+}

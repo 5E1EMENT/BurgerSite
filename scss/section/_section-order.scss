@@ -15,6 +15,10 @@
 		font-size: 14px;
 		display:block;
 	}
+	.form__order {
+		display: flex;
+		
+	}
 	.form__content {
 		width:50%;
 	}
@@ -26,7 +30,7 @@
 	}
 	.form__row {
 		display: flex;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 	}
 	.form__block {
 		flex:1;
@@ -34,5 +38,174 @@
 		&:last-child {
 			margin-right:0;
 		}
+		.form__block-title {
+			padding-bottom:5px;
+		}
 	}
+	.form__content-desc {
+			@include ubuntu(light);
+			color:$white;
+			margin-left:20px;
+		    width: 50%;
+		    height:90%;
+		.form__area {
+			width:100%;
+			resize: none;
+			height:rem(93px);
+			border-radius: 5px;
+		}
+		.form__block-radio label:before {
+		border-radius: 8px;
+		}
+		.form__block-radio {
+			display: flex;
+			.card-text {
+				cursor: pointer;
+				position: relative;
+				margin-top: -2px;
+				margin-left:33px;
+			
+			}
+			.card-text:before {
+				content: "";
+				display: inline-block;			
+				width: 16px;
+				height: 16px;
+				margin-left:-25px;
+				position: absolute;
+				left: 0;
+				bottom: 1px;
+				background-color: #fff;
+				margin-right:7px;
+			}
+			.cash-text{
+				margin-left:25px;
+				margin-top: -2px;
+				cursor: pointer;
+				position: relative;			
+			}
+			.cash-text:before {
+				content: "";
+				display: inline-block;			
+				width: 16px;
+				height: 16px;
+				margin-left:-25px;
+				margin-right: 10px;
+				position: absolute;
+				left: 0;
+				bottom: 2px;
+				background-color: #fff;
+				
+
+				
+			}
+			input[type=radio]:checked + label:before {
+    		content: "\2022";
+    		color: $btn;		
+    		font-size: 35px;
+    		text-align: center;
+    		line-height: 16px;
+}
+			.card-pay {
+				display:none;
+				cursor: pointer;
+				width:15px;
+				height:15px;
+				margin-left:50px;
+				margin-right:7px;
+			}
+			.cash-pay {
+				display:none;
+				cursor: pointer;
+				width:15px;
+				height:15px;
+				margin-right:7px;
+			}
+		}
+		.checkbox {
+			display:flex;
+			align-items: center;
+		}
+		.checked-call {
+			position:relative;
+			cursor: pointer;
+		}
+		.checkbox-call {
+			display:none;
+
+		}
+		.checked-call:before {
+			content:'';
+			display:inline-block;
+			width:15px;
+			height:15px;
+			border-radius:1px;
+			background:white;
+			vertical-align: middle;
+			margin-right:10px;
+
+
+		}
+		.checkbox-call:checked + .checked-call:after {
+			content:'';
+			display:inline-block;
+			width:12px;
+			height:10px;
+			background: url(../img/icons/checkmark.png);
+			background-size: cover;
+			vertical-align: middle;
+			position:absolute;
+			left: 1.5px;
+			top:5px;
+			transition: all .3s; 
+			
+
+		}
+		
+		
+		
+		
+		.form__row {
+		.form__buttons {
+			display:flex;
+			
+		}
+	}
+		.order-btn {
+
+			@include ubuntu(medium);
+			font-size: 13px;
+			color:$white;
+			display: block;
+			text-decoration: none;
+			padding: 10px;
+			background-color: $btn;
+			width: 100px;
+			height:35px;
+			border-radius: 5px;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			text-transform: uppercase;
+			margin-right:15px;
+			&:hover {
+				background-color: #c1401e ;
+			}
+		}
+		.clear-btn {
+			width: 70px;
+			height:35px;
+			vertical-align: baseline;
+			@include ubuntu(light);
+			font-size: 14px;
+			display: block;
+			background-color: transparent;
+			border:none;
+			color: $white;
+			cursor: pointer;
+			outline: none;
+			
+		}
+	}
+
 }
