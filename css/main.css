@@ -234,7 +234,8 @@ footer {
 
 .footer {
   width: 100%;
-  background-color: black; }
+  background-image: url(../img/footer-bg.png);
+  background-size: cover; }
   .footer .container {
     position: relative;
     max-width: 960px;
@@ -250,8 +251,7 @@ footer {
       -ms-flex-pack: distribute;
       justify-content: space-around;
       bottom: 0;
-      width: 100%;
-      background-color: black; }
+      width: 100%; }
       .footer .container .footer__nav-contacts {
         margin-top: 10px;
         margin-bottom: 10px;
