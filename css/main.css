@@ -264,7 +264,16 @@ footer {
         .footer .container .footer__nav-contacts .phone {
           font-family: 'UbuntuB' , Helvetica , sans-serif;
           color: #e45028;
-          font-size: 14px; }
+          font-size: 14px;
+          margin-left: 15px; }
+        .footer .container .footer__nav-contacts .phone:before {
+          content: '';
+          background: url("../img/icons/phone.svg");
+          position: absolute;
+          left: 0px;
+          bottom: 13px;
+          width: 10px;
+          height: 11px; }
       .footer .container .footer__nav-icons {
         width: 50%;
         display: -webkit-box;

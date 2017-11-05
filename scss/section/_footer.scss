@@ -31,6 +31,17 @@
 					@include ubuntu(bold);
 					color: $btn;
 					font-size: 14px;
+					margin-left: 15px;
+				}
+				.phone:before {
+					content: '';
+					background: url("../img/icons/phone.svg");
+   position:absolute;
+   left: 0px;
+   bottom: 13px;
+   width:10px;
+   height:11px;
+   
 				}
 			}
 			&-icons {
