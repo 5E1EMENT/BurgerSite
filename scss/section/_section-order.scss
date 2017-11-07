@@ -180,7 +180,7 @@
 			vertical-align: middle;
 			position:absolute;
 			left: 1.5px;
-			top:rem(5px);
+			top:rem(6px);
 			transition: all .3s; 
 			
 
@@ -230,6 +230,9 @@
 			color: $white;
 			cursor: pointer;
 			outline: none;
+			&:hover {
+				background-color: transparent ;
+			}
 			
 		}
 	}
