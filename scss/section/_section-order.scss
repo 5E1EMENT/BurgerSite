@@ -180,9 +180,11 @@
 			vertical-align: middle;
 			position:absolute;
 			left: 1.5px;
-			top:rem(6px);
+			top:rem(8px);
 			transition: all .3s; 
-			
+			@include tablets {
+				top:rem(7px)
+			}
 
 		}
 		

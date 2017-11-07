@@ -1191,10 +1191,13 @@ textarea:focus {
       vertical-align: middle;
       position: absolute;
       left: 1.5px;
-      top: 0.375rem;
+      top: 0.5rem;
       -webkit-transition: all .3s;
       -o-transition: all .3s;
       transition: all .3s; }
+      @media screen and (max-width: 768px) {
+        .order .form__content-desc .checkbox-call:checked + .checked-call:after {
+          top: 0.4375rem; } }
     .order .form__content-desc .form__row .form__buttons {
       display: -webkit-box;
       display: -webkit-flex;
