@@ -1,10 +1,15 @@
 .reviews__group {
 	 height: 100%;
+	 width:100%;
   display: flex;
   flex-wrap: wrap;
 	.reviews__box {
 		 width: 25%;
   height: 50%;
+  @include tablets {
+  	width: 50%;
+  	height: 25%;
+  }
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -25,36 +30,62 @@
 			padding-left:rem(10px);
 			opacity: 0;
 			.reviews__name {
-				
+				@include tablets {
+  			text-align: center;
+  			margin-top:rem(-20px);
+  			margin-left:rem(-10px);
+  }
+  @include phones {
+  	margin-left:0;
+  	font-size: rem(20px);
+  }
 				text-transform: uppercase;
 				@include Gagalin(medium);
 				font-weight: normal;
 				color: white;
-				font-size: 14px;
+				font-size: rem(14px);
 				margin-left: rem(20px);
 			}
 			.reviews__text {
 				
 				@include ubuntu(medium); 
 			color: white;
-			font-size: 14px;
+			font-size: rem(14px);
 			text-align: left;
 			line-height:1.6;
 			margin-left: rem(20px);
 			padding-right:rem(10px);
+			@include tablets {
+  			text-align: center;
+  			}
+  			@include phones {
+  				display:none;
+  			}
+
 			}
 			.reviews__btn {
 				margin-top:rem(10px);
 				@include ubuntu(medium); 
-				font-size: 14px;
-				padding:13px;
+				font-size: rem(14px);
+				padding: rem(13px);
 				background-color: #2f3234;
 				text-transform: uppercase;
 				color:white;
-				border-radius: 5px;
+				border-radius: rem(5px);
 				border: none;
 				outline: none;
 				margin-left:rem(20px);
+				@include tablets {
+  			display: block;
+  			margin: 0 auto;
+  			margin-top: rem(10px);
+  			padding: rem(10px);
+  			}	
+  			@include phones {
+  				margin-top: rem(50px);
+
+  			}
+
 				&:hover {
 					transition: all 0.2s;
 					background-color: #1f2122;

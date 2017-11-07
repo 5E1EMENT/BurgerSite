@@ -1,13 +1,38 @@
-.icon {
-	display: block;
-	margin: 0 auto;
-}
+
 .best {
 	@include clearfix;
 	
 	background-image: url("../img/best-bg.png") ;
 	background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-position: center center;
+	.best__list {
+		display: flex;
+		@include phones {
+			flex-direction: column;
+		}
+	}
+	.best__item {
+  margin-bottom: rem(50px);
+  padding: 0 rem(15px);
+  display: flex;
+  flex-direction: column;
+.best__text.hand {
+	    margin-left: rem(20px);
+}
+.best__icon {
+	margin-right: rem(15px);
 	
+}
+
+  @include phones {
+    flex-direction: row;
+
+  }
+}
+
 	.container {
 		position: relative;
 		max-width: 960px;
@@ -19,6 +44,7 @@
 	flex-direction: column;
 	justify-content: center;
 	height:100%;
+
 }
 		
 	 .best__title-text {
@@ -28,27 +54,32 @@
 	 }
 	 .best__list {
 	 	display: flex;
+		@include tablets {
 		
+	}
 	 	
 	 	
-	 	img {
-	 		display: block;
-	 		margin: 0 auto;
-
-	 	}
+	 	
 	 	.best__title {
 	 		@include Lifehack(medium);
-	 		font-size: 24px;
+	 		font-size: rem(24px);
 	 		text-align: center;
 	 		color: #2f3234;
+	 		@include phones {
+	 			text-align: left;
+	 		}
 
 	 	}
 	 	.best__description {
 	 		@include ubuntu(medium); 
-	 		font-size: 14px;
+	 		font-size: rem(14px);
 			color: #696868;
 			line-height: 1.5;
 			text-align: center;
+			@include phones {
+	 			text-align: left;
+
+	 		}
 	 	}
 	 }
 	}

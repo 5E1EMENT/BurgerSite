@@ -7,34 +7,57 @@
 		top: 0;
     	bottom: 0;
     	right: 0;
+    	@include tablets {
+			width: 100%;
+		}
 		width: 50%;
 		background: rgba(49,52,54,.8);
 		.team__wrap {
 			height:100%;
 			margin-left: rem(80px);
+			@include tablets {
+			margin-left: 0;
+		}
 			.team__title {
 				margin-top: rem(90px);
 			color:$orange;
 			padding-bottom: rem(90px);
+			@include tablets {
+			text-align: center;
+		}
 			}
 		}
 
 	}
 	&__accordion {
 		.content-active {
+			@include tablets {
+			display: flex;
+		}
 			.team__name.title{
 				color: $orange;
+				@include tablets {
+			font-size: rem(25px);
+		}
 			}
 			.team__name:before {
 			content: "";
     		position: absolute; /* Абсолютное позиционирование */
-    		left: -20px; bottom: 2px; /* Положение треугольника */
+    		left: rem(-20px); bottom: rem(2px); /* Положение треугольника */
     		border: 5px solid transparent; /* Прозрачные границы */
     		border-bottom: 5px solid $orange; /* Добавляем треугольник */
+    		@include tablets {
+			bottom:rem(20px);
+		}
 		}
 			.team__content {
 				overflow: visible;
 				height:100%;
+				@include tablets {
+			display: flex;
+			flex-direction: column;
+			width:100%;
+		}
 
 			}
 			
@@ -42,11 +65,24 @@
 		.team__tab{
 			margin-top: rem(20px);
 			cursor: pointer;
+			@include tablets {
+			text-align: center;
+			display: flex;
+    flex-direction: column;
+		}
+		.team__link {
+			text-decoration: none;
+		}
 		.team__name {
-			font-size: 14px;
+			font-size: rem(14px);
 			color: $white;
 			position:relative;
 			text-decoration: none;
+			@include tablets {
+			padding-bottom:rem(10px);
+			display: inline-block;
+			font-size: rem(25px);
+		}
 
 			&:hover {
 				color:$orange;
@@ -56,9 +92,12 @@
 		.team__name:before {
 			content: "";
     		position: absolute; /* Абсолютное позиционирование */
-    		left: -20px; bottom: 2px; /* Положение треугольника */
+    		left: rem(-20px); bottom: rem(2px); /* Положение треугольника */
     		border: 5px solid transparent; /* Прозрачные границы */
     		border-top: 5px solid $orange; /* Добавляем треугольник */
+    		@include tablets {
+			top:rem(10px);
+		}
 		}
 		.team__content {
 			height: 0;
@@ -70,30 +109,41 @@
 			justify-content: flex-start;
 			min-width: rem(260px);
 			&-name {
-				font-size: 14px;
+				font-size: rem(14px);
 				@include ubuntu(medium);
-				
+				@include phones {
+					font-size: rem(16px);
+				}
 			}
 			&-maintext {
-				
-				margin-left: rem(30px);
-				margin-top: 15px;
-				max-width: rem(235px);
+				@include tablets {
+					display: block;
+    				margin: 0 auto;
+    				font-size: rem(14px);
+				}
+					margin-left: rem(30px);
+					margin-top: rem(15px);
+					max-width: rem(235px);
 				.team__content-name {
 					@include ubuntu(bold);
 					color: white;
-					margin-top: -10px;
+					margin-top: rem(-10px);
 				}
 				.team__content-text {
-					margin-top:10px;
+					margin-top: rem(10px);
 					@include ubuntu(light);
 					color:white;
-					font-size: 14px;
+					font-size: rem(14px);
 				}
 			}
 			.team__image {
-				margin-top:10px;
+				margin-top: rem(10px);
 				border-radius: 50%;
+				max-width:rem(100px);
+				@include tablets {
+			display: block;
+			margin: 0 auto;
+		}
 			}
 
 			

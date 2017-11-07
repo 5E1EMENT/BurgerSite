@@ -1,6 +1,14 @@
+
 //Config
 @import "config/_variables.scss";
 @import "config/_mixins.scss";
+
+// media 
+@import "layout/_media.scss";
+
+// resolutions 
+$tablets: 768px;
+$phones: 480px; 
 
 //Base
 @import "layout/_fonts.scss";
@@ -17,3 +25,5 @@
 @import "section/_section-menu.scss";
 @import "section/_section-order.scss";
 @import "section/_section-map.scss";
+@import "section/_hamburger-menu.scss"
+

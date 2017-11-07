@@ -12,88 +12,109 @@
 	.form__block-title {
 		color:white;
 		@include ubuntu(light);
-		font-size: 14px;
+		font-size: rem(14px);
 		display:block;
 	}
 	.form__order {
 		display: flex;
-		
+		@include tablets {
+			flex-direction: column;
+			justify-content: center; /*Центрирование по горизонтали*/
+    align-items: center;     /*Центрирование по вертикали */
+		}
+		outline-color: #be8b5e;
 	}
 	.form__content {
 		width:50%;
+		@include tablets {
+			width:67%
+		}
+		@include phones {
+			width:90%
+		}
 	}
 	.form__input {
 		border: none;
-		border-radius: 5px;
-		padding: 5px;
+		border-radius: rem(5px);
+		padding: rem(5px);
 		width:100%;
 	}
 	.form__row {
 		display: flex;
-		margin-bottom: 15px;
+		margin-bottom:rem(15px);
 	}
 	.form__block {
 		flex:1;
-		margin-right:20px;
+		margin-right: rem(20px);
 		&:last-child {
 			margin-right:0;
 		}
 		.form__block-title {
-			padding-bottom:5px;
+			padding-bottom:rem(5px);
 		}
 	}
 	.form__content-desc {
 			@include ubuntu(light);
 			color:$white;
-			margin-left:20px;
+			margin-left:rem(20px);
 		    width: 50%;
 		    height:90%;
+		    @include tablets {
+		    	margin-left: 0;
+			width:67%
+		    }
+		    @include phones {
+			width:90%
+		}
 		.form__area {
 			width:100%;
 			resize: none;
 			height:rem(93px);
-			border-radius: 5px;
+			border-radius: rem(5px);
 		}
 		.form__block-radio label:before {
-		border-radius: 8px;
+		border-radius: rem(8px);
 		}
 		.form__block-radio {
 			display: flex;
+			@include phones {
+				justify-content: center;
+			}
 			.card-text {
 				cursor: pointer;
 				position: relative;
-				margin-top: -2px;
-				margin-left:33px;
+				margin-top: rem(-2px);
+				margin-left:rem(33px);
 			
 			}
 			.card-text:before {
 				content: "";
 				display: inline-block;			
-				width: 16px;
-				height: 16px;
-				margin-left:-25px;
+				width: rem(16px);
+				height: rem(16px);
+				margin-left: rem(-25px);
 				position: absolute;
 				left: 0;
-				bottom: 1px;
+				bottom: rem(1px);
 				background-color: #fff;
-				margin-right:7px;
+				margin-right:rem(7px);
 			}
 			.cash-text{
-				margin-left:25px;
-				margin-top: -2px;
+				margin-left:rem(25px);
+				margin-top: rem(-2px);
 				cursor: pointer;
 				position: relative;			
 			}
 			.cash-text:before {
 				content: "";
 				display: inline-block;			
-				width: 16px;
-				height: 16px;
-				margin-left:-25px;
-				margin-right: 10px;
+				width: rem(16px);
+				height: rem(16px);
+				margin-left:rem(-25px);
+				margin-right: rem(10px);
 				position: absolute;
 				left: 0;
-				bottom: 2px;
+				bottom: rem(2px);
 				background-color: #fff;
 				
 
@@ -102,29 +123,32 @@
 			input[type=radio]:checked + label:before {
     		content: "\2022";
     		color: $btn;		
-    		font-size: 35px;
+    		font-size: rem(35px);
     		text-align: center;
-    		line-height: 16px;
+    		line-height: rem(16px);
 }
 			.card-pay {
 				display:none;
 				cursor: pointer;
-				width:15px;
-				height:15px;
-				margin-left:50px;
-				margin-right:7px;
+				width: rem(15px);
+				height: rem(15px);
+				margin-left:rem(50px);
+				margin-right:rem(7px);
 			}
 			.cash-pay {
 				display:none;
 				cursor: pointer;
-				width:15px;
-				height:15px;
-				margin-right:7px;
+				width:rem(15px);
+				height:rem(15px);
+				margin-right: rem(7px);
 			}
 		}
 		.checkbox {
 			display:flex;
 			align-items: center;
+			@include phones {
+				justify-content: center;
+			}
 		}
 		.checked-call {
 			position:relative;
@@ -137,26 +161,26 @@
 		.checked-call:before {
 			content:'';
 			display:inline-block;
-			width:15px;
-			height:15px;
+			width:rem(15px);
+			height:rem(15px);
 			border-radius:1px;
 			background:white;
 			vertical-align: middle;
-			margin-right:10px;
+			margin-right:rem(10px);
 
 
 		}
 		.checkbox-call:checked + .checked-call:after {
 			content:'';
 			display:inline-block;
-			width:12px;
-			height:10px;
+			width:rem(12px);
+			height:rem(10px);
 			background: url(../img/icons/checkmark.png);
 			background-size: cover;
 			vertical-align: middle;
 			position:absolute;
 			left: 1.5px;
-			top:5px;
+			top:rem(5px);
 			transition: all .3s; 
 			
 
@@ -168,36 +192,38 @@
 		.form__row {
 		.form__buttons {
 			display:flex;
-			
+			@include phones {
+				justify-content: center;
+			}
 		}
 	}
 		.order-btn {
 
 			@include ubuntu(medium);
-			font-size: 13px;
+			font-size: rem(13px);
 			color:$white;
 			display: block;
 			text-decoration: none;
-			padding: 10px;
+			padding: rem(10px);
 			background-color: $btn;
-			width: 100px;
-			height:35px;
-			border-radius: 5px;
+			width: rem(100px);
+			height:rem(35px);
+			border-radius: rem(5px);
 			border: none;
 			outline: none;
 			cursor: pointer;
 			text-transform: uppercase;
-			margin-right:15px;
+			margin-right:rem(15px);
 			&:hover {
 				background-color: #c1401e ;
 			}
 		}
 		.clear-btn {
-			width: 70px;
-			height:35px;
+			width: rem(70px);
+			height:rem(35px);
 			vertical-align: baseline;
 			@include ubuntu(light);
-			font-size: 14px;
+			font-size: rem(14px);
 			display: block;
 			background-color: transparent;
 			border:none;

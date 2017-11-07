@@ -20,7 +20,10 @@
     top: 0;
     left: 0;
     transform: translate(50%, 100%);
-    
+    @include phones {
+        font-size: rem(50px);
+        transform: translate(25%, 50%);
+    }
 
 }
 .menu__list {
@@ -35,7 +38,7 @@
     .menu__subitle-#{$menu} {
         background: url("../img/#{$menu}.jpg") center center no-repeat;
         background-size: cover;     
-        min-width: 80px;
+        min-width: rem(80px);
         height: 100%;
  
         
@@ -81,9 +84,9 @@
 } 
 .menu__text {
     @include ubuntu(medium);
-    font-size: 14px;
+    font-size: rem(14px);
     color: white;
     padding: rem(50px) rem(30px);
-    line-height: 24px;
+    line-height: rem(24px);
     margin: 0;
 }

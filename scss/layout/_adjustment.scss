@@ -3,22 +3,23 @@
 	min-height:100%;
 }
 .wrapper {
-	width: 100%;
-  position: relative;
+	position: relative;
+  width: 100%;
+  // min-width: 940px + 20px;
   min-height: 100%;
+  overflow: hidden;
   
-  height: 100%;
 		}
 .container {
-	position: relative;
+		position: relative;
 		max-width: 960px;
 		margin: 0 auto;
-		
+		width:95%;
 }
 
 
 .title {
-	font-size: 72px;
+	font-size: rem(72px);
 	
 	margin: 0;
 	text-transform: uppercase;

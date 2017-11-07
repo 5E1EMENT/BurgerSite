@@ -1,5 +1,6 @@
 .footer {
 	width:100%;
+	height:rem(62px);
 	background-image: url(../img/footer-bg.png);
 	background-size: cover;
 	.container{
@@ -9,20 +10,24 @@
 		height:100%;
 		.footer__nav {
 			display:flex;
-			margin-top:-62px;
+			margin-top:rem(-62px);
 			justify-content: space-around;
 			bottom:0;
 			width:100%;
+			height:100%;
 			
 			&-contacts {
-				margin-top:10px;
-				margin-bottom:10px;
 				width:50%;
+				display:flex;
+				justify-content: flex-start;
+				flex-direction: column;
+				align-items: flex-start;
+				vertical-align: middle;
 				color:white;
 				@include ubuntu(light);
-				font-size: 14px;
+				font-size: rem(14px);
 				.adress {
-					padding-bottom:10px; 
+					padding-bottom:rem(5px); 
 				}
 				.phone__link{
 					text-decoration: none;
@@ -30,17 +35,18 @@
 				.phone {
 					@include ubuntu(bold);
 					color: $btn;
-					font-size: 14px;
-					margin-left: 15px;
+					font-size: rem(14px);
+					margin-left: rem(15px);
 				}
 				.phone:before {
 					content: '';
 					background: url("../img/icons/phone.svg");
    position:absolute;
    left: 0px;
-   bottom: 13px;
-   width:10px;
-   height:11px;
+   margin-top:rem(3px);
+   
+   width:rem(10px);
+   height:rem(11px);
    
 				}
 			}
@@ -51,9 +57,9 @@
 				align-items: center;
 				vertical-align: middle;
 				.icon {
-					margin-right:20px;
-					width:20px;
-					height:20px;
+					margin-right:rem(20px);
+					width:rem(20px);
+					height:rem(20px);
 					fill:#575757;
 					&:hover {
 						fill: $white;
