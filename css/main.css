@@ -892,18 +892,27 @@ textarea:focus {
   background-size: cover;
   min-width: 5rem;
   height: 100%; }
+  @media screen and (max-width: 480px) {
+    .menu__subitle-meet {
+      min-width: 4.375rem; } }
 
 .menu__subitle-veget {
   background: url("../img/veget.jpg") center center no-repeat;
   background-size: cover;
   min-width: 5rem;
   height: 100%; }
+  @media screen and (max-width: 480px) {
+    .menu__subitle-veget {
+      min-width: 4.375rem; } }
 
 .menu__subitle-diet {
   background: url("../img/diet.jpg") center center no-repeat;
   background-size: cover;
   min-width: 5rem;
   height: 100%; }
+  @media screen and (max-width: 480px) {
+    .menu__subitle-diet {
+      min-width: 4.375rem; } }
 
 .menu__item {
   display: -webkit-box;
@@ -942,6 +951,12 @@ textarea:focus {
   cursor: pointer; }
   .menu__link:hover {
     color: #f9b43b; }
+  @media screen and (max-width: 768px) {
+    .menu__link {
+      top: 80%; } }
+  @media screen and (max-width: 480px) {
+    .menu__link {
+      top: 60%; } }
 
 .menu__desc {
   display: none;
