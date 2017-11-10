@@ -1350,7 +1350,7 @@ textarea:focus {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  left: -10%; }
+  left: -20%; }
   .mobile__nav .mobile__item-hidden {
     position: relative;
     margin-top: 3.75rem;
