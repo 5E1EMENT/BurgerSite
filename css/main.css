@@ -1321,9 +1321,6 @@ textarea:focus {
 .hamburger-menu-link__bars:after {
   bottom: 0; }
 
-.active {
-  left: 0; }
-
 .mobile__nav {
   background-color: rgba(47, 50, 52, 0.9);
   position: absolute;
@@ -1391,5 +1388,8 @@ textarea:focus {
 
 .hide__menu-close:after {
   clear: both; }
+
+.active {
+  left: 0; }
 
 /*# sourceMappingURL=main.css.map */

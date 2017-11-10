@@ -1,6 +1,4 @@
-.active {
-        left:0;
-    }
+
 .mobile__nav {
     background-color: rgba(47,50,52,.9);
     position: absolute;
@@ -49,3 +47,6 @@
 .hide__menu-close {
 @include clearfix
 }
+.active {
+        left:0;
+    }
