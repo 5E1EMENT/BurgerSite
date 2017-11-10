@@ -10,12 +10,33 @@
   <link rel="stylesheet" href="css/main.css">
  
   
-  <!--JS -->
+
   
 
   <body>
+    <div class="hide__menu">
+              
+                <ul class="mobile__nav " id="hidden-menu">
+                  <li class="mobile__item-hidden">
+                    <a href="" class="mobile__link-hidden">О нас</a></li>
+                  <li class="mobile__item-hidden">
+                    <a href="" class="mobile__link-hidden">Бургеры</a></li>
+                  <li class="mobile__item-hidden">
+                    <a href="" class="mobile__link-hidden">Команда</a></li>
+                  <li class="mobile__item-hidden">
+                    <a href="" class="mobile__link-hidden">Меню</a></li>
+                  <li class="mobile__item-hidden">
+                    <a href="" class="mobile__link-hidden">Отзывы</a></li>
+                  <li class="mobile__item-hidden">
+                    <a href="" class="mobile__link-hidden">Контакты</a></li>
+                    
+                </ul>
+                
+              
+            </div>
     <div class="wrapper">
       <div class="maincontent">
+
         <!--Наш header-->
         <header class="header">
           <div class="container">
@@ -47,7 +68,9 @@
                 <div class="header__links">
                 <a class="nav__link hide-btn" href="" data-scroll-to="6">Заказать</a>
                 <a class="hamburger-menu-link" href="">
-                  <div class="hamburger-menu-link__bars"></div>
+                  <div class="hamburger-menu-link__bars" id="hamburger-menu-hidden">
+                    
+                  </div>
                 </a>
               </div>
               </div>
@@ -81,6 +104,9 @@
                 </li>
               </ul>
             </div>
+
+            
+
             <div class="header__content">
               <div class="header__content-left">
                 <img src="img/burger.png" alt="" class="header_burger">
@@ -457,9 +483,18 @@
         </footer>
       </div>
       </div>
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/svg4everybody.js"></script>
-    
+    <script src="js/main.js"></script>
+   <script>
+      $(function(){
+            $('.hamburger-menu-link').click(function(){
+                $('.mobile__nav').toggleClass('active');
+            });
+        });
+   </script>
+   
     
   </body>
 </html>

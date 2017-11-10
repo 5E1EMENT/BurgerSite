@@ -16,14 +16,18 @@
 	}
 	.header__logo {
 		width : 11%;
+		z-index:100;
+		@include tablets {
+			position: absolute;
+	left:  0;
+		}
+
 
 		.logo {
-
 			display: inline-block;
 		}
 		.logo__pic {
 			margin-top: 10px;
-			
 			max-width:98.265px;
 			max-height: 74.317px;
 			display: block;
