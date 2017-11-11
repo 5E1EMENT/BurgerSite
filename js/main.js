@@ -1,6 +1,6 @@
 (function() {
 	const link = $('.hamburger-menu-link'),
-		closeLink = $(".hamburger-menu-link--active");
+		closeLink = $(".hamburger-menu-link active");
 
 	let menu = $('.mobile__nav'),
 		active = 'active';
@@ -15,7 +15,7 @@
 	});
 $(document).keyup(function(e) {
 
-		// условие, если нажатие было на ESC
+		// условие, если нажатие было на  ESC
 		if(e.which == 27) {
 			menu.removeClass(active); // удаление класса
 		}
