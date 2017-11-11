@@ -2,8 +2,14 @@
 	@media screen and (max-width: $tablets) {
 		@content;
 	}
-}@mixin phones {
+}
+@mixin phones {
 	@media screen and (max-width: $phones) {
+		@content;
+	}
+}
+@mixin horizontal {
+	@media screen and (max-width: $horizontal) {
 		@content;
 	}
 }

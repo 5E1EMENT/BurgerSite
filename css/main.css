@@ -666,6 +666,9 @@ textarea:focus {
         @media screen and (max-width: 768px) {
           .reviews__group .reviews__box .reviews__content .reviews__text {
             text-align: center; } }
+        @media screen and (max-width: 530px) {
+          .reviews__group .reviews__box .reviews__content .reviews__text {
+            font-size: 0.75rem; } }
         @media screen and (max-width: 480px) {
           .reviews__group .reviews__box .reviews__content .reviews__text {
             display: none; } }
@@ -1391,5 +1394,133 @@ textarea:focus {
 
 .active {
   left: 0; }
+
+.burger__slider {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #f9b33b;
+  background: -moz-linear-gradient(top, #f9b33b 1%, #eb8c38 51%, #f9b33b 100%);
+  background: -webkit-linear-gradient(top, #f9b33b 1%, #eb8c38 51%, #f9b33b 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f9b33b), color-stop(51%, #eb8c38), to(#f9b33b));
+  background: -o-linear-gradient(top, #f9b33b 1%, #eb8c38 51%, #f9b33b 100%);
+  background: linear-gradient(to bottom, #f9b33b 1%, #eb8c38 51%, #f9b33b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b33b', endColorstr='#f9b33b',GradientType=0 ); }
+  .burger__slider .container {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .burger__slider .container .down__arrow-left {
+      cursor: pointer;
+      position: absolute;
+      left: -2%;
+      top: 50%;
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
+    .burger__slider .container .down__arrow-right {
+      cursor: pointer;
+      position: absolute;
+      right: -2%;
+      top: 50%;
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg); }
+
+.burger__slide {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .burger__slide .burger__left {
+    position: relative; }
+    .burger__slide .burger__left .burger__consist {
+      padding: 0.625rem 1.25rem;
+      display: inline-block;
+      background-color: #f08c33;
+      border-radius: 0.3125rem; }
+      .burger__slide .burger__left .burger__consist .burger__include {
+        display: block;
+        font-size: 0.875rem;
+        color: white; }
+    .burger__slide .burger__left .burger__kkal {
+      position: relative;
+      opacity: 0.6;
+      display: inline-block; }
+      .burger__slide .burger__left .burger__kkal:hover {
+        opacity: 1; }
+      .burger__slide .burger__left .burger__kkal-number {
+        text-align: center;
+        position: absolute;
+        left: 0.75rem;
+        top: 1.5625rem;
+        font-size: 20px;
+        color: white; }
+      .burger__slide .burger__left .burger__kkal-text {
+        text-align: center;
+        position: absolute;
+        left: 0.9375rem;
+        top: 3.75rem;
+        font-size: 20px;
+        color: white;
+        font-size: 0.875rem; }
+  .burger__slide .burger__right .burger__title {
+    color: white;
+    line-height: 1;
+    margin-bottom: 2.5rem; }
+  .burger__slide .burger__right .burger__desc {
+    font-family: 'UbuntuLight' , Helvetica , sans-serif;
+    font-size: 0.875rem;
+    color: white; }
+  .burger__slide .burger__right .burger__price {
+    color: #e45028; }
+    .burger__slide .burger__right .burger__price-ruble {
+      font-size: 1.875rem; }
+  .burger__slide .burger__right .burger__order {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.625rem;
+    background-color: #e45028;
+    width: 6.25rem;
+    height: 2.1875rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'UbuntuMedium' , Helvetica , sans-serif;
+    font-size: 0.8125rem;
+    color: white;
+    -webkit-text-decoration: uppercase;
+    text-decoration: uppercase;
+    margin-left: 2.5rem; }
+    .burger__slide .burger__right .burger__order:hover {
+      background-color: #c1401e; }
 
 /*# sourceMappingURL=main.css.map */

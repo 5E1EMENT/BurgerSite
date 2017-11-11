@@ -58,6 +58,9 @@
 			@include tablets {
   			text-align: center;
   			}
+  			@include horizontal {
+  				font-size: rem(12px);
+  			}
   			@include phones {
   				display:none;
   			}

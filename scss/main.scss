@@ -9,6 +9,7 @@
 // resolutions 
 $tablets: 768px;
 $phones: 480px; 
+$horizontal: 530px;
 
 //Base
 @import "layout/_fonts.scss";
@@ -26,4 +27,5 @@ $phones: 480px;
 @import "section/_section-order.scss";
 @import "section/_hamburger-menu.scss";
 @import "section/_hide-menu.scss";
+@import "section/_burger-slider.scss"
 

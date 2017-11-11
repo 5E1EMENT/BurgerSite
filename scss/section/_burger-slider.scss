@@ -1,0 +1,118 @@
+.burger__slider {
+	position: relative;
+	display: flex;
+	align-items: center;
+	background: #f9b33b;
+	background: -moz-linear-gradient(top, #f9b33b 1%, #eb8c38 51%, #f9b33b 100%);
+	background: -webkit-linear-gradient(top, #f9b33b 1%,#eb8c38 51%,#f9b33b 100%);
+	background: linear-gradient(to bottom, #f9b33b 1%,#eb8c38 51%,#f9b33b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b33b', endColorstr='#f9b33b',GradientType=0 );
+.container {
+	position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		height:100%;
+		display: flex;
+	justify-content: center;
+	align-items: center;
+	.down__arrow-left {
+		cursor: pointer;
+		position: absolute;
+		left: -2%;
+		top:50%;
+		transform: rotate(90deg);
+	}
+	.down__arrow-right {
+		cursor: pointer;
+		position: absolute;
+		right: -2%;
+		top:50%;
+		transform: rotate(-90deg);
+	}
+}
+}
+.burger__slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+.burger__left {
+	position: relative;
+	.burger__consist{
+		padding:rem(10px) rem(20px);
+		display:inline-block;
+		background-color: #f08c33;
+		border-radius:rem(5px);
+		.burger__include {
+			display:block;
+			font-size: rem(14px);
+			color:white;
+		}
+	}
+	.burger__kkal {
+		position:relative;
+		opacity: 0.6;
+		display:inline-block;
+		&:hover {
+			opacity: 1;
+		}
+		&-number {
+			text-align:center;
+			position: absolute;
+			left: rem(12px);
+			top:rem(25px);
+			font-size: 20px;
+			color:white;
+
+		}
+		&-text {
+			text-align:center;
+			position: absolute;
+			left: rem(15px);
+			top:rem(60px);
+			font-size: 20px;
+			color:white;
+
+				font-size: rem(14px);
+			}
+
+	}
+}
+.burger__right {
+	.burger__title {
+		color: white;
+		line-height: 1;
+		margin-bottom: rem(40px);
+	}
+	.burger__desc {
+		@include ubuntu(light);
+		font-size: rem(14px);
+		color: white;
+	}
+	.burger__price {
+		color:$btn;
+	&-ruble {
+		font-size: rem(30px);
+	}
+	}
+	.burger__order {
+		display: inline-block;
+			text-decoration: none;
+			padding: rem(10px);
+			background-color: #e45028;
+			width: rem(100px);
+			height:rem(35px);
+			border-radius: 5px;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			@include ubuntu(medium);
+			font-size: rem(13px);
+			color:white;
+			text-decoration: uppercase;
+			margin-left:rem(40px);
+			&:hover {
+				background-color: #c1401e;
+			}
+	}
+}
+}
