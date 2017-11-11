@@ -51,7 +51,10 @@
     display: flex;
     flex-direction: row;
     position: relative;
+    &.active {
 
+    }
+    
     &.active  .menu__desc {
         display: block;
     }
@@ -98,4 +101,7 @@
     padding: rem(50px) rem(30px);
     line-height: rem(24px);
     margin: 0;
+    @include phones {
+        font-size: rem(12px);
+    }
 }

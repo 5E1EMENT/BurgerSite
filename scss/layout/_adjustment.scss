@@ -25,4 +25,7 @@
 	text-transform: uppercase;
 	@include Gagalin(medium);
 	font-weight: normal;
+	@include phones {
+		font-size: rem(50px);
+	}
 }

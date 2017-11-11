@@ -24,7 +24,7 @@
 }
 .best__icon {
 	margin-right: rem(15px);
-	
+	max-width:100%;
 }
 
   @include phones {
@@ -51,6 +51,9 @@
 	 	color: #2f3234;
 	 	text-align: center;
 		margin-bottom:9%;
+		@include phones {
+		font-size: rem(50px);
+	}
 	 }
 	 .best__list {
 	 	display: flex;
@@ -67,6 +70,8 @@
 	 		color: #2f3234;
 	 		@include phones {
 	 			text-align: left;
+	 			margin: 0 rem(10px);
+
 	 		}
 
 	 	}

@@ -15,6 +15,9 @@
 		display: flex;
 	justify-content: center;
 	align-items: center;
+	@include phones {
+		    padding: 0px 10px;
+	}
 	.down__arrow-left {
 		cursor: pointer;
 		position: absolute;

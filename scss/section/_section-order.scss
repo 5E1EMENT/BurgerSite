@@ -8,6 +8,10 @@
 		color: $orange;
 		text-align:center;
 		margin-bottom:rem(80px);
+		@include phones {
+			margin-bottom:rem(20px);
+			font-size: rem(50px);
+		}
 	}
 	.form__block-title {
 		color:white;
@@ -192,6 +196,9 @@
 		
 		
 		.form__row {
+			@include phones {
+				justify-content: center;
+			}
 		.form__buttons {
 			display:flex;
 			@include phones {
