@@ -11,7 +11,11 @@
 		margin: 0 auto;
 		display:flex;
 justify-content: space-around;
-	
+	@include phones {
+				flex-direction: column;
+				justify-content: center;
+				
+			}
 	}
 	
 
@@ -40,6 +44,12 @@ justify-content: space-around;
 				color:white;
 				@include ubuntu(light);
 				font-size: rem(14px);
+				@include phones {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: rem(10px);
+			}
 				.adress {
 					
 					margin-top: 7px;
@@ -62,7 +72,7 @@ justify-content: space-around;
    left: -15px;
    margin-top:rem(3px);
    
-   width:10px;
+   width:11px;
    height:11px;
    
 				}
@@ -73,6 +83,11 @@ justify-content: space-around;
 				justify-content: flex-end;
 				align-items: center;
 				vertical-align: middle;
+				@include phones {
+				
+				justify-content: center;
+				align-items: center;
+			}
 				.footer__link {
 					margin-right:rem(20px);
 				}

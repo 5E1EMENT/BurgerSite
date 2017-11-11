@@ -382,6 +382,17 @@ textarea:focus {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around; }
+    @media screen and (max-width: 480px) {
+      .footer .footer__block {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
   .footer .footer__nav {
     position: absolute;
     bottom: 0;
@@ -422,6 +433,22 @@ textarea:focus {
       color: white;
       font-family: 'UbuntuLight' , Helvetica , sans-serif;
       font-size: 0.875rem; }
+      @media screen and (max-width: 480px) {
+        .footer .footer__nav .footer__contacts {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-bottom: 0.625rem; } }
       .footer .footer__nav .footer__contacts .adress {
         margin-top: 7px; }
       .footer .footer__nav .footer__contacts .phone__link {
@@ -439,7 +466,7 @@ textarea:focus {
         position: absolute;
         left: -15px;
         margin-top: 0.1875rem;
-        width: 10px;
+        width: 11px;
         height: 11px; }
     .footer .footer__nav .footer__social {
       display: -webkit-box;
@@ -455,6 +482,16 @@ textarea:focus {
       -ms-flex-align: center;
       align-items: center;
       vertical-align: middle; }
+      @media screen and (max-width: 480px) {
+        .footer .footer__nav .footer__social {
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center; } }
       .footer .footer__nav .footer__social .footer__link {
         margin-right: 1.25rem; }
       .footer .footer__nav .footer__social .icon {
