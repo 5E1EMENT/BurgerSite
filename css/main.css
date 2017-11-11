@@ -268,7 +268,8 @@ textarea:focus {
           -webkit-box-direction: normal;
           -webkit-flex-direction: column;
           -ms-flex-direction: column;
-          flex-direction: column; } }
+          flex-direction: column;
+          margin-top: 3.125rem; } }
       .header .container .header__content .header__content-left .header_burger {
         display: inline-block;
         position: relative;
@@ -1326,14 +1327,14 @@ textarea:focus {
 
 .hamburger-menu-link {
   vertical-align: middle;
-  position: relative;
+  position: fixed;
   height: 1.375rem;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   margin-top: 0.3125rem;
-  margin-left: 1.875rem;
+  z-index: 100;
   display: none; }
   @media screen and (max-width: 768px) {
     .hamburger-menu-link {
@@ -1361,7 +1362,9 @@ textarea:focus {
   outline: none;
   cursor: pointer;
   text-align: center;
-  display: none; }
+  display: none;
+  position: absolute;
+  right: 2.1875rem; }
   @media screen and (max-width: 768px) {
     .hide-btn {
       display: block; } }

@@ -120,9 +120,10 @@
 		align-items: center;
 		@include tablets {
 			flex-direction: column;
+			margin-top: rem(50px)
 		}
 		@include phones {
-
+			;
 		}
 		
 		.header__content-left {
