@@ -35,6 +35,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@include tablets {
+		flex-direction: column;
+	}
 .burger__left {
 	position: relative;
 	.burger__consist{
@@ -42,16 +45,40 @@
 		display:inline-block;
 		background-color: #f08c33;
 		border-radius:rem(5px);
+		@include tablets {
+		position: absolute;
+		top:-20%;
+		}
+		@include phones {
+			
+			padding:rem(5px) rem(10px);
+		}
+
 		.burger__include {
 			display:block;
 			font-size: rem(14px);
 			color:white;
 		}
 	}
+	.burger__img {
+		@include tablets {
+		max-width:100%;
+	}
+	}
 	.burger__kkal {
 		position:relative;
 		opacity: 0.6;
 		display:inline-block;
+		@include tablets {
+		position: absolute;
+		top:-20%;
+		right:0;
+		}
+		@include phones {
+			
+			right:0;
+		}
+
 		&:hover {
 			opacity: 1;
 		}
@@ -62,7 +89,10 @@
 			top:rem(25px);
 			font-size: 20px;
 			color:white;
-
+			@include tablets {
+				top:rem(27px);
+				left: rem(14px);
+			}
 		}
 		&-text {
 			text-align:center;
@@ -71,17 +101,29 @@
 			top:rem(60px);
 			font-size: 20px;
 			color:white;
-
+			@include tablets {
+				left: rem(15px);
+				top:rem(65px);
+			}
 				font-size: rem(14px);
 			}
 
 	}
 }
 .burger__right {
+	@include tablets {
+			text-align: center;
+		}
 	.burger__title {
 		color: white;
 		line-height: 1;
 		margin-bottom: rem(40px);
+		@include phones {
+			padding: 0 rem(10px);
+			font-size: rem(50px);
+			
+		}
+
 	}
 	.burger__desc {
 		@include ubuntu(light);
@@ -90,8 +132,14 @@
 	}
 	.burger__price {
 		color:$btn;
+		@include phones {
+			font-size: rem(50px);
+		}
 	&-ruble {
 		font-size: rem(30px);
+		@include phones {
+			font-size: rem(24px);
+		}
 	}
 	}
 	.burger__order {
