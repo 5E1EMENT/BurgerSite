@@ -1372,7 +1372,6 @@ textarea:focus {
     background-color: #c1401e; }
 
 .hamburger-menu-link__bars, .hamburger-menu-link__bars:before, .hamburger-menu-link__bars:after {
-  z-index: 10;
   background: #fff;
   width: 1.5rem;
   height: 0.3125rem;
