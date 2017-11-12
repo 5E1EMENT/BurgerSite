@@ -1372,6 +1372,9 @@ textarea:focus {
     background-color: #c1401e; }
 
 .hamburger-menu-link__bars, .hamburger-menu-link__bars:before, .hamburger-menu-link__bars:after {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
   background: #fff;
   width: 1.5rem;
   height: 0.3125rem;
@@ -1387,6 +1390,19 @@ textarea:focus {
 
 .hamburger-menu-link__bars:after {
   bottom: 0; }
+
+.hamburger-menu-link__bars.active {
+  background-color: transparent; }
+  .hamburger-menu-link__bars.active:before {
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: 0.625rem; }
+  .hamburger-menu-link__bars.active:after {
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    bottom: 0.4375rem; }
 
 .mobile__nav {
   background-color: rgba(47, 50, 52, 0.9);

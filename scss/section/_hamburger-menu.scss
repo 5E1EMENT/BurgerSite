@@ -54,8 +54,9 @@
 		}
 
 .hamburger-menu-link__bars {
+
 	&, &:before, &:after {
-		
+		transition: all 0.2s;
 		background: #fff;
 		width: rem(24px);
 		height: rem(5px);
@@ -75,4 +76,16 @@
 	&:after {
 		bottom: 0;
 	}
+	&.active  {
+            background-color: transparent;
+            &:before {
+                transform: rotate(135deg);
+                top:rem(10px);
+            }
+            &:after {
+                transform: rotate(-135deg);
+                bottom:rem(7px);
+            }
+        }
 }
+
