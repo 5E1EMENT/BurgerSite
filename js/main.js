@@ -3,6 +3,13 @@
 		$('.mobile__nav').toggleClass('active');
 		$('.hamburger-menu-link__bars').toggleClass('active');
 		});
+	
+	});
+  $(document).ready(function(){
+	$('.mobile__link-hidden').click(function(event) {
+		$('.mobile__nav').removeClass('active');
+	});
+	
 	});
 
 
