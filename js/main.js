@@ -8,6 +8,7 @@
   $(document).ready(function(){
 	$('.mobile__link-hidden').click(function(event) {
 		$('.mobile__nav').removeClass('active');
+		$('.hamburger-menu-link__bars').toggleClass('active');
 	});
 	
 	});
@@ -26,9 +27,3 @@
 	// при нажатии на мышку
 	
 
-	 $(document).mouseup(function(e) {
-            var $target = $(e.target);
-            if ($target.closest(".mobile__item-hidden").length === 0) {
-                $(".mobile__nav").removeClass("active");
-            }
-        });
