@@ -746,6 +746,24 @@ textarea:focus {
           background-color: #1f2122;
           cursor: pointer; }
 
+.popup {
+  display: none;
+  border-radius: 0.625rem;
+  max-width: 28.75rem; }
+  .popup .popup__title {
+    font-size: 0.875rem;
+    text-align: center; }
+    @media screen and (max-width: 480px) {
+      .popup .popup__title {
+        text-align: left; } }
+  .popup .popup__text {
+    font-family: 'UbuntuLight' , Helvetica , sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5; }
+
+.fancybox-close-small:after {
+  color: #e45028; }
+
 .team {
   background-image: url("../img/team-bg.png");
   background-size: cover;
@@ -782,7 +800,10 @@ textarea:focus {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; } }
   .team__accordion .content-active .team__name.title {
     color: #f9b43b; }
     @media screen and (max-width: 768px) {
@@ -793,7 +814,7 @@ textarea:focus {
     position: absolute;
     /* Абсолютное позиционирование */
     left: -1.25rem;
-    bottom: 0.125rem;
+    bottom: 0.4375rem;
     /* Положение треугольника */
     border: 5px solid transparent;
     /* Прозрачные границы */
@@ -801,7 +822,7 @@ textarea:focus {
     /* Добавляем треугольник */ }
     @media screen and (max-width: 768px) {
       .team__accordion .content-active .team__name:before {
-        bottom: 1.25rem; } }
+        bottom: 2.1875rem; } }
   .team__accordion .content-active .team__content {
     overflow: visible;
     height: 100%; }
@@ -816,7 +837,10 @@ textarea:focus {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        width: 100%; } }
+        width: 100%;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; } }
   .team__accordion .team__tab {
     margin-top: 1.25rem;
     cursor: pointer; }
@@ -1003,9 +1027,14 @@ textarea:focus {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  position: relative; }
-  .menu__item.active .menu__desc {
-    display: block; }
+  position: relative;
+  z-index: 2; }
+  @media screen and (max-width: 480px) {
+    .menu__item.active {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 10; } }
   .menu__item.active .menu__link {
     color: #f9b43b; }
 
@@ -1040,8 +1069,10 @@ textarea:focus {
 .menu__desc {
   display: none;
   max-width: 33.75rem;
-  background-color: #2f3234;
-  opacity: 0.9; }
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(27, 27, 27, 0.61);
+  background-blend-mode: multiply; }
 
 .menu__text {
   font-family: 'UbuntuMedium' , Helvetica , sans-serif;
@@ -1050,9 +1081,6 @@ textarea:focus {
   padding: 3.125rem 1.875rem;
   line-height: 1.5rem;
   margin: 0; }
-  @media screen and (max-width: 480px) {
-    .menu__text {
-      font-size: 0.75rem; } }
 
 .order {
   background-image: url("../img/order-bg.png");
@@ -1409,7 +1437,7 @@ textarea:focus {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 11;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1475,7 +1503,7 @@ textarea:focus {
 .active {
   left: 0; }
 
-.burger__slider {
+.slider {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1492,7 +1520,7 @@ textarea:focus {
   background: -o-linear-gradient(top, #f9b33b 1%, #eb8c38 51%, #f9b33b 100%);
   background: linear-gradient(to bottom, #f9b33b 1%, #eb8c38 51%, #f9b33b 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b33b', endColorstr='#f9b33b',GradientType=0 ); }
-  .burger__slider .container {
+  .slider .container {
     position: relative;
     max-width: 960px;
     margin: 0 auto;
@@ -1510,9 +1538,9 @@ textarea:focus {
     -ms-flex-align: center;
     align-items: center; }
     @media screen and (max-width: 480px) {
-      .burger__slider .container {
+      .slider .container {
         padding: 0px 10px; } }
-    .burger__slider .container .down__arrow-left {
+    .slider .container .down__arrow-left {
       cursor: pointer;
       position: absolute;
       left: -2%;
@@ -1520,7 +1548,7 @@ textarea:focus {
       -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
       transform: rotate(90deg); }
-    .burger__slider .container .down__arrow-right {
+    .slider .container .down__arrow-right {
       cursor: pointer;
       position: absolute;
       right: -2%;
@@ -1529,7 +1557,28 @@ textarea:focus {
       -ms-transform: rotate(-90deg);
       transform: rotate(-90deg); }
 
+.slider__burger {
+  overflow: hidden; }
+
+ul.burger__slider {
+  -webkit-transform: translate(0%);
+  -ms-transform: translate(0%);
+  transform: translate(0%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-directon: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  @media screen and (max-width: 768px) {
+    ul.burger__slider .burger__slide .burger__left img.burger__img {
+      max-width: 28.75rem; } }
+
 .burger__slide {
+  min-width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1567,9 +1616,6 @@ textarea:focus {
         display: block;
         font-size: 0.875rem;
         color: white; }
-    @media screen and (max-width: 768px) {
-      .burger__slide .burger__left .burger__img {
-        max-width: 100%; } }
     .burger__slide .burger__left .burger__kkal {
       position: relative;
       opacity: 0.6;
@@ -1607,6 +1653,47 @@ textarea:focus {
           .burger__slide .burger__left .burger__kkal-text {
             left: 0.9375rem;
             top: 4.0625rem; } }
+    .burger__slide .burger__left .burger__modal {
+      position: absolute;
+      top: 0;
+      left: 5.5rem;
+      display: none; }
+      @media screen and (max-width: 768px) {
+        .burger__slide .burger__left .burger__modal {
+          top: -3.75rem; } }
+      .burger__slide .burger__left .burger__modal .ingred {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 1.25rem 0.9375rem;
+        border-radius: 0.3125rem; }
+        .burger__slide .burger__left .burger__modal .ingred_item {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          margin-top: 0.625rem; }
+          .burger__slide .burger__left .burger__modal .ingred_item .ingred__desc {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between; }
+          .burger__slide .burger__left .burger__modal .ingred_item .ingred__title {
+            font-family: 'UbuntuMedium' , Helvetica , sans-serif;
+            font-size: 0.875rem;
+            text-decoration: none;
+            color: #3c3c3c;
+            margin-left: 0.9375rem; }
+          .burger__slide .burger__left .burger__modal .ingred_item .ingred__lot {
+            font-family: 'UbuntuLight' , Helvetica , sans-serif;
+            font-size: 0.875rem;
+            color: #3c3c3c;
+            text-align: rigt; }
+          .burger__slide .burger__left .burger__modal .ingred_item img.ingred__img {
+            width: 4.0625rem !important; }
   @media screen and (max-width: 768px) {
     .burger__slide .burger__right {
       text-align: center; } }
@@ -1621,7 +1708,8 @@ textarea:focus {
   .burger__slide .burger__right .burger__desc {
     font-family: 'UbuntuLight' , Helvetica , sans-serif;
     font-size: 0.875rem;
-    color: white; }
+    color: white;
+    padding: 0.3125rem; }
   .burger__slide .burger__right .burger__price {
     color: #e45028; }
     @media screen and (max-width: 480px) {

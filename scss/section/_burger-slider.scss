@@ -1,4 +1,4 @@
-.burger__slider {
+.slider {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -34,10 +34,30 @@
 	}
 }
 }
+.slider__burger {
+	overflow: hidden;
+}
+ul.burger__slider {
+	transform: translate(0%);
+	display:flex;
+	flex-directon: row;
+	justify-content: space-between;
+	.burger__slide {
+		.burger__left{
+			img.burger__img {
+		@include tablets {
+		max-width:rem(460px);
+	}
+	}
+		}
+	}
+}
 .burger__slide {
+	min-width:100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	@include tablets {
 		flex-direction: column;
 	}
@@ -63,11 +83,7 @@
 			color:white;
 		}
 	}
-	.burger__img {
-		@include tablets {
-		max-width:100%;
-	}
-	}
+	
 	.burger__kkal {
 		position:relative;
 		opacity: 0.6;
@@ -112,6 +128,52 @@
 			}
 
 	}
+	.burger__modal {
+		position: absolute;
+		top: 0;
+		left:rem(88px);
+		display:none;
+		@include tablets {
+			top:rem(-60px);
+		}
+		.ingred {
+			background-color : rgba(255,255,255,.9);
+			padding: rem(20px) rem(15px);
+			border-radius: rem(5px);
+			
+			&_item {
+				display:flex;
+				margin-top: rem(10px);
+				.ingred__desc {
+					width:100%;
+				display: flex;
+
+				justify-content: space-between;
+			}
+				.ingred__title {
+					
+					@include ubuntu(medium);
+					font-size: rem(14px);
+					text-decoration: none;
+					color: #3c3c3c;
+					margin-left:rem(15px);
+					
+
+				}
+				.ingred__lot {
+					
+					@include ubuntu(light);
+					font-size: rem(14px);
+					color: #3c3c3c;
+					text-align: rigt;
+
+				}
+				img.ingred__img{
+					width: rem(65px) !important;
+				}
+			}
+		}
+	}
 }
 .burger__right {
 	@include tablets {
@@ -132,6 +194,7 @@
 		@include ubuntu(light);
 		font-size: rem(14px);
 		color: white;
+		padding:rem(5px);
 	}
 	.burger__price {
 		color:$btn;

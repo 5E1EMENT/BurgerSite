@@ -98,3 +98,25 @@
 		}
 	}
 }
+.popup {
+	display: none;
+	border-radius:rem(10px);
+	max-width: rem(460px);
+	
+	.popup__title {
+		font-size: rem(14px);
+		text-align: center;
+		@include phones {
+			text-align: left;
+		}
+
+	}
+	.popup__text {
+		@include ubuntu(light);
+		font-size: rem(14px);
+		line-height:1.5;
+	}
+}
+.fancybox-close-small:after {
+	color: $btn;
+}
