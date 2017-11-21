@@ -94,7 +94,8 @@
 		.order-btn {
 			display: inline-block;
 			text-decoration: none;
-			padding: rem(10px);
+			text-align:center;
+			padding: rem(7px);
 			background-color: #e45028;
 			width: rem(100px);
 			height:rem(35px);
@@ -194,7 +195,7 @@
   left: 50%;
   width: rem(60px);
   transform: translateX(-50%);
-  transition: .3s;
+   
   height: rem(60px);
   display: flex;
   align-items: center;
@@ -202,11 +203,13 @@
   @include phones {
   	bottom: rem(5px);
   }
+  .icon {
+  	 transition: all 0.2s linear;
+  }
   &:hover {
-    .down-arrow__icon {
+    .icon {
       margin-top: rem(-15px);
-      width: rem(45px);
-      height: rem(45px);
+      
     }
   }
 }

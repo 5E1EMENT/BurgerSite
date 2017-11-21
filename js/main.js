@@ -47,7 +47,7 @@ $(document).ready(function(){
 		let items = list.find('.team__tab');
 		let content = item.find('.team__content');
 		let otherContent = list.find('.team__content');
-		var duration = 300;
+		var duration = 500;
 
 
 		if(!item.hasClass('content-active')) {
@@ -79,25 +79,89 @@ $(document).ready(function(){
 		let content = item.find('.menu__desc');
 		let otherContent = list.find('.menu__desc');
 		var duration = 300;
+		var width = link.outerWidth();
+		let reqWidth = width + content.outerWidth() + 'px';
+
 
 
 		if(!item.hasClass('active')) {
-			items.removeClass('active')
-			item.addClass('active')
+			items.removeClass('active').stop().animate({width : width}, duration);
+			item.addClass('active').stop().animate({width : reqWidth}, duration);
 
-		otherContent.stop(true, true).slideUp(duration);
-		content.stop(true, true).slideDown(duration);
+		// otherContent.stop(true, true).slideUp(duration);
+		// content.stop(true, true).slideDown(duration);
 		} else {
-			content.stop(true, true).slideUp(duration);
-			item.removeClass('active');
+			// content.stop(true, true).slideUp(duration);
+			item.removeClass('active').stop().animate({width : width}, duration);
 		}
+		// if(reqParent.hasClass(activeItem)) {
+		// 		reqParent.removeClass(activeItem).stop().animate({width : width}, duration);
+		// 	} else {
+		// 		item.removeClass(activeItem).stop().animate({width : width}, duration);
+		// 		reqParent.addClass(activeItem).stop().animate({width : reqWidth}, duration);
+		// 	}
 		
 
 	});
 	
 });
 	
-	//Modal Windows
+	
+
+		//Слайдер
+		$(function(){
+			var index = 0;
+			$('.down__arrow-right').on('click', function(e){
+                e.preventDefault();
+                var $this = $(this),
+                    container = $this.closest('.slider__burger'),
+                    items = container.find('.burger__slide'),
+                    activeSlide = items.filter('.active'),
+                    reqItem = activeSlide.next(),
+                    list = container.find('.burger__slider'),
+                    duration = 500;
+                    
+                    index++;
+                    if (index == items.length) {
+                    	index = 0;
+                    }
+
+                    console.log(index)
+                var reqTransform = -index * 100;
+
+
+                    list.css({"transform": 'translateX('+reqTransform+'%)'}, duration);
+                    reqItem.addClass('active').siblings().removeClass('active');
+
+
+            });
+            $('.down__arrow-left').on('click', function(e) {
+            	 e.preventDefault();
+            	 var $this = $(this),
+                    container = $this.closest('.slider__burger'),
+                    items = container.find('.burger__slide'),
+                    activeSlide = items.filter('.active'),
+                    reqItem = activeSlide.prev(),
+                    list = container.find('.burger__slider'),
+                    duration = 500;
+
+                    index--;
+                    if (index < 0) {
+                    	index = items.length - 1;
+                    }
+
+                    var reqTransform = -index * 100;
+
+
+                    list.css({"transform": 'translateX('+reqTransform+'%)'}, duration);
+                    reqItem.addClass('active').siblings().removeClass('active');
+
+            })
+
+		});
+
+
+		//Modal Windows
 	jQuery(document).ready(function(e) {
 		$('.burger__consist').on('mouseenter', function(){
 			$('.burger__modal').fadeIn();
@@ -116,24 +180,109 @@ $(document).ready(function(){
 	});
 	});
 
-		//Слайдер
-		$(function(){
-			$('.down__arrow-right').on('click', function(e){
-				e.preventDefault();
-				var $this = $(this),
-					container = $this.closest('.slider__burger'),
-					items = container.find('.burger__slide'),
-					activeSlide = items.filter('.active'),
-					reqItem = activeSlide.next(),
-					reqIndex = reqItem.index(),
-					list = container.find('.burger__slider'),
-					duration = 500;
+	//One Page Scroll
+	const display = $('.maincontent');
+const sections = $('.section');
 
-					list.animate({
-						
-  						'transform': -reqIndex * 'translate(100%)'
-					}, duration);
+let inScroll = false;
 
-			});
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
 
-		});
+const switchMenuActiveClass = sectionEq => {
+  $('.fixed-menu__item').eq(sectionEq).addClass('active')
+    .siblings().removeClass('active');
+}
+
+const performTransition = sectionEq => {
+  if (inScroll) return
+  inScroll = true
+
+  const position = (sectionEq * -100) + '%';
+
+  display.css({
+    'transform': `translate(0, ${position})`,
+    '-webkit-transform': `translate(0, ${position})`
+  })
+
+  sections.eq(sectionEq).addClass('active')
+    .siblings().removeClass('active');
+
+  setTimeout(() => {
+    inScroll = false;
+    switchMenuActiveClass(sectionEq);
+  }, 1300);
+}
+
+const difineSections = sections => {
+  const activeSection = sections.filter('.active');
+  return {
+    activeSection: activeSection,
+    nextSection: activeSection.next(),
+    prevSection: activeSection.prev()
+  }
+}
+
+const scrollToSection = direction => {
+  const section = difineSections(sections)
+
+  if (inScroll) return;
+
+  if (direction === 'up' && section.nextSection.length) { // вниз
+    performTransition(section.nextSection.index())
+  }
+
+  if (direction === 'down' && section.prevSection.length) { // вверх
+    performTransition(section.prevSection.index())
+  }
+}
+
+$('.wrapper').on({
+  wheel: e => {
+    const deltaY = e.originalEvent.deltaY;
+    let direction = (deltaY > 0) 
+      ? 'up' 
+      : 'down'
+
+    scrollToSection(direction);
+  },
+  touchmove: e => (e.preventDefault())
+});
+
+
+$(document).on('keydown', e => {
+  const section = difineSections(sections);
+
+  if (inScroll) return
+
+  switch (e.keyCode) {
+    case 40: // вверх
+      if (!section.nextSection.length) return;
+      performTransition(section.nextSection.index());
+      break;
+
+    case 38: //вниз
+      if (!section.prevSection.length) return;
+      performTransition(section.prevSection.index());
+      break;
+  }
+});
+
+if (isMobile) {
+  $(window).swipe({
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      console.log(direction);
+      scrollToSection(direction);
+    }
+  })
+}
+
+
+$('[data-scroll-to]').on('click touchstart', e => {
+  e.preventDefault();
+  const $this = $(e.currentTarget);
+  const sectionIndex = parseInt($this.attr('data-scroll-to'));
+
+  performTransition(sectionIndex);
+});
+

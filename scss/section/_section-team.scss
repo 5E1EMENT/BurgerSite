@@ -35,9 +35,10 @@
 	}
 	&__accordion {
 		.content-active {
+
 			@include tablets {
 			display: flex;
-			transition: all 0.3s;
+			transition: all 0.3s linear;
 		}
 			.team__name.title{
 				color: $orange;
@@ -58,14 +59,23 @@
 		}
 			.team__content {
 				overflow: visible;
-				height:100%;
+
+				flex-direction: row;
+				
 				@include tablets {
 			display: flex;
+
 			flex-direction: column;
+			justify-content: center;
 			width:100%;
-			transition: all 0.3s;
+			transition: all 0.3s linear;
 		}
 
+			}
+			.team__content-wrap  {
+				@include tablets {
+
+				}
 			}
 			
 		}
@@ -76,6 +86,7 @@
 			text-align: center;
 			display: flex;
     flex-direction: column;
+
 		}
 		.team__link {
 			text-decoration: none;
@@ -107,13 +118,11 @@
 		}
 		}
 		.team__content {
-			height:0;
+			display: none;
 			overflow: hidden;
-			transition: all 0.2s;
+			
 			position: relative;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: flex-start;
+			
 			min-width: rem(260px);
 			&-name {
 				font-size: rem(14px);
@@ -153,7 +162,12 @@
 		}
 			}
 
+			&-wrap {
+				display: flex;
 			
+			justify-content: flex-start;
+			
+			}
 		}
 	}
 }

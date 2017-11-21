@@ -52,8 +52,18 @@
     flex-direction: row;
     position: relative;
     z-index:2;
+    width: 5rem;
+    overflow: hidden;
+
 
     &.active {
+        .menu__desc {
+            display: block;
+             background-color: rgba(27, 27, 27, 0.81);
+    background-blend-mode: multiply;
+            
+            
+        }
         @include phones {
             position: absolute;
             width:100%;
@@ -94,14 +104,16 @@
 
 } 
 .menu__desc {
-   display:none;
-    max-width: rem(540px);
+   min-width: rem(540px);;
+   
+   overflow: hidden;
+    
     background-position: center;
     background-size: cover;
-    background-color: rgba(27, 27, 27, 0.61);
+    background-color: rgba(27, 27, 27, 0.91);
     background-blend-mode: multiply;
-
-
+    transition: all 0.3s linear;
+ 
     
 } 
 .menu__text {
@@ -112,4 +124,32 @@
     line-height: rem(24px);
     margin: 0;
     
+}
+ .menu__item--1 {
+    background-blend-mode: multiply;
+    background-color: rgba(27, 27, 27, 0.91);
+    .menu__desc {
+        background: url('../img/meat-man.png') ;
+        background-size: cover;
+        background-position: center;
+
+    }
+}
+ .menu__item--2 {
+    background-blend-mode: multiply;
+    .menu__desc {
+        background: url('../img/vegan-man.png') ;
+        background-size: cover;
+        background-position: center;
+
+    }
+}
+.menu__item--3 {
+    background-blend-mode: multiply;
+    .menu__desc {
+        background: url('../img/diet-man.png') ;
+        background-size: cover;
+        background-position: center;
+
+    }
 }

@@ -22,25 +22,51 @@
                   <li class="mobile__item-hidden">
                     <a href="#best" class="mobile__link-hidden">О нас</a></li>
                   <li class="mobile__item-hidden">
-                    <a href="" class="mobile__link-hidden">Бургеры</a></li>
+                    <a href="#burgers-slider" class="mobile__link-hidden">Бургеры</a></li>
                   <li class="mobile__item-hidden">
-                    <a href="" class="mobile__link-hidden">Команда</a></li>
+                    <a href="#team" class="mobile__link-hidden">Команда</a></li>
                   <li class="mobile__item-hidden">
-                    <a href="" class="mobile__link-hidden">Меню</a></li>
+                    <a href="#menu" class="mobile__link-hidden">Меню</a></li>
                   <li class="mobile__item-hidden">
-                    <a href="" class="mobile__link-hidden">Отзывы</a></li>
+                    <a href="#reviews" class="mobile__link-hidden">Отзывы</a></li>
                   <li class="mobile__item-hidden">
-                    <a href="" class="mobile__link-hidden">Контакты</a></li>
+                    <a href="#footer" class="mobile__link-hidden">Контакты</a></li>
                     
                 </ul>
                 
               
             </div>
+             <ul class="fixed-menu">
+    <li class="fixed-menu__item active">
+      <a class="fixed-menu__link" href="#header" data-scroll-to="0"></a>
+    </li>
+    <li class="fixed-menu__item">
+      <a class="fixed-menu__link" href="#best" data-scroll-to="1"></a>
+    </li>
+    <li class="fixed-menu__item">
+      <a class="fixed-menu__link" href="#burgers-slider" data-scroll-to="2"></a>
+    </li>
+    <li class="fixed-menu__item">
+      <a class="fixed-menu__link" href="#team" data-scroll-to="3"></a>
+    </li>
+    <li class="fixed-menu__item">
+      <a class="fixed-menu__link" href="#menu" data-scroll-to="4"></a>
+    </li>
+    <li class="fixed-menu__item">
+      <a class="fixed-menu__link" href="#reviews" data-scroll-to="5"></a>
+    </li>
+    <li class="fixed-menu__item">
+      <a class="fixed-menu__link" href="#order" data-scroll-to="6"></a>
+    </li>
+    <li class="fixed-menu__item">
+      <a class="fixed-menu__link" href="#footer" data-scroll-to="7"></a>
+    </li>
+  </ul>
     <div class="wrapper">
       <div class="maincontent">
 
         <!--Наш header-->
-        <header class="header">
+        <section class="section header active" id="header">
           <div class="container">
             <div class="header__top">
               <div class="header__logo">
@@ -54,22 +80,22 @@
               <div class="header__nav">
                 <ul class="nav">
                   <li class="nav__item">
-                    <a href="#best" class="nav__link">О нас</a></li>
+                    <a href="#best" class="nav__link" data-scroll-to="1">О нас</a></li>
                   <li class="nav__item">
-                    <a href="" class="nav__link">Бургеры</a></li>
+                    <a href="#burgers-slider" class="nav__link" data-scroll-to="2">Бургеры</a></li>
                   <li class="nav__item">
-                    <a href="" class="nav__link">Команда</a></li>
+                    <a href="#team" class="nav__link" data-scroll-to="3">Команда</a></li>
                   <li class="nav__item">
-                    <a href="" class="nav__link">Меню</a></li>
+                    <a href="#menu" class="nav__link" data-scroll-to="4">Меню</a></li>
                   <li class="nav__item">
-                    <a href="" class="nav__link">Отзывы</a></li>
+                    <a href="#reviews" class="nav__link" data-scroll-to="5">Отзывы</a></li>
                   <li class="nav__item">
-                    <a href="" class="nav__link">Контакты</a></li>
-                    <button type="button" class="nav__link order-btn">Заказать</button>
+                    <a href="#footer" class="nav__link" data-scroll-to="7">Контакты</a></li>
+                    <a href="#order" data-scroll-to="6" class="nav__link order-btn">Заказать</a>
                 </ul>
                 <div class="header__links">
-                <a class="nav__link hide-btn" href="" data-scroll-to="6">Заказать</a>
-                <a class="hamburger-menu-link" href="#menu">
+                <a class="nav__link hide-btn" href="#order" data-scroll-to="6">Заказать</a>
+                <a class="hamburger-menu-link" href="#">
                   <div class="hamburger-menu-link__bars" id="hamburger-menu-hidden">
                     
                   </div>
@@ -82,34 +108,8 @@
               </div>
 
             </div>
-            <div class="screen-switcher">
-              <ul class="screen-switcher__items">
-                <li class="screen-switcher__item">
-                    <a href="#" class="screen-switcher__link  screen-switcher__link--active">Экран 1</a>
-                </li>
-                <li class="screen-switcher__item">
-                    <a href="#" class="screen-switcher__link">Экран 2</a>
-                </li>
-                <li class="screen-switcher__item">
-                    <a href="#" class="screen-switcher__link">Экран 3</a>
-                </li>
-                <li class="screen-switcher__item">
-                    <a href="#" class="screen-switcher__link">Экран 4</a>
-                </li>
-                <li class="screen-switcher__item">
-                    <a href="#" class="screen-switcher__link">Экран 5</a>
-                </li>
-                <li class="screen-switcher__item">
-                    <a href="#" class="screen-switcher__link">Экран 6</a>
-                </li>
-                <li class="screen-switcher__item">
-                    <a href="#" class="screen-switcher__link">Экран 7</a>
-                </li>
-                <li class="screen-switcher__item">
-                    <a href="#" class="screen-switcher__link">Экран 8</a>
-                </li>
-              </ul>
-            </div>
+            
+           
 
             
 
@@ -122,15 +122,15 @@
                 <span class="header__title-text">натуральные<br> бургеры</span>
               </div>
             </div>
-            <a class="down-arrow" href="#" data-scroll-to="1">
+            <a class="down-arrow" href="#best" data-scroll-to="1">
           <svg class="icon" width="28.685px" height="14.479px" style="fill:#fff;">
                     <use xlink:href="img/icons/arrow-scroll.svg#Layer_1" />
             </svg>
         </a>
           </div>
-        </header>
+        </section>
         <!--Секция Мы Лучшие-->
-        <section class="best" id="best">
+        <section class="section best" id="best">
           <div class="container">
             <div class="wrap">
               <h2 class="title best__title-text">
@@ -163,7 +163,7 @@
         </div>
         </section>
         <!--Секция Бургер Слайдер-->
-        <section class="slider">
+        <section class="section slider" id="burgers-slider">
           <div class="container slider__container">
                <div class="slider__burger">
                     <ul class="burger__slider">
@@ -316,24 +316,24 @@
                      </li>
                    </ul>
                    <div class="burger__arrows">
-                   <a class="down__arrow-left" href="#" data-scroll-to="1">
+                   <a class="down__arrow-left" href="#" >
                       <svg class="icon" width="28.685px" height="14.479px" style="fill:#fff;">
                           <use xlink:href="img/icons/arrow-scroll.svg#Layer_1" />
                       </svg>
                     </a>
-                    <a class="down__arrow-right" href="#" data-scroll-to="1">
+                    <a class="down__arrow-right" href="#" >
                       <svg class="icon" width="28.685px" height="14.479px" style="fill:#fff;">
                           <use xlink:href="img/icons/arrow-scroll.svg#Layer_1" />
                       </svg>
                     </a>
                  </div>
                          
-                              </div>
+                  </div>
             
           </div>
         </section>
         <!--Секция Команда-->
-        <section class="team">
+        <section class="section team" id="team">
           <div class="team__container">
             <div class="team__wrap">
               <h2 class="title team__title">команда</h2>
@@ -342,14 +342,18 @@
                   <a href="" class="team__link">
                     <span class="team__name title">Дэниэл Редклиф</span>
                   </a>
-                <div class="team__content  ">
-                  <img src="img/team-img.jpg" alt="" class="team__image">
-                  <div class="team__content-maintext">
-                    <span class="team__content-name ">Оператор</span>
-                    <p class="team__content-text">
-                      С радостью поможет подобрать идеальный бургер и оформить заказ.  
-                    </p>
+                <div class="team__content ">
+
+                  <div class="team__content-wrap">
+                    <img src="img/team-img.jpg" alt="" class="team__image">
+                    <div class="team__content-maintext">
+                      <span class="team__content-name ">Оператор</span>
+                      <p class="team__content-text">
+                        С радостью поможет подобрать идеальный бургер и оформить заказ.  
+                      </p>
+                    </div>
                   </div>
+
                 </div>
                 </li>
                 <li class="team__tab  ">
@@ -357,13 +361,17 @@
                     <span class="team__name title ">Ричард Джеймс</span>
                   </a>
                   <div class="team__content ">
-                   <img src="img/team-img.jpg" alt="" class="team__image">
-                   <div class="team__content-maintext">
-                     <span class="team__content-name ">Оператор</span>
-                     <p class="team__content-text">
-                       С радостью поможет подобрать идеальный бургер и оформить заказ.  
-                     </p>
+
+                   <div class="team__content-wrap">
+                     <img src="img/team-img.jpg" alt="" class="team__image">
+                     <div class="team__content-maintext">
+                       <span class="team__content-name ">Оператор</span>
+                       <p class="team__content-text">
+                         С радостью поможет подобрать идеальный бургер и оформить заказ.  
+                       </p>
+                     </div>
                    </div>
+
                  </div>
                
                 </li>
@@ -372,13 +380,17 @@
                   <span class="team__name title">Джейк Финн</span>
                 </a>
                 <div class="team__content ">
-                  <img src="img/team-img.jpg" alt="" class="team__image">
-                  <div class="team__content-maintext">
-                    <span class="team__content-name ">Оператор</span>
-                    <p class="team__content-text">
-                      С радостью поможет подобрать идеальный бургер и оформить заказ.  
-                    </p>
+
+                  <div class="team__content-wrap">
+                    <img src="img/team-img.jpg" alt="" class="team__image">
+                    <div class="team__content-maintext">
+                      <span class="team__content-name ">Оператор</span>
+                      <p class="team__content-text">
+                        С радостью поможет подобрать идеальный бургер и оформить заказ.  
+                      </p>
+                    </div>
                   </div>
+
                 </div>
                 </li>
                 <li class="team__tab ">
@@ -386,30 +398,34 @@
                     <span class="team__name title">Николай Иванов</span>
                   </a>
                 <div class="team__content ">
-                  <img src="img/team-img.jpg" alt="" class="team__image">
-                  <div class="team__content-maintext">
-                    <span class="team__content-name ">Оператор</span>
-                    <p class="team__content-text">
-                      С радостью поможет подобрать идеальный бургер и оформить заказ.  
-                    </p>
+
+                  <div class="team__content-wrap">
+                    <img src="img/team-img.jpg" alt="" class="team__image">
+                    <div class="team__content-maintext">
+                      <span class="team__content-name ">Оператор</span>
+                      <p class="team__content-text">
+                        С радостью поможет подобрать идеальный бургер и оформить заказ.  
+                      </p>
+                    </div>
                   </div>
+
                 </div>
                 </li>
             </ul>
           </div>
         </section>
         <!--Секция Меню-->
-        <section class="section menu">
+        <section class="section menu" id="menu">
                 <div class="menu__container">
                     <div class="menu__space">
                         <h2 class="title section__title-menu ">меню</h2>
                     </div>
                     <ul class="menu__list">
-                        <li class="menu__item ">
+                        <li class="menu__item menu__item--1">
                             <a href="#" class="menu__subitle menu__subitle-meet">
                                 <span  class="menu__link">для мясоедов</span>
                             </a>
-                            <div class="menu__desc " style="background-image: url('img/meat-man.png');">
+                            <div class="menu__desc " >
                                 <p class="menu__text">
                                     Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
                                     Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
@@ -421,11 +437,11 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="menu__item ">
+                        <li class="menu__item menu__item--2">
                             <a  href="#" class="menu__subitle menu__subitle-veget">
                                 <span  class="menu__link">вегетерианские</span>
                             </a>
-                            <div class="menu__desc" style="background-image: url('img/vegan-man.png');">
+                            <div class="menu__desc" >
                                 <p class="menu__text">
                                     Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
                                     Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
@@ -437,11 +453,11 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="menu__item ">
+                        <li class="menu__item menu__item--3">
                             <a  href="#" class="menu__subitle menu__subitle-diet">
                                 <span  class="menu__link">диетические</span>
                             </a>
-                            <div class="menu__desc" style="background-image: url('img/diet-man.png');">
+                            <div class="menu__desc" >
                                 <p class="menu__text">
                                     Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
                                     Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко
@@ -458,7 +474,7 @@
                 </div>
             </section>
         <!--Секция Отзывы-->
-        <section class="reviews">
+        <section class="section reviews" id="reviews">
           <ul class="reviews__group">
             <li class="reviews__box" style="background-image: url('img/reviews/man-1.jpg');">
               <div class="reviews__content">
@@ -540,7 +556,7 @@
           </ul>
         </section>
         <!--Секция Заказать-->
-        <section class="order">
+        <section class="section order" id="order">
           <div class="container">
             <div class="wrap">
               <h2 class="order__title title">закажите доставку</h2>
@@ -624,7 +640,7 @@
           </div>
         </section>
         
-        <footer class="footer">
+        <section class="section footer" id="footer">
           
             <div class="footer__nav">
               <div class="footer__block">
@@ -660,8 +676,10 @@
             </div>
           </div>
           
-        </footer>
-        <div class="modals">
+        </section>
+        
+      </div>
+      <div class="modals">
          
           <div class="reviews__modals">
             <div class="popup " id="hidden-content-orlova">
@@ -699,12 +717,12 @@
           </div>
         </div>
       </div>
-      </div>
       
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
-
+    
     <script src="js/svg4everybody.js"></script>
     <script src="js/main.js"></script>
   

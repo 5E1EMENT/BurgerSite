@@ -21,14 +21,14 @@
 	.down__arrow-left {
 		cursor: pointer;
 		position: absolute;
-		left: -2%;
+		left: -3.5%;
 		top:50%;
 		transform: rotate(90deg);
 	}
 	.down__arrow-right {
 		cursor: pointer;
 		position: absolute;
-		right: -2%;
+		right: -3.5%;
 		top:50%;
 		transform: rotate(-90deg);
 	}
@@ -42,11 +42,17 @@ ul.burger__slider {
 	display:flex;
 	flex-directon: row;
 	justify-content: space-between;
+	transition: all 0.3s;
 	.burger__slide {
 		.burger__left{
 			img.burger__img {
+				margin: 0 auto;
+    display: block;
 		@include tablets {
 		max-width:rem(460px);
+	}
+	@include phones {
+		max-width:rem(300px);
 	}
 	}
 		}
@@ -63,6 +69,7 @@ ul.burger__slider {
 	}
 .burger__left {
 	position: relative;
+	width:100%;
 	.burger__consist{
 		padding:rem(10px) rem(20px);
 		display:inline-block;
