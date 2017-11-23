@@ -3,6 +3,7 @@
 	min-height:650px;
 	transition : 1s;
 	will-change: transform;
+	
 	@include tablets {
 		min-height: auto;
 	}
@@ -12,17 +13,20 @@
   width: 100%;
   // min-width: 940px + 20px;
   height: 100%;
-  min-height:650px;
+  // min-height:650px;
   overflow: hidden;
-  @include tablets {
-		min-height: auto;
-	}
+
+
 		}
 .container {
 		position: relative;
 		max-width: 960px;
 		margin: 0 auto;
 		width:95%;
+		height: 100% !important;
+    	height: 100%;
+    	margin: 0 auto; 
+    	overflow: hidden;
 }
 
 
@@ -36,4 +40,7 @@
 	@include phones {
 		font-size: rem(50px);
 	}
+}
+.wrapper--mobile {
+	overflow: visible;
 }

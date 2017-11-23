@@ -54,6 +54,9 @@
     z-index:2;
     width: 5rem;
     overflow: hidden;
+    @include phones {
+             width: 4rem;
+        }
 
 
     &.active {
@@ -104,7 +107,7 @@
 
 } 
 .menu__desc {
-   min-width: rem(540px);;
+   min-width: rem(540px);
    
    overflow: hidden;
     
@@ -113,7 +116,15 @@
     background-color: rgba(27, 27, 27, 0.91);
     background-blend-mode: multiply;
     transition: all 0.3s linear;
- 
+ @include tablets {
+    min-width: rem(340px);
+ }
+ @include horizontal {
+    min-width: rem(280px);
+ }
+ @include phones {
+    min-width: rem(380px);
+ }
     
 } 
 .menu__text {

@@ -7,6 +7,24 @@
 	background: -webkit-linear-gradient(top, #f9b33b 1%,#eb8c38 51%,#f9b33b 100%);
 	background: linear-gradient(to bottom, #f9b33b 1%,#eb8c38 51%,#f9b33b 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b33b', endColorstr='#f9b33b',GradientType=0 );
+	.down__arrow-left {
+		@include clearfix;
+		cursor: pointer;
+		position: absolute;
+		left: 0.5%;
+		top:50%;
+		transform: rotate(90deg);
+		z-index: 10;
+	}
+	.down__arrow-right {
+		@include clearfix;
+		cursor: pointer;
+		position: absolute;
+		right: 0.5%;
+		top:50%;
+		transform: rotate(-90deg);
+		z-index:10;
+	}
 .container {
 	position: relative;
 		max-width: 960px;
@@ -18,20 +36,7 @@
 	@include phones {
 		    padding: 0px 10px;
 	}
-	.down__arrow-left {
-		cursor: pointer;
-		position: absolute;
-		left: -3.5%;
-		top:50%;
-		transform: rotate(90deg);
-	}
-	.down__arrow-right {
-		cursor: pointer;
-		position: absolute;
-		right: -3.5%;
-		top:50%;
-		transform: rotate(-90deg);
-	}
+
 }
 }
 .slider__burger {
@@ -77,10 +82,10 @@ ul.burger__slider {
 		border-radius:rem(5px);
 		@include tablets {
 		position: absolute;
-		top:-20%;
+		
 		}
 		@include phones {
-			
+			left:rem(5px);
 			padding:rem(5px) rem(10px);
 		}
 
@@ -97,7 +102,7 @@ ul.burger__slider {
 		display:inline-block;
 		@include tablets {
 		position: absolute;
-		top:-20%;
+		top:0;
 		right:0;
 		}
 		@include phones {
@@ -119,19 +124,38 @@ ul.burger__slider {
 				top:rem(27px);
 				left: rem(14px);
 			}
+			@include iphone {
+				top: rem(24px);
+				left:rem(8px);
+				font-size: rem(15px);
+				}
 		}
 		&-text {
 			text-align:center;
 			position: absolute;
 			left: rem(15px);
 			top:rem(60px);
-			font-size: 20px;
+			font-size: rem(20px);
 			color:white;
 			@include tablets {
-				left: rem(15px);
+				left: rem(18px);
 				top:rem(65px);
-			}
 				font-size: rem(14px);
+			}
+			@include iphone {
+				top: rem(50px);
+				left:rem(10px);
+					font-size: rem(10px);
+				}
+				
+			}
+			.burger__kkal-img {
+				@include iphone {
+					margin-top:rem(10px);
+					width: rem(40px);
+				height: rem(40px);
+				}
+				
 			}
 
 	}
@@ -141,7 +165,7 @@ ul.burger__slider {
 		left:rem(88px);
 		display:none;
 		@include tablets {
-			top:rem(-60px);
+			
 		}
 		.ingred {
 			background-color : rgba(255,255,255,.9);
@@ -189,7 +213,7 @@ ul.burger__slider {
 	.burger__title {
 		color: white;
 		line-height: 1;
-		margin-bottom: rem(40px);
+		margin-bottom: rem(20px);
 		@include phones {
 			padding: 0 rem(10px);
 			font-size: rem(50px);

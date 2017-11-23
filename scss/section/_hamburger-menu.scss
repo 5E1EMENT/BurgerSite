@@ -13,7 +13,7 @@
 	height: rem(22px);
 	align-items: center;
 	margin-top: rem(5px);
-	z-index:100;
+	z-index:998;
   display: none;
 
   @include tablets() {
@@ -54,7 +54,7 @@
 		}
 
 .hamburger-menu-link__bars {
-
+	z-index: 999;
 	&, &:before, &:after {
 		transition: all 0.2s;
 		background: #fff;
