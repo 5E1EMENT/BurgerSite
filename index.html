@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+  
   
   <title>My Burger</title>
   <link rel="stylesheet" href="css/normalize.css">
@@ -43,32 +46,33 @@
       <a class="fixed-menu__link" href="#footer" data-scroll-to="7"></a>
     </li>
   </ul>
+  <div class="hide__menu">
+              
+                <ul class="mobile__nav " id="hidden-menu">
+                  <li class="mobile__item-hidden">
+                    <a href="#best" class="mobile__link-hidden" data-scroll-to="1">О нас</a></li>
+                  <li class="mobile__item-hidden">
+                    <a href="#burgers-slider" class="mobile__link-hidden" data-scroll-to="2">Бургеры</a></li>
+                  <li class="mobile__item-hidden">
+                    <a href="#team" class="mobile__link-hidden" data-scroll-to="3">Команда</a></li>
+                  <li class="mobile__item-hidden">
+                    <a href="#menu" class="mobile__link-hidden" data-scroll-to="4">Меню</a></li>
+                  <li class="mobile__item-hidden">
+                    <a href="#reviews" class="mobile__link-hidden" data-scroll-to="5">Отзывы</a></li>
+                  <li class="mobile__item-hidden">
+                    <a href="#footer" class="mobile__link-hidden" data-scroll-to="7">Контакты</a></li>
+                    
+                </ul>
+                
+              
+            </div>
     <div class="wrapper">
       <div class="maincontent">
 
         <!--Наш header-->
         <section class="section header active" id="header">
           <div class="container">
-            <div class="hide__menu">
-              
-                <ul class="mobile__nav " id="hidden-menu">
-                  <li class="mobile__item-hidden">
-                    <a href="#best" class="mobile__link-hidden">О нас</a></li>
-                  <li class="mobile__item-hidden">
-                    <a href="#burgers-slider" class="mobile__link-hidden">Бургеры</a></li>
-                  <li class="mobile__item-hidden">
-                    <a href="#team" class="mobile__link-hidden">Команда</a></li>
-                  <li class="mobile__item-hidden">
-                    <a href="#menu" class="mobile__link-hidden">Меню</a></li>
-                  <li class="mobile__item-hidden">
-                    <a href="#reviews" class="mobile__link-hidden">Отзывы</a></li>
-                  <li class="mobile__item-hidden">
-                    <a href="#footer" class="mobile__link-hidden">Контакты</a></li>
-                    
-                </ul>
-                
-              
-            </div>
+            
             <div class="header__top">
               <div class="header__logo">
                 <a href="#" class="logo">
@@ -244,6 +248,52 @@
                            <img src="img/burger-composition.png" alt="" class="burger__composition">
                            <span class="burger__include title">состав</span>
                          </div>
+                         <div class="burger__modal">
+                           <ul class="ingred">
+                             <li class="ingred_item">
+                               <img src="img/icons/beef.svg" alt="" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Говядина</span>
+                                 <span class="ingred__lot">300г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/buns.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Булочки</span>
+                                 <span class="ingred__lot">100г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/salad.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Зелень</span>
+                                 <span class="ingred__lot">70г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/sauce.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Соус</span>
+                                 <span class="ingred__lot">150г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/cucumber.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Овощи</span>
+                                 <span class="ingred__lot">200г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/cheese.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Сыр</span>
+                                 <span class="ingred__lot">80г</span>
+                               </div>
+                             </li>
+                           </ul>
+                         </div>
                          <img src="img/burgers/Chiken_burger.png" alt="" class="burger__img">
                          <div class="burger__kkal">
                            <img src="img/icons/kkal.svg" alt="" class="burger__kkal-img">
@@ -263,6 +313,52 @@
                          <div class="burger__consist">
                            <img src="img/burger-composition.png" alt="" class="burger__composition">
                            <span class="burger__include title">состав</span>
+                         </div>
+                         <div class="burger__modal">
+                           <ul class="ingred">
+                             <li class="ingred_item">
+                               <img src="img/icons/beef.svg" alt="" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Говядина</span>
+                                 <span class="ingred__lot">300г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/buns.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Булочки</span>
+                                 <span class="ingred__lot">100г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/salad.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Зелень</span>
+                                 <span class="ingred__lot">70г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/sauce.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Соус</span>
+                                 <span class="ingred__lot">150г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/cucumber.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Овощи</span>
+                                 <span class="ingred__lot">200г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/cheese.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Сыр</span>
+                                 <span class="ingred__lot">80г</span>
+                               </div>
+                             </li>
+                           </ul>
                          </div>
                          <img src="img/burgers/Cheeseburger.png" alt="" class="burger__img">
                          <div class="burger__kkal">
@@ -284,6 +380,52 @@
                            <img src="img/burger-composition.png" alt="" class="burger__composition">
                            <span class="burger__include title">состав</span>
                          </div>
+                         <div class="burger__modal">
+                           <ul class="ingred">
+                             <li class="ingred_item">
+                               <img src="img/icons/beef.svg" alt="" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Говядина</span>
+                                 <span class="ingred__lot">300г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/buns.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Булочки</span>
+                                 <span class="ingred__lot">100г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/salad.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Зелень</span>
+                                 <span class="ingred__lot">70г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/sauce.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Соус</span>
+                                 <span class="ingred__lot">150г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/cucumber.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Овощи</span>
+                                 <span class="ingred__lot">200г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/cheese.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Сыр</span>
+                                 <span class="ingred__lot">80г</span>
+                               </div>
+                             </li>
+                           </ul>
+                         </div>
                          <img src="img/burgers/burger_sandwich.png" alt="" class="burger__img">
                          <div class="burger__kkal">
                            <img src="img/icons/kkal.svg" alt="" class="burger__kkal-img">
@@ -303,6 +445,52 @@
                          <div class="burger__consist">
                            <img src="img/burger-composition.png" alt="" class="burger__composition">
                            <span class="burger__include title">состав</span>
+                         </div>
+                         <div class="burger__modal">
+                           <ul class="ingred">
+                             <li class="ingred_item">
+                               <img src="img/icons/beef.svg" alt="" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Говядина</span>
+                                 <span class="ingred__lot">300г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/buns.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Булочки</span>
+                                 <span class="ingred__lot">100г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/salad.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Зелень</span>
+                                 <span class="ingred__lot">70г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/sauce.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Соус</span>
+                                 <span class="ingred__lot">150г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/cucumber.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Овощи</span>
+                                 <span class="ingred__lot">200г</span>
+                               </div>
+                             </li>
+                             <li class="ingred_item">
+                               <img src="img/icons/cheese.svg" class="ingred__img">
+                               <div class="ingred__desc">
+                                 <span class="ingred__title">Сыр</span>
+                                 <span class="ingred__lot">80г</span>
+                               </div>
+                             </li>
+                           </ul>
                          </div>
                          <img src="img/burgers/Spicy_Shrimp_Burger.png" alt="" class="burger__img">
                          <div class="burger__kkal">
@@ -566,41 +754,41 @@
               <h2 class="order__title title">закажите доставку</h2>
               <div class="form">
 
-                <form action="" class="form__order">
+                <form action="server.php" method="post" class="form__order" id="order__form">
                   <div class="form__content">
                     <div class="form__row">
-                      <label class="form__block">
+                      <label class="form__block" for="user-name">
                         <span class="form__block-title">Имя</span>
-                        <input type="text" class="form__input">
+                        <input type="text" class="form__input" name="user-name" id="user-name">
                       </label>
-                      <label class="form__block">
+                      <label class="form__block" for="user-phone">
                         <span class="form__block-title">Телефон</span>
-                        <input type="text" class="form__input">
+                        <input type="text" class="form__input" name="user-phone" id="user-phone">
                       </label>
                     </div>
                     <div class="form__row">
-                      <label class="form__block">
+                      <label class="form__block" for="user-street">
                         <span class="form__block-title">Улица</span>
-                        <input type="text" class="form__input">
+                        <input type="text" class="form__input" name="user-street" id="user-street">
                       </label>
                       
                     </div>
                     <div class="form__row">
-                      <label class="form__block">
+                      <label class="form__block" for="user-house">
                         <span class="form__block-title">Дом</span>
-                        <input type="text" class="form__input">
+                        <input type="text" class="form__input" name="user-house" id="user-house">
                       </label>
-                       <label class="form__block">
+                       <label class="form__block" for="user-houseBlock">
                         <span class="form__block-title">Корпус</span>
-                        <input type="text" class="form__input">
+                        <input type="text" class="form__input" name="user-houseBlock" id="user-houseBlock">
                       </label>
-                       <label class="form__block">
+                       <label class="form__block" for="user-apartment">
                         <span class="form__block-title">Квартира</span>
-                        <input type="text" class="form__input">
+                        <input type="text" class="form__input" name="user-apartment" id="user-apartment">
                       </label>
-                       <label class="form__block">
+                       <label class="form__block" for="user-floor">
                         <span class="form__block-title">Этаж</span>
-                        <input type="text" class="form__input">
+                        <input type="text" class="form__input" name="user-floor" id="user-floor">
                       </label>
                     </div>
                   </div>
@@ -608,7 +796,7 @@
                     <div class="form__row">
                       <label class="form__block">
                         <span class="form__block-title">Комментарий</span>
-                        <textarea name="" id="" class="form__area" cols="30" rows="10"></textarea>
+                        <textarea name="user-message" id="message" class="form__area" cols="30" rows="10"></textarea>
                       </label>
                       
                       
@@ -616,28 +804,36 @@
                     <div class="form__row">
                       <label  class="form__block">
                         <div class="form__block-radio">
-                          <input id="cash" type="radio" name="gender" value="cash" class="cash-pay">
+                          <input id="cash" type="radio" name="pay-option" value="cash" class="cash-pay">
                           <label for="cash" class="cash-text">Потребуется сдача</label>
-                          <input id="card" type="radio" name="gender" value="card" class="card-pay">
+
+                          <input id="card" type="radio" name="pay-option" value="card" class="card-pay">
                           <label for="card" class="card-text">Оплата по карте</label>
                         </div>
                       </label>
                     </div>
                     <div class="form__row">
                       <label  class="form__block checkbox">
-                        <input id="ready" type="checkbox" class="checkbox-call">
+                        <input id="ready" type="checkbox" class="checkbox-call" name="dont-disturb" value="1">
                         <label for="ready" class="checked-call" >Не перезванивать</label>
                         
                       </label>
                     </div>
                     <div class="form__row">
                       
-                        <button type="button" class="form-button order-btn">Заказать</button>
+                        <button type="submit" class="form-button order-btn  " >Заказать</button>
                         <button type="reset" class="form-clear clear-btn">Очистить</button>
                       
                     </div>
                   </div>
                 </form>
+                <div class="form__result" id="result">
+                  <div class="popup" id="hidden-content-form">
+                    <h2 class="popup__title title">Спасибоо за заказ!</h2>
+                    <p class="popup__text">Ваш заказ находится в очереди.Доставка осуществляется в кротчайшие сроки. Приятного аппетита! </p>
+                  </div>
+                </div> 
+
                 
               </div>
             </div>
@@ -655,12 +851,12 @@
                 </a>
               </div>
               <div class="footer__social">
-                  <a href="#" class="footer__link vk__link">
+                  <a href="https://vk.com/flak_zwilling" class="footer__link vk__link">
                     <svg class="icon" width="36.711px" height="36.711px" viewBox = "0 0 36.711 36.711" >
                       <use xlink:href="img/icons/sprite.svg#vk" />
                     </svg>
                   </a>
-                  <a href="#" class="footer__link fb__link">
+                  <a href="https://www.facebook.com/daniil.nikitas?ref=bookmarks" class="footer__link fb__link">
                     <svg class="icon" width="36.711px" height="36.711px" viewBox = "0 0 36.711 36.711" >
                       <use xlink:href="img/icons/sprite.svg#fb" />
                     </svg>
@@ -670,7 +866,7 @@
                       <use xlink:href="img/icons/sprite.svg#inst" />
                     </svg>
                   </a>
-                  <a href="#" class="footer__link twitter__link">
+                  <a href="https://twitter.com/DaniilNikitas" class="footer__link twitter__link">
                     <svg class="icon" width="36.711px" height="36.711px" viewBox = "0 0 36.711 36.711" >
 
                       <use xlink:href="img/icons/sprite.svg#tw" />
@@ -722,7 +918,10 @@
         </div>
       </div>
       
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>

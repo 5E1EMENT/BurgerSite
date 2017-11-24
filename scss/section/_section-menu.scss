@@ -125,6 +125,9 @@
  @include phones {
     min-width: rem(380px);
  }
+ @include iphone {
+    min-width: rem(320px);
+ }
     
 } 
 .menu__text {
@@ -163,4 +166,10 @@
         background-position: center;
 
     }
+}
+.error {
+    color: red;
+}
+.success {
+    color: green;
 }

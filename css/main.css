@@ -118,8 +118,7 @@ textarea:focus {
   min-height: 650px;
   -webkit-transition: 1s;
   -o-transition: 1s;
-  transition: 1s;
-  will-change: transform; }
+  transition: 1s; }
   @media screen and (max-width: 768px) {
     .maincontent {
       min-height: auto; } }
@@ -281,6 +280,9 @@ textarea:focus {
           -ms-flex-direction: column;
           flex-direction: column;
           margin-top: 3.125rem; } }
+      @media screen and (max-width: 480px) {
+        .header .container .header__content .header__content-left {
+          padding: 0 1.25rem; } }
       .header .container .header__content .header__content-left .header_burger {
         display: inline-block;
         position: relative;
@@ -1113,6 +1115,9 @@ textarea:focus {
   @media screen and (max-width: 480px) {
     .menu__desc {
       min-width: 23.75rem; } }
+  @media screen and (max-width: 350px) {
+    .menu__desc {
+      min-width: 20rem; } }
 
 .menu__text {
   font-family: 'UbuntuMedium' , Helvetica , sans-serif;
@@ -1143,6 +1148,12 @@ textarea:focus {
     background: url("../img/diet-man.png");
     background-size: cover;
     background-position: center; }
+
+.error {
+  color: red; }
+
+.success {
+  color: green; }
 
 .order {
   background-image: url("../img/order-bg.png");

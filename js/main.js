@@ -1,67 +1,67 @@
 
-
 // Интерактивное всплывающее меню
  $(document).ready(function(){
- 	let link = $('.hamburger-menu-link');
- 	let nav = $('.mobile__nav');
- 	let bars = $('.hamburger-menu-link__bars');
+  let link = $('.hamburger-menu-link');
+  let nav = $('.mobile__nav');
+  let bars = $('.hamburger-menu-link__bars');
 
 
-	$(link).click(function () {
-		$(nav).toggleClass('active');
-		$(bars).toggleClass('active');
-		});
-	
-	});
+  link.click(function (e) {
+    e.preventDefault();
+    nav.toggleClass('active');
+    bars.toggleClass('active');
+    });
+  
+  });
 
   $(document).ready(function(){
-  	let hidden = $('.mobile__link-hidden');
-  	let nav = $('.mobile__nav');
-  	let bars = $('.hamburger-menu-link__bars');
+    let hidden = $('.mobile__link-hidden');
+    let nav = $('.mobile__nav');
+    let bars = $('.hamburger-menu-link__bars');
 
-	$(hidden).click(function(event) {
-		$(nav).removeClass('active');
-		$(bars).toggleClass('active');
-	});
-	
-	});
+  hidden.click(function() {
+    nav.removeClass('active');
+    bars.removeClass('active');
+  });
+  
+  });
 
 
 // при нажатии на клавиатуру
-	$(document).keyup(function(e) {
-		// условие, если нажатие было на ESC
-		if(e.which == 27) {
-			$('.mobile__nav').removeClass('active'); // удаление класса
-		}
-	});
+  $(document).keyup(function(e) {
+    // условие, если нажатие было на ESC
+    if(e.which == 27) {
+      $('.mobile__nav').removeClass('active'); // удаление класса
+    }
+  });
 
 // Секция  команда
 
 $(document).ready(function(){
 
-	$('.team__link').click(function(e) {
-		e.preventDefault();
-		var $this = $(this);
-		let item = $this.closest('.team__tab');
-		let list = $this.closest('.team__accordion');
-		let items = list.find('.team__tab');
-		let content = item.find('.team__content');
-		let otherContent = list.find('.team__content');
-		var duration = 500;
+  $('.team__link').click(function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    let item = $this.closest('.team__tab');
+    let list = $this.closest('.team__accordion');
+    let items = list.find('.team__tab');
+    let content = item.find('.team__content');
+    let otherContent = list.find('.team__content');
+    var duration = 500;
 
 
-		if(!item.hasClass('content-active')) {
-			items.removeClass('content-active')
-			item.addClass('content-active')
+    if(!item.hasClass('content-active')) {
+      items.removeClass('content-active')
+      item.addClass('content-active')
 
-		otherContent.stop(true, true).slideUp(duration);
-		content.stop(true, true).slideDown(duration);
-		} else {
-			content.stop(true, true).slideUp(duration);
-			item.removeClass('content-active');
-		}
+    otherContent.stop(true, true).slideUp(duration);
+    content.stop(true, true).slideDown(duration);
+    } else {
+      content.stop(true, true).slideUp(duration);
+      item.removeClass('content-active');
+    }
 
-		});
+    });
 });
 
 // Секция  меню
@@ -105,12 +105,12 @@ $(document).ready(function(){
   });
   
 });
-	
-	
+  
+  
 
-		//Слайдер
-		$(function(){
-			// var index = 0;
+    //Слайдер
+    $(function(){
+      // var index = 0;
       var moveSlide = function(container, slideNum) {
                 var 
                     items = container.find('.burger__slide'),
@@ -128,7 +128,7 @@ $(document).ready(function(){
                     }
       }
 
-			$('.slider__btn').on('click', function(e){
+      $('.slider__btn').on('click', function(e){
                 e.preventDefault();
 
                   var $this = $(this),
@@ -165,7 +165,7 @@ $(document).ready(function(){
                     
                     // index++;
                     // if (index == items.length) {
-                    	// index = 0;
+                      // index = 0;
                     // }
 
                     // console.log(index)
@@ -192,8 +192,8 @@ $(document).ready(function(){
 
 
             // $('.down__arrow-left').on('click', function(e) {
-            // 	 e.preventDefault();
-            // 	 var $this = $(this),
+            //   e.preventDefault();
+            //   var $this = $(this),
             //         container = $this.closest('.slider__burger'),
             //         items = container.find('.burger__slide'),
             //         activeSlide = items.filter('.active'),
@@ -203,7 +203,7 @@ $(document).ready(function(){
 
             //         index--;
             //         if (index < 0) {
-            //         	index = items.length - 1;
+            //          index = items.length - 1;
             //         }
 
             //         var reqTransform = -index * 100;
@@ -214,29 +214,29 @@ $(document).ready(function(){
 
             // })
 
-		});
+    });
 
 
-		//Modal Windows
-	jQuery(document).ready(function(e) {
-		$('.burger__consist').on('mouseenter', function(){
-			$('.burger__modal').fadeIn();
-		});
-		$('.burger__consist').on('mouseleave', function(){
-			$('.burger__modal').fadeOut();
-		});
-	});
-	jQuery(document).ready(function(e) {
+    //Modal Windows
+  jQuery(document).ready(function(e) {
+    $('.burger__consist').on('mouseenter', function(){
+      $('.burger__modal').fadeIn();
+    });
+    $('.burger__consist').on('mouseleave', function(){
+      $('.burger__modal').fadeOut();
+    });
+  });
+  jQuery(document).ready(function(e) {
 
 
-		$("[data-fancybox]").fancybox(function(e){
+    $("[data-fancybox]").fancybox(function(e){
 
 
 
-	});
-	});
+  });
+  });
 
-	//One Page Scroll
+  //One Page Scroll
   $(window).on('load resize',resizeFunc());
 
 function resizeFunc(){
@@ -352,5 +352,25 @@ $('[data-scroll-to]').on('click touchstart', e => {
 
   }
 }
-	
+//Form
+$('#order__form').submit(function(e) {
+  $.ajax({
+    type: "POST",
+    url : "server.php",
+    data: $(this).serialize()
+  }).done(function(){
+    alert('Успешно');
+    setTimeout(function(){
+
+    },1000)
+  });
+  return false;
+});
+
+
+
+
+
+
+
 
