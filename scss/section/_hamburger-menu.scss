@@ -6,7 +6,12 @@
 	right: rem(10px);
 
 }
-
+.hamburger__menu--fixedbtn {
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	right: rem(10px);
+}
 .hamburger-menu-link {
 	vertical-align: middle;
 	position: fixed;
@@ -14,7 +19,9 @@
 	align-items: center;
 	margin-top: rem(5px);
 	z-index:998;
-  display: none;
+  	display: none;
+  	top: rem(34px);
+  	right: rem(15px);
 
   @include tablets() {
     display: flex;
@@ -44,8 +51,11 @@
 			display: none;
 			position: absolute;
 			right:rem(35px);
+			
+			
 			@include tablets {
 				display: block;
+				    z-index: 2;
 			}
 
 			&:hover {

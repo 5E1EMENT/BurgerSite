@@ -1426,6 +1426,18 @@ textarea:focus {
   position: absolute;
   right: 0.625rem; }
 
+.hamburger__menu--fixedbtn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0.625rem; }
+
 .hamburger-menu-link {
   vertical-align: middle;
   position: fixed;
@@ -1436,7 +1448,9 @@ textarea:focus {
   align-items: center;
   margin-top: 0.3125rem;
   z-index: 998;
-  display: none; }
+  display: none;
+  top: 2.125rem;
+  right: 0.9375rem; }
   @media screen and (max-width: 768px) {
     .hamburger-menu-link {
       display: -webkit-box;
@@ -1468,7 +1482,8 @@ textarea:focus {
   right: 2.1875rem; }
   @media screen and (max-width: 768px) {
     .hide-btn {
-      display: block; } }
+      display: block;
+      z-index: 2; } }
   .hide-btn:hover {
     background-color: #c1401e; }
 
