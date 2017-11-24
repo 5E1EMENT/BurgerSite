@@ -2,8 +2,16 @@
 	background-image: url("../img/order-bg.png") ;
 	background-size: cover;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+		    flex-direction: column;
+		        justify-content: center;
+		        align-items: center;
+	.container {
+		display: flex;
+		    flex-direction: column;
+		        justify-content: center;
+		        align-items: center;
+
+	}
 	&__title {
 		color: $orange;
 		text-align:center;
