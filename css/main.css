@@ -385,9 +385,22 @@ textarea:focus {
   width: 100%;
   height: 100%;
   min-height: 650px;
-  background-image: url(../img/map-bg.png);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background-size: cover;
   position: relative; }
+  .footer #map {
+    width: 100%;
+    height: 100%; }
+  .footer .footer__nav {
+    display: block; }
   .footer .footer__block {
     width: 90%;
     max-width: 960px;
@@ -1693,9 +1706,9 @@ ul.burger__slider {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s; }
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s; }
   ul.burger__slider .burger__slide .burger__left img.burger__img {
     margin: 0 auto;
     display: block; }

@@ -366,11 +366,40 @@ $('#order__form').submit(function(e) {
   });
   return false;
 });
+//MAP
+ymaps.ready(init);
+    var myMap,
+        myPlacemark1,
+        myPlacemark2,
+        myPlacemark3;
+
+    function init(){     
+        myMap = new ymaps.Map("map", {
+            center: [52.97095692, 63.09152136],
+            zoom: 15
+        });
+        myMap.behaviors
+    
+    .disable(['scrollZoom'])
+
+
+       myPin = new ymaps.GeoObjectCollection({}, {
+       iconLayout: 'default#image',
+        iconImageHref: 'img/icons/map-marker.svg',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -55]
+    });
 
 
 
 
-
-
-
-
+        myPlacemark1 = new ymaps.Placemark([52.97310578, 63.08356340], 
+          { hintContent: 'Burger', balloonContent: 'Burger Shop' });
+        myPlacemark2 = new ymaps.Placemark([52.96390810, 63.09176508], 
+          { hintContent: 'Burger', balloonContent: 'Burger Shop' });
+        myPlacemark3 = new ymaps.Placemark([52.97133372, 63.08856374], 
+          { hintContent: 'Burger', balloonContent: 'Burger Shop' });
+          myPin.add(myPlacemark1).add(myPlacemark2).add(myPlacemark3);
+          myMap.geoObjects.add(myPin);
+         
+    }
