@@ -1508,8 +1508,6 @@ textarea:focus {
     .hide-btn {
       display: block;
       z-index: 2; } }
-  .hide-btn:hover {
-    background-color: #c1401e; }
 
 .hamburger-menu-link__bars {
   z-index: 999; }
@@ -1867,7 +1865,8 @@ ul.burger__slider {
   .burger__slide .burger__right .burger__order {
     display: inline-block;
     text-decoration: none;
-    padding: 0.625rem;
+    text-align: center;
+    padding: 0.5625rem;
     background-color: #e45028;
     width: 6.25rem;
     height: 2.1875rem;
