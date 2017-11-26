@@ -288,14 +288,16 @@ $('[data-scroll-to]').on('click touchstart', e => {
     console.log('no!');
     $('.wrapper').css('overflow', 'visible');
 
-    $(document).ready(function() {
-    $(".mobile__item-hidden").click(function () { 
-      var elementClick = $(this).attr("href");
-      var destination = $(elementClick).offset().top;
-      $('html,body').animate( { scrollTop: destination }, 1200 );
-      return false;
-    });
-  });
+    $('.mobile__link-hidden').click(function (e) { 
+     e.preventDefault();
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+ 
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+        //анимируем переход на расстояние - top за 1000 мс
+        $('body,html').animate({scrollTop: top}, 1000);
+   });
 
   }
 }
