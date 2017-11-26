@@ -288,7 +288,7 @@ $('[data-scroll-to]').on('click touchstart', e => {
     console.log('no!');
     $('.wrapper').css('overflow', 'visible');
 
-    $('.mobile__link-hidden').click(function (e) { 
+    $('.mobile__link-hidden, .nav__link, .burger__order').click(function (e) { 
      e.preventDefault();
         //забираем идентификатор бока с атрибута href
         var id  = $(this).attr('href'),
