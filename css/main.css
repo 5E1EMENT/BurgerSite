@@ -1730,14 +1730,16 @@ ul.burger__slider {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  padding: 1.25rem 0; }
   @media screen and (max-width: 768px) {
     .burger__slide {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
-      flex-direction: column; } }
+      flex-direction: column;
+      padding: 0; } }
   .burger__slide .burger__left {
     position: relative;
     width: 100%; }
@@ -1790,7 +1792,7 @@ ul.burger__slider {
       .burger__slide .burger__left .burger__kkal-text {
         text-align: center;
         position: absolute;
-        left: 0.9375rem;
+        left: 0.625rem;
         top: 3.75rem;
         font-size: 1.25rem;
         color: white; }
