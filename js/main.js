@@ -88,18 +88,12 @@ $(document).ready(function(){
       items.removeClass('active').stop().animate({width : width}, duration);
       item.addClass('active').stop().animate({width : reqWidth}, duration);
 
-    // otherContent.stop(true, true).slideUp(duration);
-    // content.stop(true, true).slideDown(duration);
+   
     } else {
-      // content.stop(true, true).slideUp(duration);
+      
       item.removeClass('active').stop().animate({width : width}, duration);
     }
-    // if(reqParent.hasClass(activeItem)) {
-    //    reqParent.removeClass(activeItem).stop().animate({width : width}, duration);
-    //  } else {
-    //    item.removeClass(activeItem).stop().animate({width : width}, duration);
-    //    reqParent.addClass(activeItem).stop().animate({width : reqWidth}, duration);
-    //  }
+    
     
 
   });
@@ -110,7 +104,7 @@ $(document).ready(function(){
 
     //Слайдер
     $(function(){
-      // var index = 0;
+      
       var moveSlide = function(container, slideNum) {
                 var 
                     items = container.find('.burger__slide'),
@@ -118,8 +112,7 @@ $(document).ready(function(){
                     reqItem = items.eq(slideNum),
                     reqIndex = reqItem.index(),
                     list = container.find('.burger__slider'),
-                    // nextItem = activeSlide.next(),
-                    // prevItem = activeSlide.prev(),
+                    
                     duration = 500;
                     if (reqItem.length) {
                       var reqTransform = -reqIndex * 100;
@@ -147,8 +140,6 @@ $(document).ready(function(){
                         moveSlide(container, items.first().index());
                       }
 
-                    
-
                   } else {
                         if(prevItem.length) {
                         moveSlide(container, prevItem.index());
@@ -159,61 +150,8 @@ $(document).ready(function(){
                    }
 
                 
-
-
-                    
-                    
-                    // index++;
-                    // if (index == items.length) {
-                      // index = 0;
-                    // }
-
-                    // console.log(index)
-                
             });
      
-
-             // var $this = $(this),
-             //        container = $this.closest('.slider__burger'),
-             //        items = container.find('.burger__slide'),
-             //        activeSlide = items.filter('.active'),
-             //        reqItem = activeSlide.prev(),
-             //        reqIndex = reqItem.index(),
-             //        list = container.find('.burger__slider'),
-             //        // nextItem = activeSlide.next(),
-             //        // prevItem = activeSlide.prev(),
-             //        duration = 500;
-             //        if (reqItem.length) {
-             //          var reqTransform = -reqIndex * 100;
-             //          list.css({"transform": 'translateX('+reqTransform+'%)'}, duration);
-             //        reqItem.addClass('active').siblings().removeClass('active');
-             //        }
-         
-
-
-            // $('.down__arrow-left').on('click', function(e) {
-            //   e.preventDefault();
-            //   var $this = $(this),
-            //         container = $this.closest('.slider__burger'),
-            //         items = container.find('.burger__slide'),
-            //         activeSlide = items.filter('.active'),
-            //         reqItem = activeSlide.prev(),
-            //         list = container.find('.burger__slider'),
-            //         duration = 500;
-
-            //         index--;
-            //         if (index < 0) {
-            //          index = items.length - 1;
-            //         }
-
-            //         var reqTransform = -index * 100;
-
-
-            //         list.css({"transform": 'translateX('+reqTransform+'%)'}, duration);
-            //         reqItem.addClass('active').siblings().removeClass('active');
-
-            // })
-
     });
 
 
@@ -350,6 +288,15 @@ $('[data-scroll-to]').on('click touchstart', e => {
     console.log('no!');
     $('.wrapper').css('overflow', 'visible');
 
+    $(document).ready(function() {
+    $(".mobile__item-hidden").click(function () { 
+      var elementClick = $(this).attr("href");
+      var destination = $(elementClick).offset().top;
+      $('html,body').animate( { scrollTop: destination }, 1200 );
+      return false;
+    });
+  });
+
   }
 }
 //Form
@@ -367,6 +314,7 @@ $('#order__form').submit(function(e) {
   return false;
 });
 //MAP
+
 ymaps.ready(init);
     var myMap,
         myPlacemark1,
@@ -391,8 +339,6 @@ ymaps.ready(init);
     });
 
 
-
-
         myPlacemark1 = new ymaps.Placemark([52.97310578, 63.08356340], 
           { hintContent: 'Burger', balloonContent: 'Burger Shop' });
         myPlacemark2 = new ymaps.Placemark([52.96390810, 63.09176508], 
@@ -401,5 +347,8 @@ ymaps.ready(init);
           { hintContent: 'Burger', balloonContent: 'Burger Shop' });
           myPin.add(myPlacemark1).add(myPlacemark2).add(myPlacemark3);
           myMap.geoObjects.add(myPin);
-         
+
+         if($(window).width() <= '480') {
+          myMap.behaviors.disable('drag');
+         }
     }
