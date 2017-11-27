@@ -1,4 +1,5 @@
 <?php
+
 	header('Content-Type: text/html; charset=utf-8');
 	$name = $_POST['user-name'];
 	$phone = $_POST['user-phone'];
@@ -8,8 +9,10 @@
 	$apartament = $_POST['user-apartment'];
 	$floor = $_POST['user-floor'];
 	$message = $_POST['user-message'];
+
 	$disturb = $_POST['dont-disturb']; // 1 или null 
     $disturb = isset($disturb) ? 'НЕТ' : 'ДА'; 
+
 	$mail_message = '
 	<html>
 	  <head>
@@ -30,6 +33,7 @@
 	  </body>
 	</html>
 	';
+
    
     $headers = "From: Администратор сайта <admin@burger.com>\r\n".
     "MIME-Version: 1.0" . "\r\n" .
@@ -40,4 +44,5 @@
    	} else {
    		echo 'error';
    	}
+
 ?>
