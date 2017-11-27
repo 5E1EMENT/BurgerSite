@@ -6,7 +6,7 @@
   let bars = $('.hamburger-menu-link__bars');
 
 
-  link.click(function (e) {
+  link.on("touchstart click", function (e) {
     e.preventDefault();
     nav.toggleClass('active');
     bars.toggleClass('active');
@@ -19,7 +19,7 @@
     let nav = $('.mobile__nav');
     let bars = $('.hamburger-menu-link__bars');
 
-  hidden.click(function() {
+  hidden.on("touchstart click" , function() {
     nav.removeClass('active');
     bars.removeClass('active');
   });
@@ -288,7 +288,7 @@ $('[data-scroll-to]').on('click touchstart', e => {
     console.log('no!');
     $('.wrapper').css('overflow', 'visible');
 
-    $('.mobile__link-hidden, .nav__link, .burger__order').click(function (e) { 
+    $('.mobile__link-hidden, .nav__link, .burger__order').on("touchstart click" ,function (e) { 
      e.preventDefault();
         //забираем идентификатор бока с атрибута href
         var id  = $(this).attr('href'),
