@@ -814,12 +814,11 @@
                     </div>
                     <div class="form__row">
                       
-                        <button type="submit" class="form-button order-btn  " id="btn">Заказать</button>
+                        <button type="submit" class="form-button order-btn  " >Заказать</button>
                         <button type="reset" class="form-clear clear-btn">Очистить</button>
                       
                     </div>
                   </div>
-                  <div class="result_form"></div>
                 </form>
                 <div class="form__result" id="result">
                   <div class="popup" id="hidden-content-form">

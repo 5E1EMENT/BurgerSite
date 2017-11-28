@@ -1,6 +1,6 @@
 <?php
 
-	header('Content-Type: text/html; charset=utf-8');
+	header('Content-type: text/html; charset=utf-8');
 	$name = $_POST['user-name'];
 	$phone = $_POST['user-phone'];
 	$street = $_POST['user-street'];

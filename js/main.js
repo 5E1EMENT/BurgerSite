@@ -302,16 +302,19 @@ $('[data-scroll-to]').on('click touchstart', e => {
   }
 }
 //Form
+
 $('#order__form').submit(function(e) {
+   var msg = $("#order__form").serialize();
   $.ajax({
     type: "POST",
-    url : "server.php",
-    data: $(this).serialize()
-  }).done(function(){
-    alert('Успешно');
-    setTimeout(function(){
-
-    },1000)
+    url: "server.php",
+    data: msg,
+    success: function(data) {
+      alert("Все хорошо");
+    },
+    error:  function(xhr, str){
+      alert("Возникла ошибка!");
+    }
   });
   return false;
 });
