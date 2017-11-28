@@ -306,7 +306,7 @@ $('[data-scroll-to]').on('click touchstart', e => {
 $('#order__form').submit(function(e) {
    var msg = $("#order__form").serialize();
   $.ajax({
-    type: "GET",
+    type: "POST",
     url: "server.php",
     data: msg,
     success: function(data) {
