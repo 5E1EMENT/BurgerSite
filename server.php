@@ -1,15 +1,15 @@
 <?php 
 header('Content-type: text/html; charset=utf-8');
-	$name = $_POST['user-name'];
-	$phone = $_POST['user-phone'];
-	$street = $_POST['user-street'];
-	$house = $_POST['user-house'];
-	$houseBlock = $_POST['user-houseBlock'];
-	$apartament = $_POST['user-apartment'];
-	$floor = $_POST['user-floor'];
-	$message = $_POST['user-message'];
+	$name = $_GET['user-name'];
+	$phone = $_GET['user-phone'];
+	$street = $_GET['user-street'];
+	$house = $_GET['user-house'];
+	$houseBlock = $_GET['user-houseBlock'];
+	$apartament = $_GET['user-apartment'];
+	$floor = $_GET['user-floor'];
+	$message = $_GET['user-message'];
 
-	$disturb = $_POST['dont-disturb']; // 1 или null 
+	$disturb = $_GET['dont-disturb']; // 1 или null 
     $disturb = isset($disturb) ? 'НЕТ' : 'ДА'; 
 
 	$mail_message = '
