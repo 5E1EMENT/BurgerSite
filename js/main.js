@@ -353,7 +353,7 @@ ymaps.ready(init);
           myPin.add(myPlacemark1).add(myPlacemark2).add(myPlacemark3);
           myMap.geoObjects.add(myPin);
 
-         if($(window).width() <= '480') {
+         if($(window).width() <= '768') {
           myMap.behaviors.disable('drag');
          }
     }
