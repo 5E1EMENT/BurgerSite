@@ -1905,5 +1905,7 @@ ul.burger__slider {
     margin-left: 2.5rem; }
     .burger__slide .burger__right .burger__order:hover {
       background-color: #c1401e; }
-
+#footer-title {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */
