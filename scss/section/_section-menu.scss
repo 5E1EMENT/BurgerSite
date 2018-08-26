@@ -152,18 +152,19 @@
  .menu__item--2 {
     background-blend-mode: multiply;
     .menu__desc {
-        background: url('../img/vegan-man.png') ;
-        background-size: cover;
-        background-position: center;
-
+        background: url('../img/vegan-man.png') no-repeat;
+        background-size: cover !important;
+        background-position: center !important;
+        
     }
 }
 .menu__item--3 {
     background-blend-mode: multiply;
     .menu__desc {
-        background: url('../img/diet-man.png') ;
-        background-size: cover;
-        background-position: center;
+        background: url('../img/diet-man.png') no-repeat;
+        background-size: cover !important;
+        background-position: center !important;
+        
 
     }
 }

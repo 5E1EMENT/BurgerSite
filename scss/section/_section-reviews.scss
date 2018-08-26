@@ -27,33 +27,39 @@
 		.reviews__content {
 			transition: all 0.2s;
 			padding-top:rem(50px);
-			padding-left:rem(10px);
+			padding-left:rem(30px);
 			opacity: 0;
+			text-align: left;
+			@include tablets {
+				text-align: center;
+				padding-left: 0;
+			}
 			.reviews__name {
+				margin-left: 0;
 				@include tablets {
-  			text-align: center;
-  			margin-top:rem(-20px);
-  			margin-left:rem(-10px);
-  }
-  @include phones {
-  	margin-left:0;
-  	font-size: rem(20px);
-  }
+  				text-align: center;
+  				margin-top:rem(-20px);
+  				margin-left:rem(-10px);
+  				}
+  				@include phones {
+  				margin-left:0;
+  				font-size: rem(20px);
+  				}
 				text-transform: uppercase;
 				@include Gagalin(medium);
 				font-weight: normal;
 				color: white;
 				font-size: rem(14px);
-				margin-left: rem(20px);
+
 			}
 			.reviews__text {
-				
+
 				@include ubuntu(medium); 
 			color: white;
 			font-size: rem(14px);
 			text-align: left;
 			line-height:1.6;
-			margin-left: rem(20px);
+			margin-left: 0;
 			padding-right:rem(10px);
 			@include tablets {
   			text-align: center;
@@ -68,7 +74,7 @@
 			}
 			.reviews__btn {
 				margin-top:rem(10px);
-				@include ubuntu(medium); 
+				@include ubuntu(medium);
 				font-size: rem(14px);
 				padding: rem(13px);
 				background-color: #2f3234;
@@ -77,15 +83,15 @@
 				border-radius: rem(5px);
 				border: none;
 				outline: none;
-				margin-left:rem(20px);
+				display: inline-block;
+
+
 				@include tablets {
-  			display: block;
-  			margin: 0 auto;
-  			margin-top: rem(10px);
-  			padding: rem(10px);
-  			}	
+  				display: inline-block;
+  				padding: rem(10px);
+  			}
   			@include phones {
-  				margin-top: rem(30px);
+  				margin-top: rem(10px);
 
   			}
 
@@ -103,6 +109,26 @@
 	border-radius:rem(10px);
 	max-width: rem(460px);
 	
+	.popup__title {
+		font-size: rem(14px);
+		text-align: center;
+		@include phones {
+			text-align: left;
+		}
+
+	}
+	.popup__text {
+		@include ubuntu(light);
+		font-size: rem(14px);
+		line-height:1.5;
+	}
+}
+.modal {
+	background-color: #fff;
+	border-radius:rem(10px);
+	max-width: rem(460px);
+	padding: rem(10px) rem(20px);
+
 	.popup__title {
 		font-size: rem(14px);
 		text-align: center;

@@ -1,3 +1,4 @@
+
 .slider {
 	position: relative;
 	display: flex;
@@ -9,18 +10,24 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b33b', endColorstr='#f9b33b',GradientType=0 );
 	.down__arrow-left {
 		@include clearfix;
+		display: block;
+		width:28.685px;
+		height:14.479px;
 		cursor: pointer;
 		position: absolute;
-		left: 0.5%;
+		left: 1px;
 		top:50%;
 		transform: rotate(90deg);
 		z-index: 10;
 	}
 	.down__arrow-right {
 		@include clearfix;
+		display: block;
+		width:28.685px;
+		height:14.479px;
 		cursor: pointer;
 		position: absolute;
-		right: 0.5%;
+		right: 0;
 		top:50%;
 		transform: rotate(-90deg);
 		z-index:10;
@@ -55,9 +62,11 @@ ul.burger__slider {
     display: block;
 		@include tablets {
 		max-width:rem(460px);
+
 	}
 	@include phones {
 		max-width:rem(300px);
+		height: rem(170px);
 	}
 	}
 		}
@@ -75,25 +84,46 @@ ul.burger__slider {
 	}
 .burger__left {
 	position: relative;
-	width:100%;
+	width:55%;
+	@include tablets {
+		width:90%;
+
+	}
 	.burger__consist{
 		padding:rem(10px) rem(20px);
 		display:inline-block;
 		background-color: #f08c33;
 		border-radius:rem(5px);
+		&:hover {
+			cursor: pointer;
+			&__modal {
+				display: block;
+			}
+		}
 		@include tablets {
 		position: absolute;
-		
+
 		}
 		@include phones {
-			left:rem(5px);
-			padding:rem(5px) rem(10px);
+			left:0;
+			padding:rem(3px) rem(5px);
 		}
 
 		.burger__include {
 			display:block;
 			font-size: rem(14px);
 			color:white;
+			@include tablets {
+				text-align: center;
+			}
+			@include phones {
+				display: none;
+			}
+		}
+		.burger__composition {
+			@include phones {
+				width:rem(45px);
+			}
 		}
 	}
 	
@@ -165,21 +195,22 @@ ul.burger__slider {
 		top: 0;
 		left:rem(88px);
 		display:none;
-		@include tablets {
-			
+
+		@include phones {
+			left:rem(54px);
 		}
 		.ingred {
 			background-color : rgba(255,255,255,.9);
 			padding: rem(20px) rem(15px);
 			border-radius: rem(5px);
-			
+			padding-top: 1px;
 			&_item {
 				display:flex;
 				margin-top: rem(10px);
 				.ingred__desc {
 					width:100%;
 				display: flex;
-
+					align-items: center;
 				justify-content: space-between;
 			}
 				.ingred__title {
@@ -200,25 +231,28 @@ ul.burger__slider {
 					text-align: rigt;
 
 				}
-				img.ingred__img{
+				svg.ingred__img {
 					width: rem(65px) !important;
+					height: 50px;
 				}
 			}
 		}
 	}
 }
 .burger__right {
+	width:51%;
 	@include tablets {
 			text-align: center;
+		width: 90%;
 		}
 	.burger__title {
 		color: white;
 		line-height: 1;
 		margin-bottom: rem(20px);
 		@include phones {
-			padding: 0 rem(10px);
-			font-size: rem(50px);
-			
+			padding: 0;
+			margin-bottom: rem(10px);
+			font-size: 2.4rem;
 		}
 
 	}
@@ -227,6 +261,10 @@ ul.burger__slider {
 		font-size: rem(14px);
 		color: white;
 		padding:rem(5px);
+		max-width: rem(350px);
+		@include tablets{
+			margin: 0 auto;
+		}
 	}
 	.burger__price {
 		color:$btn;
@@ -241,7 +279,7 @@ ul.burger__slider {
 	}
 	}
 	.burger__order {
-		display: inline-block;
+			display: inline-block;
 			text-decoration: none;
 			text-align: center;
 			padding: rem(9px);
@@ -257,9 +295,13 @@ ul.burger__slider {
 			color:white;
 			text-decoration: uppercase;
 			margin-left:rem(40px);
+			vertical-align: text-bottom;
 			&:hover {
 				background-color: #c1401e;
 			}
+		@include tablets {
+			margin-left: rem(18px);
+		}
 	}
 }
 }

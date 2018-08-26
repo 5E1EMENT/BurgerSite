@@ -15,8 +15,8 @@ $iphone: 350px;
 //Base
 @import "layout/_fonts.scss";
 @import "layout/_base.scss";
-@import "layout/_adjustment.scss";
-
+@import "lity.min.scss";
+@import "layout/adjustment.scss";
 //sections
 @import "section/_section-header.scss";
 @import "section/_section-footer.scss";
@@ -28,5 +28,6 @@ $iphone: 350px;
 @import "section/_section-order.scss";
 @import "section/_hamburger-menu.scss";
 @import "section/_hide-menu.scss";
-@import "section/_burger-slider.scss"
+@import "section/_burger-slider.scss";
+
 

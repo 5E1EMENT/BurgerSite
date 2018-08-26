@@ -1,3 +1,28 @@
+//Отправка формы
+$(document).ready(function () {
+
+    $('#order__form').submit(function() { // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
+
+        $.ajax({
+            type: "POST",
+            url: "server.php",
+            data: $(this).serialize()
+        }).done(function() {
+            swal("Спасибо!", "Ваше сообщение отправлено!", "success");
+            $(this).find('textarea').val('');
+            $('#order__form').trigger('reset');
+            
+        });
+
+        return false;
+    });
+});
+
+$(function($){
+        $('[name="user-phone"]').mask("+7(999) 999-9999");
+    });
+
+
 
 // Интерактивное всплывающее меню
  $(document).ready(function(){
@@ -154,31 +179,20 @@ $(document).ready(function(){
      
     });
 
+//modal
+$('.burger__consist').on('mouseover', function () {
+    $('.burger__modal').css('display','block');
+})
+$('.burger__consist').on('mouseleave', function () {
+    $('.burger__modal').css('display','none');
+})
 
-    //Modal Windows
-  jQuery(document).ready(function(e) {
-    $('.burger__consist').on('mouseenter', function(){
-      $('.burger__modal').fadeIn();
-    });
-    $('.burger__consist').on('mouseleave', function(){
-      $('.burger__modal').fadeOut();
-    });
-  });
-  jQuery(document).ready(function(e) {
-
-
-    $("[data-fancybox]").fancybox(function(e){
-
-
-
-  });
-  });
 
   //One Page Scroll
   $(window).on('load resize',resizeFunc());
 
 function resizeFunc(){
-  console.log($(window).width());
+
   if($(window).width() >= '480') {
     const display = $('.maincontent');
 const sections = $('.section');
@@ -301,23 +315,7 @@ $('[data-scroll-to]').on('click touchstart', e => {
 
   }
 }
-//Form
 
-$('#order__form').submit(function(e) {
-   var msg = $("#order__form").serialize();
-  $.ajax({
-    type: "POST",
-    url: "server.php",
-    data: msg,
-    success: function(data) {
-      alert("Все хорошо");
-    },
-    error:  function(xhr, str){
-      alert("Возникла ошибка!");
-    }
-  });
-  return false;
-});
 //MAP
 
 ymaps.ready(init);

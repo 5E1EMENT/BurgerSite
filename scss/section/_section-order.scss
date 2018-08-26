@@ -91,6 +91,7 @@
 			display: flex;
 			@include phones {
 				justify-content: center;
+				font-size:  rem(13px);
 			}
 			.card-text {
 				cursor: pointer;

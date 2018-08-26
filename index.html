@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
   <title>My Burger</title>
-  <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/jquery.fancybox.css">
-  <link rel="stylesheet" href="css/main.min.css">
 
- <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA1wAAAAAAAAAAAAAAAAAAAOcAXL//AG/n/wBv5/8Ab+f/AG/n/wBv5/8Ab+f/AG/n/wBv5/8Aa9z/AGHC/wBQof8AAADPAAAAAAAAAAAAAADnAGjX/ymQ//84l///OJf//ziX//84l///OJf//x2J//8Ae///AHv//wB18P8AWrX/AAAA5wAAAAAAAAAAAAAA5wAIEP8AGzj/DiI4/w4iOP8OIjj/DiI4/w4iOP8AGzj/ABs4/wAbOP8AFy//AAcN/wAAAOcAAAAAAAAAtwAVKf8AKlX/AAAA/wAAAP8AGTL/ABw4/wAYL/8AGC//ABgv/wAYL/8AGC//ABQo/wAJE/8AAAD/AAAAtwAAAP8AMGH/ACFC/wBXV/8AgoL/AAAA/wALF/8ALl3/ADdt/wApU/8AIUL/ACFC/wAdO/8AAwb/AEpK/wAAAP8AAAD/ABUp/wAAAP8AJSX/AFBQ/wAAAP8AAAD/AAAA/wAbNv8ADRv/AA0b/wANG/8ABgz/AAAA/wApKf8AAAD/AAAA/wBXAP8ARgD/AAAA/wAAMv8MDHT/IyOH/wAAaf8AAGn/AAAZ/wAAAP8AaQD/AFsA/wBGAP8AOgD/AAAA/wAAAIcAVwD/AEYA/wAAAP8AADL/DAx0/yMjh/8AAGn/AABp/wAAGf8AAAD/AGkA/wBbAP8ARgD/ADoA/wAAAIcAAAAAAAAA5xEnQP8bP2j/Gz9o/xs/aP8bP2j/Gz9o/xs/aP8bP2j/BDRo/wAyaP8AMmj/AB9A/wAAAOcAAAAAAAAAAAAAAOc4hNf/SqD//1mn//9Zp///Waf//1mn//9CnP//Qpz//0Kc//8Eff//AHv//wBo1/8AAADnAAAAAAAAAAAAAADnQIjX/4S9//+Evf//hL3//4S9//+Evf//eLf//0Kc//9CnP//L5P//wB7//8AaNf/AAAA5wAAAAAAAAAAAAAAr1N2n/+Evf//hL3//4S9//+Evf//hL3//4S9//9bqP//Qpz//yGM//8Ae///AE2f/wAAAMcAAAAAAAAAAAAAAAAAAACvU3af/2+f1/+Evf//hL3//4S9//9bqP//Qpz//yGM//8AaNf/AE2f/wAAANcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK8AAADnSmqP/3ir5/9Vmuf/PI3n/yGA5/8ARY//AAAA5wAAAMcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAApwAAAAAAAAAAAAAAAAAAAAAAAAAAwAMAAIABAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAIABAACAAQAAgAEAAMADAADgBwAA+B8AAA==" rel="icon" type="image/x-icon" />
- </head>
-  
+ <link  href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA1wAAAAAAAAAAAAAAAAAAAOcAXL//AG/n/wBv5/8Ab+f/AG/n/wBv5/8Ab+f/AG/n/wBv5/8Aa9z/AGHC/wBQof8AAADPAAAAAAAAAAAAAADnAGjX/ymQ//84l///OJf//ziX//84l///OJf//x2J//8Ae///AHv//wB18P8AWrX/AAAA5wAAAAAAAAAAAAAA5wAIEP8AGzj/DiI4/w4iOP8OIjj/DiI4/w4iOP8AGzj/ABs4/wAbOP8AFy//AAcN/wAAAOcAAAAAAAAAtwAVKf8AKlX/AAAA/wAAAP8AGTL/ABw4/wAYL/8AGC//ABgv/wAYL/8AGC//ABQo/wAJE/8AAAD/AAAAtwAAAP8AMGH/ACFC/wBXV/8AgoL/AAAA/wALF/8ALl3/ADdt/wApU/8AIUL/ACFC/wAdO/8AAwb/AEpK/wAAAP8AAAD/ABUp/wAAAP8AJSX/AFBQ/wAAAP8AAAD/AAAA/wAbNv8ADRv/AA0b/wANG/8ABgz/AAAA/wApKf8AAAD/AAAA/wBXAP8ARgD/AAAA/wAAMv8MDHT/IyOH/wAAaf8AAGn/AAAZ/wAAAP8AaQD/AFsA/wBGAP8AOgD/AAAA/wAAAIcAVwD/AEYA/wAAAP8AADL/DAx0/yMjh/8AAGn/AABp/wAAGf8AAAD/AGkA/wBbAP8ARgD/ADoA/wAAAIcAAAAAAAAA5xEnQP8bP2j/Gz9o/xs/aP8bP2j/Gz9o/xs/aP8bP2j/BDRo/wAyaP8AMmj/AB9A/wAAAOcAAAAAAAAAAAAAAOc4hNf/SqD//1mn//9Zp///Waf//1mn//9CnP//Qpz//0Kc//8Eff//AHv//wBo1/8AAADnAAAAAAAAAAAAAADnQIjX/4S9//+Evf//hL3//4S9//+Evf//eLf//0Kc//9CnP//L5P//wB7//8AaNf/AAAA5wAAAAAAAAAAAAAAr1N2n/+Evf//hL3//4S9//+Evf//hL3//4S9//9bqP//Qpz//yGM//8Ae///AE2f/wAAAMcAAAAAAAAAAAAAAAAAAACvU3af/2+f1/+Evf//hL3//4S9//9bqP//Qpz//yGM//8AaNf/AE2f/wAAANcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK8AAADnSmqP/3ir5/9Vmuf/PI3n/yGA5/8ARY//AAAA5wAAAMcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAApwAAAAAAAAAAAAAAAAAAAAAAAAAAwAMAAIABAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAIABAACAAQAAgAEAAMADAADgBwAA+B8AAA==" rel="icon" type="image/x-icon" />
 
-  
+  <!--header-->
+  <style>.header{background-image:url(../img/video-bg.png);background-size:cover;min-height:40.625rem}.header .container{position:relative;max-width:960px;margin:0 auto;height:100%}.header .container .header__top{display:flex;justify-content:space-between}.header .container .header__top:after,.header .container .header__top:before{display:table;content:""}.header .container .header__top:after{clear:both}.header .container .header__logo{width:11%;z-index:100}.header .container .header__logo .logo{display:inline-block}.header .container .header__logo .logo__pic{margin-top:10px;max-width:98.27px;max-height:74.32px;display:block}.header .container .header__nav{padding-top:2.0625rem;font-size:.8125rem}.header .container .header__nav .nav{display:flex;justify-content:flex-end;align-items:center}@media screen and (max-width:768px){.header .container .header__logo{position:absolute;left:0}.header .container .header__logo .logo__pic{margin-top:.75rem}.header .container .header__nav .nav{display:none}}.header .container .header__nav .nav .nav__item{display:flex;align-items:center;font-size:.8125rem;font-weight:500;text-transform:uppercase;color:#fff;vertical-align:middle}.header .container .header__nav .nav .nav__item:hover{text-decoration:underline}.header .container .header__nav .nav .nav__item:after{display:block;content:"";vertical-align:middle;width:.3125rem;height:.3125rem;border-radius:.15625rem;background:#fff;margin-left:.9375rem;margin-right:.9375rem}.header .container .header__nav .nav .nav__item:nth-last-child(2):after{content:none}.header .container .header__nav .nav .nav__item:nth-last-child(2){margin-right:.75rem}.header .container .header__nav .nav .nav__link{text-decoration:none;text-transform:uppercase;color:#fff;font-size:.8125rem;font-family:UbuntuMedium,Helvetica,sans-serif}.header .container .header__nav .nav .order-btn{display:inline-block;text-decoration:none;text-align:center;padding:.4375rem;background-color:#e45028;width:6.25rem;height:2.1875rem;border-radius:5px;border:none;outline:0;cursor:pointer}.header .container .header__nav .nav .order-btn:hover{background-color:#c1401e}.header .container .header__content{position:relative;height:75%;display:flex;align-items:center}@media screen and (max-width:480px){.header .container .header__content .header__content-left{padding:0 1.25rem}.header .container .header__content .header__content-right .header__title{font-size:3.75rem}}.header .container .header__content .header__content-left .header_burger{display:inline-block;position:relative;left:50%;transform:translateX(-50%);max-width:100%}@media screen and (max-width:768px){.header .container .header__content{flex-direction:column;margin-top:3.125rem}.header .container .header__content .header__content-left .header_burger{padding-bottom:.9375rem}}.header .container .header__content .header__content-right{vertical-align:middle;display:flex;align-items:center;flex-direction:column;margin-left:.625rem}@media screen and (max-width:768px){.header .container .header__content .header__content-right{text-align:center;margin-left:0;font-size:3.75rem;line-height:1}}.header .container .header__content .header__content-right .header__title{color:#f9b43b;display:block;margin-bottom:1.875rem;margin-left:-1.875rem}.header .container .header__content .header__content-right .header__title-text{display:block;color:#fff;line-height:1;font-family:LifehackMedium,Helvetica,sans-serif;font-size:4.0625rem;text-transform:lowercase}@media screen and (max-width:768px){.header .container .header__content .header__content-right .header__title{margin-left:0;margin-bottom:0}.header .container .header__content .header__content-right .header__title-text{font-size:3.4375rem}}.header .container .down-arrow{position:absolute;bottom:1.25rem;left:50%;width:3.75rem;transform:translateX(-50%);height:3.75rem;display:flex;align-items:center;justify-content:center}@media screen and (max-width:480px){.header .container .header__content .header__content-right .header__title-text{font-size:3.125rem}.header .container .down-arrow{bottom:.3125rem}}.header .container .down-arrow .icon{transition:all .2s linear}.header .container .down-arrow:hover .icon{margin-top:-.9375rem}.header .container .down-arrow__icon{width:2.5rem;height:2.5rem;transition:.3s;fill:#fff}</style>
+ <!--mainstyle-->
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
 
   <body>
     <div class="hamburger__menu--fixedbtn">
@@ -78,7 +80,7 @@
               <div class="header__logo">
                 <a href="#" class="logo">
                   <svg class="icon logo__pic" width="98.265px" height="74.317px" viewBox = "0 0 98.265 74.317" style="fill:#e25028;">
-                    <use xlink:href="img/icons/logo.svg#Layer_1" />
+                    <use xlink:href="img/icons/symbols.svg#logo" />
                   </svg>
                 </a>
                 
@@ -124,8 +126,8 @@
               </div>
             </div>
             <a class="down-arrow" href="#best" data-scroll-to="1">
-          <svg class="icon" width="28.685px" height="14.479px" style="fill:#fff;">
-                    <use xlink:href="img/icons/arrow-scroll.svg#Layer_1" />
+          <svg class="icon" width="38.685px" height="14.479px" style="fill:#fff;">
+            <use xlink:href="img/icons/symbols.svg#arrow-scroll" />
             </svg>
         </a>
           </div>
@@ -139,21 +141,29 @@
               </h2>
               <div class="best__list">
                 <div class="best__item">
-                  <img src="img/icons/meat.svg" alt="meat" class="best__icon">
+
+
+                    <svg class="best__icon" height="89.246px">
+                      <use xlink:href="img/icons/symbols.svg#meat" />
+                    </svg>
                   <div class="best__text">
                     <h3 class="best__title ">100% свежее мясо</h3>
                     <p class="best__description ">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
                   </div>
                 </div>
                 <div class="best__item">
-                  <img src="img/icons/hand.svg" alt="hand" class="best__icon ">
+                  <svg class="best__icon" height="85.875px">
+                    <use xlink:href="img/icons/symbols.svg#hand" />
+                  </svg>
                   <div class="best__text hand" >
                     <h3 class="best__title">Ручная сборка</h3>
                     <p class="best__description ">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
                   </div>
                 </div>
                 <div class="best__item">
-                  <img src="img/icons/natural.svg" alt="natural" class="best__icon">
+                  <svg class="best__icon" height="75.534px">
+                    <use xlink:href="img/icons/symbols.svg#natural" />
+                  </svg>
                   <div class="best__text">
                     <h3 class="best__title ">Натуральные ингредиенты</h3>
                     <p class="best__description ">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
@@ -174,49 +184,65 @@
                      <li class="burger__slide active">
                        <div class="burger__left">
                          <div class="burger__consist">
-                           <img src="img/burger-composition.png" alt="burger-composition" class="burger__composition">
+
+                           <svg class="burger__composition" width="45.748px" height="44.625px">
+                             <use xlink:href="img/icons/symbols.svg#burger" />
+                           </svg>
                            <span class="burger__include title">состав</span>
                            
                          </div>
                          <div class="burger__modal">
                            <ul class="ingred">
                              <li class="ingred_item">
-                               <img src="img/icons/beef.svg" alt="beef" class="ingred__img">
+
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#beef" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Говядина</span>
                                  <span class="ingred__lot">300г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/buns.svg" alt="buns" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#buns" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Булочки</span>
                                  <span class="ingred__lot">100г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/salad.svg" alt="salad" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#salad" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Зелень</span>
                                  <span class="ingred__lot">70г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/sauce.svg" alt="sauce" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#sauce" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Соус</span>
                                  <span class="ingred__lot">150г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/cucumber.svg" alt="cucumber" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#cucumber" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Овощи</span>
                                  <span class="ingred__lot">200г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/cheese.svg" alt="cheese" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#cheese" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Сыр</span>
                                  <span class="ingred__lot">80г</span>
@@ -226,7 +252,10 @@
                          </div>
                          <img src="img/burgers/Dark-Burger.png" alt="Dark-Burger" class="burger__img">
                          <div class="burger__kkal">
-                           <img src="img/icons/kkal.svg" alt="kkal" class="burger__kkal-img">
+
+                           <svg class="burger__kkal-img"width="60px" height="60.178px" >
+                             <use xlink:href="img/icons/symbols.svg#kkal" />
+                           </svg>
                            <span class="burger__kkal-number title">1200<br></span>
                            <b class="burger__kkal-text title">ккал</b>
                          </div>
@@ -241,48 +270,63 @@
                      <li class="burger__slide">
                        <div class="burger__left">
                          <div class="burger__consist">
-                           <img src="img/burger-composition.png" alt="burger-composition" class="burger__composition">
+                           <svg class="burger__composition" width="45.748px" height="44.625px">
+                             <use xlink:href="img/icons/symbols.svg#burger" />
+                           </svg>
                            <span class="burger__include title">состав</span>
                          </div>
                          <div class="burger__modal">
                            <ul class="ingred">
                              <li class="ingred_item">
-                               <img src="img/icons/beef.svg" alt="beef" class="ingred__img">
+
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#beef" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Говядина</span>
                                  <span class="ingred__lot">300г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/buns.svg" alt="buns" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#buns" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Булочки</span>
                                  <span class="ingred__lot">100г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/salad.svg" alt="salad" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#salad" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Зелень</span>
                                  <span class="ingred__lot">70г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/sauce.svg" alt="sauce" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#sauce" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Соус</span>
                                  <span class="ingred__lot">150г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/cucumber.svg" alt="cucumber" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#cucumber" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Овощи</span>
                                  <span class="ingred__lot">200г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/cheese.svg" alt="cheese" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#cheese" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Сыр</span>
                                  <span class="ingred__lot">80г</span>
@@ -290,9 +334,11 @@
                              </li>
                            </ul>
                          </div>
-                         <img src="img/burgers/Chiken_burger.png" alt="Chiken-burger" class="burger__img">
+                         <img src="img/burgers/Chiken_burger.png" alt="Chiken-burger" class="burger__img" style="margin-bottom: 10px">
                          <div class="burger__kkal">
-                           <img src="img/icons/kkal.svg" alt="kkal" class="burger__kkal-img">
+                           <svg class="burger__kkal-img"width="60px" height="60.178px" >
+                             <use xlink:href="img/icons/symbols.svg#kkal" />
+                           </svg>
                            <span class="burger__kkal-number title">1100<br></span>
                            <b class="burger__kkal-text title">ккал</b>
                          </div>
@@ -307,48 +353,63 @@
                      <li class="burger__slide">
                        <div class="burger__left">
                          <div class="burger__consist">
-                           <img src="img/burger-composition.png" alt="burger-composition" class="burger__composition">
+                           <svg class="burger__composition" width="45.748px" height="44.625px">
+                             <use xlink:href="img/icons/symbols.svg#burger" />
+                           </svg>
                            <span class="burger__include title">состав</span>
                          </div>
                          <div class="burger__modal">
                            <ul class="ingred">
                              <li class="ingred_item">
-                               <img src="img/icons/beef.svg" alt="beef" class="ingred__img">
+
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#beef" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Говядина</span>
                                  <span class="ingred__lot">300г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/buns.svg" alt="buns" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#buns" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Булочки</span>
                                  <span class="ingred__lot">100г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/salad.svg" alt="salad" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#salad" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Зелень</span>
                                  <span class="ingred__lot">70г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/sauce.svg" alt="sauce" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#sauce" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Соус</span>
                                  <span class="ingred__lot">150г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/cucumber.svg" alt="cucumber" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#cucumber" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Овощи</span>
                                  <span class="ingred__lot">200г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/cheese.svg" alt="cheese" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#cheese" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Сыр</span>
                                  <span class="ingred__lot">80г</span>
@@ -356,9 +417,11 @@
                              </li>
                            </ul>
                          </div>
-                         <img src="img/burgers/Cheeseburger.png" alt="Cheeseburger" class="burger__img">
+                         <img src="img/burgers/Cheeseburger.png" alt="Cheeseburger" class="burger__img" style="margin-bottom: 5px">
                          <div class="burger__kkal">
-                           <img src="img/icons/kkal.svg" alt="kkal" class="burger__kkal-img">
+                           <svg class="burger__kkal-img"width="60px" height="60.178px" >
+                             <use xlink:href="img/icons/symbols.svg#kkal" />
+                           </svg>
                            <span class="burger__kkal-number title">1300<br></span>
                            <b class="burger__kkal-text title">ккал</b>
                          </div>
@@ -373,48 +436,63 @@
                      <li class="burger__slide">
                        <div class="burger__left">
                          <div class="burger__consist">
-                           <img src="img/burger-composition.png" alt="burger-composition" class="burger__composition">
+                           <svg class="burger__composition" width="45.748px" height="44.625px">
+                             <use xlink:href="img/icons/symbols.svg#burger" />
+                           </svg>
                            <span class="burger__include title">состав</span>
                          </div>
                          <div class="burger__modal">
                            <ul class="ingred">
                              <li class="ingred_item">
-                               <img src="img/icons/beef.svg" alt="beef" class="ingred__img">
+
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#beef" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Говядина</span>
                                  <span class="ingred__lot">300г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/buns.svg" alt="buns" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#buns" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Булочки</span>
                                  <span class="ingred__lot">100г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/salad.svg" alt="salad" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#salad" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Зелень</span>
                                  <span class="ingred__lot">70г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/sauce.svg" alt="sauce" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#sauce" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Соус</span>
                                  <span class="ingred__lot">150г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/cucumber.svg" alt="cucumber" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#cucumber" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Овощи</span>
                                  <span class="ingred__lot">200г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/cheese.svg" alt="cheese" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#cheese" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Сыр</span>
                                  <span class="ingred__lot">80г</span>
@@ -424,7 +502,9 @@
                          </div>
                          <img src="img/burgers/burger_sandwich.png" alt="burger_sandwich" class="burger__img">
                          <div class="burger__kkal">
-                           <img src="img/icons/kkal.svg" alt="kkal" class="burger__kkal-img">
+                           <svg class="burger__kkal-img"width="60px" height="60.178px" >
+                             <use xlink:href="img/icons/symbols.svg#kkal" />
+                           </svg>
                            <span class="burger__kkal-number title">1350<br></span>
                            <b class="burger__kkal-text title">ккал</b>
                          </div>
@@ -439,48 +519,63 @@
                      <li class="burger__slide">
                        <div class="burger__left">
                          <div class="burger__consist">
-                           <img src="img/burger-composition.png" alt="burger-composition" class="burger__composition">
+                           <svg class="burger__composition" width="45.748px" height="44.625px">
+                             <use xlink:href="img/icons/symbols.svg#burger" />
+                           </svg>
                            <span class="burger__include title">состав</span>
                          </div>
                          <div class="burger__modal">
                            <ul class="ingred">
                              <li class="ingred_item">
-                               <img src="img/icons/beef.svg" alt="beef" class="ingred__img">
+
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#beef" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Говядина</span>
                                  <span class="ingred__lot">300г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/buns.svg" alt="buns" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#buns" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Булочки</span>
                                  <span class="ingred__lot">100г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/salad.svg" alt="salad" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#salad" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Зелень</span>
                                  <span class="ingred__lot">70г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/sauce.svg" alt="sauce" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#sauce" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Соус</span>
                                  <span class="ingred__lot">150г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/cucumber.svg" alt="cucumber" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#cucumber" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Овощи</span>
                                  <span class="ingred__lot">200г</span>
                                </div>
                              </li>
                              <li class="ingred_item">
-                               <img src="img/icons/cheese.svg" alt="cheese" class="ingred__img">
+                               <svg class="ingred__img" >
+                                 <use xlink:href="img/icons/symbols.svg#cheese" />
+                               </svg>
                                <div class="ingred__desc">
                                  <span class="ingred__title">Сыр</span>
                                  <span class="ingred__lot">80г</span>
@@ -490,7 +585,9 @@
                          </div>
                          <img src="img/burgers/Spicy_Shrimp_Burger.png" alt="Spicy_Shrimp_Burger" class="burger__img">
                          <div class="burger__kkal">
-                           <img src="img/icons/kkal.svg" alt="kkal" class="burger__kkal-img">
+                           <svg class="burger__kkal-img"width="60px" height="60.178px" >
+                             <use xlink:href="img/icons/symbols.svg#kkal" />
+                           </svg>
                            <span class="burger__kkal-number title">1250<br></span>
                            <b class="burger__kkal-text title">ккал</b>
                          </div>
@@ -505,13 +602,15 @@
                    </ul>
                    <div class="burger__arrows">
                    <a class="slider__btn down__arrow-left" href="#" >
-                      <svg class="icon" width="28.685px" height="14.479px" style="fill:#fff;">
-                          <use xlink:href="img/icons/arrow-scroll.svg#Layer_1" />
-                      </svg>
+                      
+
+                     <svg width="38.685px" height="30px" style="fill:#fff;">
+                       <use xlink:href="img/icons/symbols.svg#arrow-scroll" />
+                     </svg>
                     </a>
                     <a class="slider__btn down__arrow-right" href="#" >
-                      <svg class="icon" width="28.685px" height="14.479px" style="fill:#fff;">
-                          <use xlink:href="img/icons/arrow-scroll.svg#Layer_1" />
+                      <svg width="38.685px" height="30px" style="fill:#fff;">
+                        <use xlink:href="img/icons/symbols.svg#arrow-scroll" />
                       </svg>
                     </a>
                  </div>
@@ -671,11 +770,7 @@
                 <p class="reviews__text">
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думала, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
-                <button data-fancybox data-src="#hidden-content-orlova" class="reviews__btn fancybox-inline" >Подробнее</button>
-
-
-
-                
+                <a data-lity href="#hidden-content-orlova" class="reviews__btn" >Подробнее</a>
               </div>
             </li>
             <li class="reviews__box" style="background-image: url('./img/reviews/man-2.jpg');">
@@ -685,7 +780,7 @@
                 <p class="reviews__text">
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
-                <button data-fancybox data-src="#hidden-content-spilberg" class="reviews__btn fancybox-inline" >Подробнее</button>
+                <a data-lity href="#hidden-content-spilberg" class="reviews__btn" >Подробнее</a>
               </div>
             </li>
             <li class="reviews__box" style="background-image: url('./img/reviews/man-3.jpg');">
@@ -694,7 +789,7 @@
                 <p class="reviews__text">
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думала, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
-                <button data-fancybox data-src="#hidden-content-yak" class="reviews__btn fancybox-inline" >Подробнее</button>
+                <a data-lity href="#hidden-content-yak" class="reviews__btn" >Подробнее</a>
               </div>
             </li>
             <li class="reviews__box" style="background-image: url('./img/reviews/man-4.jpg');">
@@ -703,7 +798,7 @@
                 <p class="reviews__text">
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
-                <button data-fancybox data-src="#hidden-content-verb" class="reviews__btn fancybox-inline" >Подробнее</button>
+                <a data-lity  href="#hidden-content-verb" class="reviews__btn " >Подробнее</a>
               </div>
             </li>
             <li class="reviews__box" style="background-image: url('./img/reviews/man-5.jpg');">
@@ -712,7 +807,7 @@
                 <p class="reviews__text">
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
-                <button data-fancybox data-src="#hidden-content-tieto" class="reviews__btn fancybox-inline" >Подробнее</button>
+                <a data-lity href="#hidden-content-tieto" class="reviews__btn" >Подробнее</a>
               </div>
             </li>
             <li class="reviews__box" style="background-image: url('./img/reviews/man-6.jpg');">
@@ -721,7 +816,7 @@
                 <p class="reviews__text">
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думала, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
-                <button data-fancybox data-src="#hidden-content-kuk" class="reviews__btn fancybox-inline" >Подробнее</button>
+                <a data-lity href="#hidden-content-kuk" class="reviews__btn " >Подробнее</a>
               </div>
             </li>
             <li class="reviews__box" style="background-image: url('./img/reviews/man-7.jpg');">
@@ -730,7 +825,7 @@
                 <p class="reviews__text">
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
-                <button data-fancybox data-src="#hidden-content-ark" class="reviews__btn fancybox-inline" >Подробнее</button>
+                <a data-lity href="#hidden-content-ark" class="reviews__btn " >Подробнее</a>
               </div>
             </li>
             <li class="reviews__box" style="background-image: url('./img/reviews/man-8.jpg');">
@@ -739,7 +834,7 @@
                 <p class="reviews__text">
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
-                <button data-fancybox data-src="#hidden-content-sper" class="reviews__btn fancybox-inline" >Подробнее</button>
+                <a data-lity href="#hidden-content-sper" class="reviews__btn" >Подробнее</a>
               </div>
             </li>
           </ul>
@@ -756,36 +851,36 @@
                     <div class="form__row">
                       <label class="form__block" for="user-name">
                         <span class="form__block-title">Имя</span>
-                        <input type="text"  class="form__input" name="user-name" id="user-name" placeholder="Иван">
+                        <input type="text"  class="form__input" name="user-name" id="user-name" placeholder="Иван" required>
                       </label>
                       <label class="form__block" for="user-phone">
                         <span class="form__block-title">Телефон</span>
-                        <input type="text" class="form__input" name="user-phone" id="user-phone" placeholder="88005553535">
+                        <input type="text" class="form__input" name="user-phone" id="user-phone" placeholder="+78005553535" required>
                       </label>
                     </div>
                     <div class="form__row">
                       <label class="form__block" for="user-street">
                         <span class="form__block-title">Улица</span>
-                        <input type="text" class="form__input" name="user-street" id="user-street" placeholder="Корчагина">
+                        <input type="text" class="form__input" name="user-street" id="user-street" placeholder="Корчагина" required>
                       </label>
                       
                     </div>
                     <div class="form__row">
                       <label class="form__block" for="user-house">
                         <span class="form__block-title">Дом</span>
-                        <input type="text" class="form__input" name="user-house" id="user-house" placeholder="72">
+                        <input type="text" class="form__input" name="user-house" id="user-house" placeholder="72" required>
                       </label>
                        <label class="form__block" for="user-houseBlock">
                         <span class="form__block-title">Корпус</span>
-                        <input type="text" class="form__input" name="user-houseBlock" id="user-houseBlock" placeholder="1">
+                        <input type="text" class="form__input" name="user-houseBlock" id="user-houseBlock" placeholder="1" required>
                       </label>
                        <label class="form__block" for="user-apartment">
                         <span class="form__block-title">Квартира</span>
-                        <input type="text" class="form__input" name="user-apartment" id="user-apartment" placeholder="207"> 
+                        <input type="text" class="form__input" name="user-apartment" id="user-apartment" placeholder="207" required>
                       </label>
                        <label class="form__block" for="user-floor">
                         <span class="form__block-title">Этаж</span>
-                        <input type="text" class="form__input" name="user-floor" id="user-floor" placeholder="2">
+                        <input type="text" class="form__input" name="user-floor" id="user-floor" placeholder="2" required>
                       </label>
                     </div>
                   </div>
@@ -793,7 +888,7 @@
                     <div class="form__row">
                       <label class="form__block">
                         <span class="form__block-title">Комментарий</span>
-                        <textarea name="user-message" id="message" class="form__area" cols="30" rows="10" placeholder="Хочу много бургеров"></textarea>
+                        <textarea name="user-message" id="message" class="form__area" cols="30" rows="10" placeholder="Хочу много бургеров" required></textarea>
                       </label>
                       
                       
@@ -801,7 +896,7 @@
                     <div class="form__row">
                       <div class="form__block">
                         <div class="form__block-radio">
-                          <input id="cash" type="radio" name="pay-option" value="cash" class="cash-pay">
+                          <input id="cash" type="radio" name="cash-option" value="cash" class="cash-pay">
                           <label for="cash" class="cash-text">Потребуется сдача</label>
 
                           <input id="card" type="radio" name="pay-option" value="card" class="card-pay">
@@ -875,63 +970,77 @@
                     </svg>
                   </a>
               </div>
+
             </div>
+            <div class="footer__signature">
+                      <a href="https://vk.com/flak_zwilling" class="footer__signature-person">Nikitas Daniil © 2017 Arthim . All Rights Reserved.</a>
+                    </div>
           </div>
           
         </section>
+
+
+
+
         
       </div>
       <div class="modals">
          
           <div class="reviews__modals">
-            <div class="popup " id="hidden-content-orlova">
+            <div class="lity-hide modal" id="hidden-content-orlova">
               <h2 class="popup__title title">Елена Орлова</h2>
               <p class="popup__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
             </div>
-            <div class="popup" id="hidden-content-spilberg">
+            <div class="lity-hide modal" id="hidden-content-spilberg">
               <h2 class="popup__title title">Константин Спилберг</h2>
               <p class="popup__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
             </div>
-            <div class="popup" id="hidden-content-yak">
+            <div class="lity-hide modal" id="hidden-content-yak">
               <h2 class="popup__title title">Лилия Яковлева</h2>
               <p class="popup__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
             </div>
-            <div class="popup" id="hidden-content-verb">
+            <div class="lity-hide modal" id="hidden-content-verb">
               <h2 class="popup__title title">Дмитрий Вербицкий</h2>
               <p class="popup__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
             </div>
-            <div class="popup" id="hidden-content-tieto">
+            <div class="lity-hide modal" id="hidden-content-tieto">
               <h2 class="popup__title title">Джабриель Тието</h2>
               <p class="popup__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
             </div>
-            <div class="popup" id="hidden-content-kuk">
+            <div class="lity-hide modal" id="hidden-content-kuk">
               <h2 class="popup__title title">Елизавета Кукиш</h2>
               <p class="popup__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
             </div>
-            <div class="popup" id="hidden-content-ark">
+            <div class="lity-hide modal" id="hidden-content-ark">
               <h2 class="popup__title title">Петр Аркадьевич</h2>
               <p class="popup__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
             </div>
-            <div class="popup" id="hidden-content-sper">
+            <div class="lity-hide modal" id="hidden-content-sper">
               <h2 class="popup__title title">Никита Сперанский</h2>
               <p class="popup__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
             </div>
           </div>
         </div>
       </div>
-      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" >
-    </script>
+
+
     <script
-  src="js/jQuery.js"></script>
+            src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>var scr = {"scripts":[
+
+            {"src" : "js/lity.min.js", "async" : false},
+            {"src" : "js/maskedinput.js", "async" : false},
+            {"src" : "js/svg4everybody.js", "async" : false},
+            {"src" : "js/main.js", "async" : false}
+        ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" >
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    
-    <script src="js/svg4everybody.js"></script>
-    <script src="js/main.js"></script>
-    
-  
-   
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
   </body>
 </html>

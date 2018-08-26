@@ -117,3 +117,26 @@ justify-content: space-around;
 	
 
 }
+
+#footer-title {
+	display: none;
+}
+
+.footer__signature {
+	width: 100%;
+	-webkit-font-smoothing: antialiased;
+	color: #000;
+	border-top: 2px solid black;
+	padding: rem(5px);
+}
+.footer__signature-person {
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	@include ubuntu(regular);
+	@include tablets {
+		font-size: rem(12px);
+	}
+}
